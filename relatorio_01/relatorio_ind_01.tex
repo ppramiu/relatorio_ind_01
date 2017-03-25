@@ -1,0 +1,109 @@
+\documentclass[final,3p,12pt,times,onecolumn,authoryear]{elsarticle}
+\usepackage[brazil]{babel}
+%\usepackage{tex4ht}
+\usepackage{amssymb}
+\usepackage{titling}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsthm,amsmath}
+\usepackage{framed} 
+\usepackage{multirow}
+\usepackage{epstopdf}
+\usepackage{multicol} 
+\usepackage{varwidth}
+\usepackage{color}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{subfigure}
+\usepackage{nomencl} 
+\geometry{a4paper,left=2cm,right=2cm,bottom=2cm,top=2.5cm}
+\setlength{\nomitemsep}{-\parskip}
+\renewcommand{\baselinestretch}{0.9}
+\renewcommand*\nompreamble{\begin{multicols}{2}}
+\renewcommand*\nompostamble{\end{multicols}}
+\usepackage[none]{hyphenat} 
+ \usepackage{nomencl}
+ \makenomenclature
+\usepackage{lineno}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{listings}
+\lstset{basicstyle=\footnotesize,language=C,frame=lines}
+%\journal{Applied Numerical Mathematics}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\pretolerance=1000 % for no overfull lines
+\usepackage[
+colorlinks=true,
+pdfstartview=FitV,
+linkcolor=blue,
+citecolor=blue,
+urlcolor=blue]{hyperref}
+%\hypersetup{
+   %pdftitle    ={Numerical modeling of chickpea \textit{(Cicer arietinum)} hydration: The effects of temperature and pressure},
+   %pdfauthor   ={Pétterson Pramiu},
+   %pdfkeywords = {diffusion equation \sep Fick's second law \sep the hydration process.},
+	 %pdfsubject  = {Article}
+%} 
+ 
+\setlength{\parskip}{1em}
+\linespread{1.25}
+\hyphenation{especificamen-te} 
+
+\begin{document}
+
+%\ 
+%
+%\vspace{-1cm}
+%\noindent \includegraphics[width=\textwidth]{figuras/topo_research}
+
+% \begin{frontmatter}
+\title{Relatório de estudos individual - 2017}
+%\author[]{figuras/Rogério Luis Rizzi\corref{cor1}}
+%\ead{ppramiu@gmail.com}
+\author{Pétterson Vinícius Pramiu}
+%\author[unioeste]{figuras/Ricardo Lessa Azevedo }
+%\author[unioeste]{figuras/Fabrício Michel Denes}
+%\author[unioeste]{figuras/Leonardo Andrey Zavarezzi}
+%\author[unioeste]{figuras/Roner Rodrigo Domilton}
+%\author[unioeste]{figuras/Muryel Correia de Carvalho Poliszuk}
+%\cortext[cor1]{Corresponding author. Tel.:+55 45 998069309.}
+%\address[unioeste]{Centro de Ciências Exatas e Tecnológicas, Universidade Estadual do Oeste do Paraná - Cascavel, Brasil.}
+%\address[esalq]{figuras/Escola Superior de Agricultura Luiz de Queiroz, Universidade de São Paulo - Piracicaba, Brazil.}
+%\address[pgeagri]{figuras/Programa de Pós-Graduação em Engenharia Agrícola - PGEAGRI, Universidade Estadual do Oeste do Paraná - Cascavel, Brazil.}
+% % \begin{abstract}
+% \small
+% Com a mínima pretensão de ser um texto completo e autocontido, este relatório objetiva registrar de forma detalhada e sistemática as atividades de pesquisa e estudos relacionados à temática de proposta de tese do autor. Nele serão revistos alguns conceitos fundamentais de mecânica de fluidos, métodos numéricos em equações diferenciais, instalação e configuração de bibliotecas para implementação computacional como PETSC e MPI, entre outros. Ao longo destas atividades espera-se obter os requisitos necessários para compreensão de trabalhos envolvendo simulações em escoamentos turbulentos empregando o método de Simulação de Grandes Escalas - \textit{Large Eddy Simulation}.
+% % \end{abstract}
+%\begin{keyword}
+%Palavras-chave:
+%
+%\end{keyword}
+% \end{frontmatter}
+
+%\linenumbers
+
+%\input{sumario}
+\begin{center}
+\thetitle
+
+\theauthor
+\end{center}
+\small
+Resumo: Este relatório objetiva registrar de forma detalhada e sistemática as atividades de pesquisa e estudos relacionados à temática de proposta de tese do autor. Nele serão revistos alguns conceitos fundamentais de mecânica de fluidos, métodos numéricos em equações diferenciais, instalação e configuração de bibliotecas para implementação computacional como PETSC e MPI, entre outros. Exemplos da resolução de sistemas de equações lineares e da solução de algumas EDPs como a equação de Laplace, de Poisson, da equação do calor transiente e da equação de Stokes serão resolvidos detalhadamente em diferenças finitas ou volumes finitos, empregando malhas estruturadas e em programação serial ou paralela. A linguagem selecionada para implementação dos códgidos fonte é a linguagem C, e alguns exemplos também serão ilustrados e implementados em Scilab. Com a realização destes exemplos espera-se obter os requisitos necessários para compreensão de trabalhos e implementação de código computacional envolvendo simulações em escoamentos turbulentos empregando o método de Simulação de Grandes Escalas - \textit{Large Eddy Simulation}.
+
+%\input{resumo_ceasb}
+%\input{fluxograma}
+% \input{revisao}
+\input{codigo}
+
+%\bibliographystyle{elsarticle-harv}
+%\nocite{*}
+%\bibliography{references}
+
+
+\end{document}

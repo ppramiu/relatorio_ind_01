@@ -1,0 +1,298 @@
+\section{Instalação e Configuração do PETSC}
+Esta seção é breve e tem como objetivo auxiliar na instalação e configuração do pacote de ferramentas PETSC, seguindo o manual do software. Informações adicionais podem ser obtidas diretamente no site do desenvolvedor da ferramenta: \url{https://www.mcs.anl.gov/petsc/}. 
+
+Nesta seção serão apresentados também alguns requisitos computacionais necessários à implementação dos métodos numéricos e resolução das equações discretizadas. Também será exibido uma introdução, instalação e configuração da biblioteca PETSC para o sistema Linux Ubuntu 16.04. PETSc (Portable, Extensible Toolkit for Scientific Computation), é um conjunto de estruturas de dados e rotinas para solução paralela de aplicações científicas modeladas por meio de equações diferenciais parciais. 
+
+Para instalação do PETSc é necessário a realização do download da distribuição mais atual do pacote, o que pode ser obtido no link \url{https://www.mcs.anl.gov/petsc/download/index.html}. Após a obtenção do arquivo \texttt{.tar.gz} é necessário extraí-lo em alguma pasta do computador local. Isto pode ser feito por meio do terminal e empregando o comando \texttt{tar -xf petsc-3.7.5.tar.gz}. Após a extração, deve-se acessar a pasta que foi criada e que neste tutorial chama-se \texttt{/petsc-3.7.5.tar.gz} e executar o comando para configuração do PETSC: 
+\begin{flushleft}
+ \texttt{./configure --with-cc=gcc --with-cxx=g++ --with-X=1 --with-fc=gfortran --download-mpich --download-fblaslapack}
+\end{flushleft}
+Esse comando, além de configurar o PETSC, também instala algumas ferramentas como compiladores e bibliotecas. Caso a configuração ocorra corretamente uma mensagem semelhante à da Figura \ref{fig:install_01} deve ser exibida no terminal.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{figuras/install_01.png}
+ \caption{Terminal configuração PETSC.}
+ \label{fig:install_01}
+\end{figure}
+Como indicado, o usuário deve em seguida executar o seguinte comando:
+\begin{flushleft}
+ \verb|make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=arch-linux2-c-debug all|
+\end{flushleft}
+o que resultará na seguinte Figura \ref{fig:install_02}.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{figuras/install_02.png}
+ \caption{Terminal configuração PETSC.}
+ \label{fig:install_02}
+\end{figure}
+Como indicado, o usuário deve verificar se as bibliotecas estão trabalhando corretamente, por meio do comando:
+\begin{flushleft}
+ \verb|make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=arch-linux2-c-debug test|
+\end{flushleft}
+o que resultará na seguinte Figura \ref{fig:install_03}.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{figuras/install_03.png}
+ \caption{Terminal configuração PETSC.}
+ \label{fig:install_03}
+\end{figure}
+Para finalizar a configuração, o usuário deve o sistema, por meio do comando:
+\begin{flushleft}
+ \verb|make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=arch-linux2-c-debug streams|
+\end{flushleft}
+o que resultará na seguinte Figura \ref{fig:install_04}.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figuras/install_04.png}
+ \caption{Terminal configuração PETSC.}
+ \label{fig:install_04}
+\end{figure}
+Se a instalação foi realizada com êxito uma janela com o speedup em função do número de processadores será exibida.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figuras/install_speedup.png}
+ \caption{Terminal configuração PETSC.}
+ \label{fig:install_speedup}
+\end{figure}
+
+Ao término da instalação deve-se também configurar, via terminal, as variáveis de ambiente \verb|PETSC_DIR=/home/user/Documentos/petsc-3.7.5| e \verb|PETSC_ARCH=arch-linux2-c-debug| com auxílio do comando \texttt{export}. Ver Figura \ref{fig:install_environment}.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{figuras/install_environment.png}
+ \caption{Terminal configuração PETSC.}
+ \label{fig:install_environment}
+\end{figure}
+
+Para verificar se a instalação e configuração foram realizadas com êxito, é possível navegar até a o diretório: \verb|cd /home/user/Documentos/petsc-3.7.5/src/ksp/ksp/examples/tutorials/| e executar os comandos:
+\begin{flushleft}
+ \verb|make ex1|
+\end{flushleft}
+o que resultará na Figura \ref{fig:make_ex1}.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{figuras/make_ex1.png}
+ \caption{Terminal exemplo ex1.c.}
+ \label{fig:make_ex1}
+\end{figure}
+Para executar o código acima compilado, digita-se \verb|./ex1|, o que deve resultar em algo semelhante à Figura \ref{fig:exec_ex1}.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{figuras/exec_ex1.png}
+ \caption{Execução do exemplo ./ex1}
+ \label{fig:exec_ex1}
+\end{figure}
+
+Para uma configuraçã completa do PETSC, talvez seja necessária a instalação de alguns pacotes adicionais como é o caso do X11 para criação de janelas gráficas. Sua instalação pode ser realizada via terminal com o comando: \verb|apt install libxt-dev|.
+
+\section{Primeiros exemplos com PETSC}
+Como já mencionado o PETSC é uma suite de ferramentas que permite a solução de sistemas de equações em paralelo. Essa suite foi desenvolvida para resolução de Equações Diferenciais Parciais, em que sua resolução conduz à resolução de sistemas de equações de grandes dimensões, o que demanda algoritmos eficientes e programação paralela. Desta forma o propóstico da biblioteca PETSC é auxiliar na solução de problemas científicos e de engenharia em computadores multiprocessados. O primeiro exemplo aqui ilustrado é apresentado em \cite{bueler:2017} e aproxima a constante de Euler por meio da série de Maclaurin:
+\begin{equation}
+  \label{eq:ex_01}	
+  e = \sum_{n=0}^\infty \dfrac{1}{n!} \approx 2.718281828
+\end{equation}
+O programa \verb|code_euler.c| , ilustrado no código \ref{code:code_euler}, realiza a computação de cada termo da série infinita em cada processo, resultando numa melhor estimativa de $e$ quando executado em vários processos MPI. Embora seja um exemplo ingênuo do emprego da biblioteca PETSC, ele auxilia na compreensão de algumas ideias envolvidas em computação paralela.
+
+\lstinputlisting[language=C]{codigo/code_euler.c}
+
+Como qualquer programa escrito em linguagem C, o código é iniciado com uma função chamada \texttt{main()} a qual tem os argumentos \texttt{argc} e \texttt{argv} passados via linha de comando. No exemplo ilustrado esses argumentos serão passados à biblioteca através da função \texttt{PetscInitialize()}, e a biblioteca obtém as informações passadas em linha de comando. A função \texttt{main()} também tem como retorno um valor inteiro, que é igual a 0 se o programa foi executado corretamente. Além disso, é importante utilizar a função PETSC para vericação de erros associados à sua utilização, \texttt{CHKERRQ(ierr)}, a qual retorna um valor inteiro diferente de 0 caso alguma anomalia ocorra na execução de alguma função pertencente à biblioteca.
+
+Como indicado no manual \cite{petsc} para compilar um arquivo que utiliza PETSC, deve-se ter no mesmo diretório do arquivo fonte, um arquivo \texttt{makefile}, cujo conteúdo é exibido no código \ref{code:make}.
+
+\lstinputlisting[language=C]{codigo/makefile}
+
+Após ter criado o arquivo \texttt{makefile} é possível compilar o código programa \verb|code_euler.c| com o seguinte comando:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ make code_euler|
+\end{flushleft}
+Para executar o código compilado basta digitar
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ ./code_euler|\\
+\verb|O valor da constante 'e' é aproximadamente: 1.000000000000000|\\
+\verb|rank 0 did 0 flops|
+\end{flushleft}
+O valor obtido para $e=1.0$ é uma estimativa muito ruim, e isso pode ser melhorado com a execução de mais processos MPI, da seguinte forma:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ mpiexec -n 5 ./code_euler|\\
+\verb|O valor da constante 'e' é aproximadamente: 2.708333333333333|\\
+\verb|rank 0 did 0 flops|\\
+\verb|rank 1 did 0 flops|\\
+\verb|rank 2 did 1 flops|\\
+\verb|rank 3 did 2 flops|\\
+\verb|rank 4 did 3 flops|\\
+\end{flushleft}
+Executando o mesmo programa em 10 processos, obtemos uma boa aproximação constante
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ mpiexec -n 10 ./code_euler|\\
+\verb|O valor da constante 'e' é aproximadamente: 2.718281525573192|\\
+\verb|rank 0 did 0 flops|\\
+\verb|.....|\\
+\end{flushleft}
+Com base na execução dos 10 processos acima, pode-se imaginar que o código tenha sido escrito usando um cluster com no mínimo 10 processadores físicos. Na verdade, esses 5 e 10 processos funcionam muito bem em um laptop com 2 núcleos. Os processos MPI são criados conforme necessário, usando um recurso antigo de sistemas operacionais: multitarefa. Obviamente a aceleração real do paralelismo (speedup) é outra questão.
+
+No exemplo do programa \verb|code_euler.c|, cada processo MPI calcula o termo $1/n!$, onde $n$ é o retorno de \verb|MPI_Comm_rank()|. É importante notar que \verb|PETSC_COMM_WORLD| é um comunicador MPI contendo todos os processos gerados usando \verb|mpiexec -n N| na linha de comando. Uma chamada para \verb|MPI_Allreduce()| calcula a soma parcial de expressão \eqref{eq:ex_01} e envia o resultado de volta para cada processo. Esses usos diretos da API MPI são uma parte (relativamente pequena) do uso do PETSc, mas ocorrem porque o PETSc geralmente evita a duplicação da funcionalidade MPI.
+
+A estimativa calculada de $e$ é impressa de uma só vez. Além disso, cada processo também imprime seu \verb|rank| e o trabalho que ele fez. O comando de impressão formatado \verb|PetscPrintf()|, semelhante ao \verb|fprintf()| da biblioteca padrão C, é chamado duas vezes no código. Na primeira vez MPI usa o comunicador \verb|PETSC_COMM_WORLD| e a segunda vez \verb|PETSC_COMM_SELF|. O primeiro desses trabalhos de impressão é, portanto, coletivo em todos os processos, e apenas uma linha de saída é produzida, enquanto a segunda é individual para cada processo e obtemos $n$ linhas impressas. As linhas de saída \verb|PETSC_COMM_SELF| podem aparecer em ordem aparentemente aleatória uma vez que a impressão ocorre na ordem que essa classificação encontra o comando \verb|PetscPrintf()| no código.
+
+Todo programa ou parte de comando que utiliza a biblioteca PETSC, deve iniciar e terminar com as funções \verb|PetscInitialize()| e \verb|PetscFinalize()|, respectivamente. Observa-se que o último argumento da função \verb|PetscInitialize(&argc, &argv, NULL, help)| fornece uma string que informa ao usuário uma breve descrição do programa, e pode ser visualizada através do comando:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ ./code_euler --help|\\
+\verb|O valor da constante 'e' é aproximadamente: 2.718281525573192|\\
+\verb|rank 0 did 0 flops|\\
+\verb|.....|\\
+\end{flushleft}
+
+\subsection{Objetos do tipo vetores e matrizes em PETSC}
+A maioria dos métodos de resolução numérica de equações diferenciais cumlmina na solução de sistemas lineares de dimensão finita. Como esses sistemas lineares se tornam representações mais precisas do PDE à medida que seu tamanho vai para o infinito, busca-se resolver os maiores sistemas lineares que a tecnologia de computação disponível possa ser capaz de suportar. Resolver tais sistemas lineares, usando algoritmos que têm o potencial de escalar para tamanhos muito grandes - tão grandes, por exemplo, que a solução vetorial do sistema deve ser distribuída através de muitos processadores até mesmo se encaixar na memória - representa a tecnologia de núcleo em PETSc.
+
+Uma observação a ser feita, é que muitas das PDEs discretizadas geram sistemas lineares com estrutura explorável, especialmente a esparcidade, o que significa que há poucas entradas diferentes de zero por linha na matriz. Para que os métodos convirjam, também precisa haver outra estrutura no sistema linear, tal como a regularidade das entradas de matrizes que surgem da suavidade dos coeficientes na PDE. A aplicação ingênua de métodos diretos é na maioria das vezes, muito lenta.
+
+O código exibido a seguir ilustra um exemplo da criação de um vetor $10\times1$ em PETSc. 
+
+\lstinputlisting[language=C]{codigo/build_vector.c}
+
+Para compilar o código acima, deve-se alterar o arquivo \verb|makefile| para deixá-lo semelhante ao apresentado abaixo:
+
+\lstinputlisting[language=C]{codigo/makefile}
+
+Em seguida o código é compilado e executado através dos comandos:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ make build_vector|\\
+\verb|user@user-G73Sw:~$ ./build_vector -vec_view|\\
+\verb|Mat Object: 1 MPI processes|\\
+\verb|type: seqaij|\\
+\verb|11.|\\
+\verb|7.|\\
+\verb|5.|\\
+\verb|3.|\\
+\verb|6.|\\
+\verb|11.|\\
+\verb|7.|\\
+\verb|5.|\\
+\verb|3.|\\
+\verb|6.|
+\end{flushleft}
+
+A seguir é apresentado um exemplo simples de como preencher uma matriz $4 \times 4$, usando um loop 'for' sobre o índice de linha $i$. O programa é denominado de \verb|build_matrix.c|:
+
+\lstinputlisting[language=C]{codigo/build_matrix.c}
+
+O resultado ou a matriz criada pode ser visualizada de várias formas, e aqui faremos duas visualizações uma no formato esparso e outra mostrando todos os seus elementos.
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ ./build_matrix -mat_view|\\
+\verb|Mat Object: 1 MPI processes|\\
+\verb|type: seqaij|\\
+\verb|row 0: (0, 1.)  (1, 2.)  (2, 3.)  (3, 0.) |\\
+\verb|row 1: (0, 2.)  (1, 1.)  (2, -2.)  (3, -3.) |\\
+\verb|row 2: (0, -1.)  (1, 1.)  (2, 1.)  (3, 0.) |\\
+\verb|row 3: (0, 0.)  (1, 1.)  (2, 1.)  (3, -1.) |
+
+\verb|user@user-G73Sw:~$ ./build_matrix -mat_view ::ascii_dense|\\
+\verb|Mat Object: 1 MPI processes|\\
+\verb|type: seqaij|\\
+\verb| 1.00000e+00  2.00000e+00  3.00000e+00  0.00000e+00 |\\
+\verb| 2.00000e+00  1.00000e+00 -2.00000e+00 -3.00000e+00 |\\
+\verb|-1.00000e+00  1.00000e+00  1.00000e+00  0.00000e+00 |\\
+\verb| 0.00000e+00  1.00000e+00  1.00000e+00 -1.00000e+00 |
+\end{flushleft}
+
+É possível também salvar a matriz impressa no terminal através do comando:
+\begin{flushleft}
+\verb|./build_matrix -mat_view ascii:build_matrix.txt:ascii_dense|.
+\end{flushleft}
+
+Como descrito em \cite{bueler}, embora PETSC seja escrito em C, e não em C ++, ela é uma biblioteca orientada a objetos. Para construir o nosso primeiro código PETSc para resolver um sistema linear, vamos usar os tipos de dados \verb|Vec| e \verb|Mat|, que são essencialmente objetos, que possuem vetores e matrizes. O exemplo a seguir descreve a solução do sistema linear:
+\begin{equation}
+  \label{eq:sistema_01}
+    \left[
+    \begin{array}{cccc}
+     1 & 2 & 3 & 0 \\
+     2 & 1 & -2 & -3 \\
+     -1 & 1 & 1 & 0\\
+     0 & 1 & 1 & -1 
+     \end{array} 
+     \right]
+     \left[
+     \begin{array}{l}
+      x_0\\
+      x_1\\
+      x_2\\
+      x_3
+     \end{array}
+     \right] = \left[
+     \begin{array}{l}
+      7\\
+      1\\
+      1\\
+      3
+     \end{array}
+     \right] 
+\end{equation}
+
+Um objeto KSP resolve o sistema linear, com o algoritmo de solução específico escolhido apenas em tempo de execução. O código fonte que contém o programa para resolver o sistema \eqref{eq:sistema_01} é apresentado a seguir:
+
+\lstinputlisting[language=C]{codigo/solve_linear_ksp.c}
+
+O resulta final da execução do programa \verb|solve_linear_ksp.c| é:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ ./solve_linear_ksp|\\
+\verb|Vec Object: 1 MPI processes|\\
+\verb|type: seq|\\
+\verb|1.|\\
+\verb|0.|\\
+\verb|2.|\\
+\verb|-1.|
+\end{flushleft}
+
+O código \verb|solve_linear_ksp.c| apresentou a solução de um sistema com dimensão fixa, no entanto pode ser necessário, alterar essa dimensão em tempo de execução, como é o caso do próximo exemplo. Ele resovle um sistema de equação com tamanho arbitrário e definido no momento da execução, através de um valor inteiro passado na função \verb|PetscOptionsXXX()|. Além disso, nesse exemplo serão vistos algumas formas de manipulação de vetores como soma e determinação da sua norma euclidiana, utilizando \verb|VecAXPY| e \verb|VecNorm|, respectivamente. O programa é ilustrado no código..................
+
+\lstinputlisting[language=C]{codigo/solve_linear_arbitrary.c}
+
+É importante destacar que embora o tamanho do sistem seja arbitrário, ele sempre terá a forma tridiagonal, com valores 3 na diagonal principal e valor -1 na diagonal superior e inferior. 
+
+O primeiro novo recurso usado neste código é \verb|PetscOptionsBegin()| e \verb|PetscOptionsEnd()|, ou seja, a chamada para \verb|PetscOptionsInt()|. O início do método define um prefixo \verb|-tri_| para que a nova opção criada seja distinguida das muitas opções integradas do PETSc que começam por exemplo com \verb|-ksp_| ou \verb|-vec_| ou algo do tipo. Aqui \verb|PetscOptionsInt()| cria a opção \verb|-tri_m| para que o usuário possa definir a variável $m$ e deixa como padrão $m = 4$ inalterado se a opção não for definida na execução. 
+
+Após configurar a nova opção em \verb|solve_linear_arbitrary.c| a solução numérica \verb|Vec x| é criada exatamente como fizemos no último exemplo. Mas agora também é necessário criar \verb|Vec s|,  \verb|Vec b| e \verb|Vec xexact|. O primeiro vetor é o lado direito do sistema linear e este último mantém a solução exata para o sistema linear para que seja possível avaliar o erro associado à solução numérica.
+
+Em seguida, deve-se montar a matriz A, que como mencionado é uma matriz tridiagonal. É importante montá-la de forma eficiente em paralelo, algo que será relevante na resolução de equações diferenciais 2D e 3D posteriormente. No entanto, somente quando o \verb|solve_linear_arbitrary.c| é executado, sabemos quantos processos estão em uso. O método \verb|MatGetOwnershipRange()| informa o programa, executando em um determinado processo (rank), quais linhas ele possui localmente. %No caso de muitas matrizes estruturadas como esta, pode-se evitar toda comunicação entre processos, reunindo exatamente as linhas que possuímos.
+
+Como observado no início do código \verb|solve_linear_arbitrary.c|, chamamos \ função \verb|MatGetOwnershipRange(A, &Istart, &Iend)| para obter os índices de linha inicial e final para o processo local. Estes índices são usados como limites no loop 'for' que preenche as linhas da matriz localmente. utiliza-se  \verb|MatSetValues()| para realmente definir as entradas da matriz  A e \verb|MatAssemblyBegin/End()| para completar a montagem de A. 
+
+Adicionalmente, é necessário montar o lado direito do sistema linear e também a solução exacta para o sistema linear $(A \,xexato = b)$. A maneira mais simples de fazer isso, é escolher uma solução exata, e em seguida, calcular $b$, multiplicando A pela solução exata. Assim, definimos valores para \verb|xexact|. Em seguida calculamos $b$ com auxílio da função \verb|MatMult(A, xexact, b)|. 
+
+Como em vecmatksp.c criamos o objeto KSP e então chamamos o solver \verb|KSPSolve()| para resolver aproximadamente $A x = b$. A opção \verb|-ksp_monitor| imprime a norma residual $||b - Ax||_2$ em tempo de execução. Neste caso, também queremos ver que o erro real $||x - x_{ex}||_2$ é pequeno quando o solver KSP é concluido. Assim, depois de obter x do KSPSolve (), calculamos o erro com os códigos:
+\begin{flushleft}
+\verb|VecAXPY(x,-1.0,xexact)| : $x \leftarrow -1.0 x_{ex}+x$\\
+\verb|Vecnorm(x,NORM_2,&errnorm)| : \verb|errnorm|  $\leftarrow  ||x||_2$\\
+\end{flushleft}
+Obviamente o sistema linear resolvido neste exemplo é fácil de resolver por ser tridiagonal, simétrico, diagonal-dominante e positivo definido. 
+Pode-se verificar o tempo necessário para resolução do sistema com auxílio do comando \verb|time|, como segue:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ time ./solve_linear_arbitrary -tri_m 1000000|\\
+\verb|error for m = 1000000 system is (x-xexact)_2 = 4.8e-11|\\
+\verb|real	0m1.814s|\\
+\verb|user	0m1.772s|\\
+\verb|sys	0m0.040s|
+\end{flushleft}
+Somente o tempo 'real' deve ser considerado. Note a diferença ao executar o mesmo código com $m=10000000$.
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ time ./solve_linear_arbitrary -tri_m 10000000|\\
+\verb|error for m = 10000000 system is (x-xexact)_2 = 3.5e-10|\\
+\verb|real	0m17.154s|\\
+\verb|user	0m17.971s|\\
+\verb|sys	0m0.140s|
+\end{flushleft}
+A princípio um sistema de equações contendo $10^7$ variáveis parece ser grande. Mas pensando numa simulação tridimensional da equação de Navier-Stokes em um domínio cúbico de 1 metro de lado e com espacamento de malha igual a 0.01 m (1cm), geraria um sistema de equações dessa ordem de grandeza. Agora, o programa será executado empregando 8 processos.
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ time mpiexec -n 8./solve_linear_arbitrary -tri_m 10000000|\\
+\verb|error for m = 10000000 system is (x-xexact)_2 = 9.9e-11|\\
+\verb|real	0m5.484s|\\
+\verb|user	0m38.976s|\\
+\verb|sys	0m2.260s|
+\end{flushleft}
+Como esperado, o tempo de execução caiu de 17 para 5 segundos, indicando um speedup de:
+\begin{equation}
+  546546
+\end{equation}
+
+
+

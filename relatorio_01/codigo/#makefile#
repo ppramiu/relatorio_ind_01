@@ -1,0 +1,7 @@
+include ${PETSC_DIR}/lib/petsc/conf/variables
+include ${PETSC_DIR}/lib/petsc/conf/rules
+
+code_euler: code_euler.o  chkopts
+	-${CLINKER} -o code_euler code_euler.o  ${PETSC_LIB}
+	${RM} code_euler.o
+

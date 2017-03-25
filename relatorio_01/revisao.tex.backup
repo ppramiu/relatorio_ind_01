@@ -1,0 +1,15 @@
+\begin{itemize}
+	\item Revisar C
+	\item Estudar MPI e PETSC
+	\item Instalar e configurar MPI e PETSC ('pet-see')
+	\item Primeiros exemplos utilizando PETSC;  
+	\item Leituras iniciais sobre turbulência
+	\item Revisão sobre Mecância dos Fluídos
+	\item 
+	\item Revisão sobre Volumes Finitos
+	\item Implementações iniciais
+\end{itemize}
+
+\section{Instalação e Configuração do PETSC}
+  Esta seção é breve e tem como objetivo auxiliar na instalação e configuração do pacote de ferramentas PETSC, seguindo o manual do software. Informações adicionais podem ser obtidas diretamente no site do desenvolvedor da ferramenta: \url{https://www.mcs.anl.gov/petsc/}. 
+  
