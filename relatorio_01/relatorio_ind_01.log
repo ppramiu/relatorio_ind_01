@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.11)  25 MAR 2017 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.11)  26 MAR 2017 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -192,16 +192,49 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count106
+\calc@Bcount=\count107
+\calc@Adimen=\dimen128
+\calc@Bdimen=\dimen129
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count108
+\calc@Cskip=\skip54
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count109
+\l_MT_multwidth_dim=\dimen130
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen131
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen132
+\l_MT_above_intertext_sep=\dimen133
+\l_MT_below_intertext_sep=\dimen134
+\l_MT_above_shortintertext_sep=\dimen135
+\l_MT_below_shortintertext_sep=\dimen136
+)
 (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip52
-\fb@frw=\dimen128
-\fb@frh=\dimen129
-\FrameRule=\dimen130
-\FrameSep=\dimen131
+\OuterFrameSep=\skip56
+\fb@frw=\dimen137
+\fb@frh=\dimen138
+\FrameRule=\dimen139
+\FrameSep=\dimen140
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen132
+\bigstrutjot=\dimen141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
@@ -252,23 +285,23 @@ Package epstopdf Warning: No graphics package `graphic{s,x}' loaded.
 
 )) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
-\c@tracingmulticols=\count106
+\c@tracingmulticols=\count110
 \mult@box=\box30
-\multicol@leftmargin=\dimen133
-\c@unbalance=\count107
-\c@collectmore=\count108
-\doublecol@number=\count109
-\multicoltolerance=\count110
-\multicolpretolerance=\count111
-\full@width=\dimen134
-\page@free=\dimen135
-\premulticols=\dimen136
-\postmulticols=\dimen137
-\multicolsep=\skip53
-\multicolbaselineskip=\skip54
+\multicol@leftmargin=\dimen142
+\c@unbalance=\count111
+\c@collectmore=\count112
+\doublecol@number=\count113
+\multicoltolerance=\count114
+\multicolpretolerance=\count115
+\full@width=\dimen143
+\page@free=\dimen144
+\premulticols=\dimen145
+\postmulticols=\dimen146
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
 \partial@page=\box31
 \last@line=\box32
-\maxbalancingoverflow=\dimen138
+\maxbalancingoverflow=\dimen147
 \mult@rightbox=\box33
 \mult@grightbox=\box34
 \mult@gfirstbox=\box35
@@ -290,21 +323,21 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \@tempa=\box51
 \@tempa=\box52
 \@tempa=\box53
-\c@columnbadness=\count112
-\c@finalcolumnbadness=\count113
-\last@try=\dimen139
-\multicolovershoot=\dimen140
-\multicolundershoot=\dimen141
+\c@columnbadness=\count116
+\c@finalcolumnbadness=\count117
+\last@try=\dimen148
+\multicolovershoot=\dimen149
+\multicolundershoot=\dimen150
 \mult@nat@firstbox=\box54
 \colbreak@box=\box55
-\mc@col@check@num=\count114
+\mc@col@check@num=\count118
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box56
-\sift@deathcycles=\count115
-\@vwid@loff=\dimen142
-\@vwid@roff=\dimen143
+\sift@deathcycles=\count119
+\@vwid@loff=\dimen151
+\@vwid@roff=\dimen152
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
@@ -316,7 +349,7 @@ Package color Info: Driver file: pdftex.def on input line 143.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count116
+\Gread@gobject=\count120
 ))
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -355,29 +388,29 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip55
-\subfigcapskip=\skip56
-\subfigcaptopadj=\dimen144
-\subfigbottomskip=\skip57
-\subfigcapmargin=\dimen145
-\subfiglabelskip=\skip58
-\c@subfigure=\count117
-\c@lofdepth=\count118
-\c@subtable=\count119
-\c@lotdepth=\count120
+\subfigtopskip=\skip59
+\subfigcapskip=\skip60
+\subfigcaptopadj=\dimen153
+\subfigbottomskip=\skip61
+\subfigcapmargin=\dimen154
+\subfiglabelskip=\skip62
+\c@subfigure=\count121
+\c@lofdepth=\count122
+\c@subtable=\count123
+\c@lotdepth=\count124
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip59
-\subfig@bottom=\skip60
+\subfig@top=\skip63
+\subfig@bottom=\skip64
 )
 (/usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
-\nomlabelwidth=\dimen146
-\nom@tempdim=\dimen147
-\nomitemsep=\skip61
+\nomlabelwidth=\dimen155
+\nom@tempdim=\dimen156
+\nomitemsep=\skip65
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
@@ -391,60 +424,47 @@ LaTeX Info: Redefining \_ on input line 43.
 Writing nomenclature file relatorio_ind_01.nlo
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count121
+\linenopenalty=\count125
 \output=\toks30
-\linenoprevgraf=\count122
-\linenumbersep=\dimen148
-\linenumberwidth=\dimen149
-\c@linenumber=\count123
-\c@pagewiselinenumber=\count124
-\c@LN@truepage=\count125
-\c@internallinenumber=\count126
-\c@internallinenumbers=\count127
-\quotelinenumbersep=\dimen150
-\bframerule=\dimen151
-\bframesep=\dimen152
+\linenoprevgraf=\count126
+\linenumbersep=\dimen157
+\linenumberwidth=\dimen158
+\c@linenumber=\count127
+\c@pagewiselinenumber=\count128
+\c@LN@truepage=\count129
+\c@internallinenumber=\count130
+\c@internallinenumbers=\count131
+\quotelinenumbersep=\dimen159
+\bframerule=\dimen160
+\bframesep=\dimen161
 \bframebox=\box57
 LaTeX Info: Redefining \\ on input line 3056.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen153
-\lightrulewidth=\dimen154
-\cmidrulewidth=\dimen155
-\belowrulesep=\dimen156
-\belowbottomsep=\dimen157
-\aboverulesep=\dimen158
-\abovetopsep=\dimen159
-\cmidrulesep=\dimen160
-\cmidrulekern=\dimen161
-\defaultaddspace=\dimen162
-\@cmidla=\count128
-\@cmidlb=\count129
-\@aboverulesep=\dimen163
-\@belowrulesep=\dimen164
-\@thisruleclass=\count130
-\@lastruleclass=\count131
-\@thisrulewidth=\dimen165
+\heavyrulewidth=\dimen162
+\lightrulewidth=\dimen163
+\cmidrulewidth=\dimen164
+\belowrulesep=\dimen165
+\belowbottomsep=\dimen166
+\aboverulesep=\dimen167
+\abovetopsep=\dimen168
+\cmidrulesep=\dimen169
+\cmidrulekern=\dimen170
+\defaultaddspace=\dimen171
+\@cmidla=\count132
+\@cmidlb=\count133
+\@aboverulesep=\dimen172
+\@belowrulesep=\dimen173
+\@thisruleclass=\count134
+\@lastruleclass=\count135
+\@thisrulewidth=\dimen174
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count132
-\calc@Bcount=\count133
-\calc@Adimen=\dimen166
-\calc@Bdimen=\dimen167
-\calc@Askip=\skip62
-\calc@Bskip=\skip63
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count134
-\calc@Cskip=\skip64
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
@@ -466,38 +486,38 @@ File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 95.
 )
-\Gin@req@height=\dimen168
-\Gin@req@width=\dimen169
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
 )
-\AM@pagewidth=\dimen170
-\AM@pageheight=\dimen171
+\AM@pagewidth=\dimen177
+\AM@pageheight=\dimen178
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box58
 \AM@toc@title=\toks31
-\c@AM@survey=\count135
+\c@AM@survey=\count136
 \AM@templatesizebox=\box59
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count136
+\lst@mode=\count137
 \lst@gtempboxa=\box60
 \lst@token=\toks32
-\lst@length=\count137
-\lst@currlwidth=\dimen172
-\lst@column=\count138
-\lst@pos=\count139
-\lst@lostspace=\dimen173
-\lst@width=\dimen174
-\lst@newlines=\count140
-\lst@lineno=\count141
-\lst@maxwidth=\dimen175
+\lst@length=\count138
+\lst@currlwidth=\dimen179
+\lst@column=\count139
+\lst@pos=\count140
+\lst@lostspace=\dimen180
+\lst@width=\dimen181
+\lst@newlines=\count141
+\lst@lineno=\count142
+\lst@maxwidth=\dimen182
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count142
-\lst@skipnumbers=\count143
+\c@lstnumber=\count143
+\lst@skipnumbers=\count144
 \lst@framebox=\box61
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -550,14 +570,14 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen176
-\Hy@linkcounter=\count144
-\Hy@pagecounter=\count145
+\@linkdim=\dimen183
+\Hy@linkcounter=\count145
+\Hy@pagecounter=\count146
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count146
+\Hy@SavedSpaceFactor=\count147
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -571,12 +591,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count147
+\c@Hy@tempcnt=\count148
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen177
-\Fld@menulength=\count148
-\Field@Width=\dimen178
-\Fld@charsize=\dimen179
+\XeTeXLinkMargin=\dimen184
+\Fld@menulength=\count149
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -586,47 +606,51 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count149
-\c@Item=\count150
-\c@Hfootnote=\count151
+\Hy@abspage=\count150
+\c@Item=\count151
+\c@Hfootnote=\count152
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count152
-\c@bookmark@seq@number=\count153
+\Fld@listcount=\count153
+\c@bookmark@seq@number=\count154
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip65
+\Hy@SectionHShift=\skip66
 )
 
 LaTeX Warning: Unused global option(s):
     [3p,times,authoryear].
 
-(./relatorio_ind_01.aux)
+(./relatorio_ind_01.aux
+
+LaTeX Warning: Label `eq:sistema_01' multiply defined.
+
+)
 \openout1 = `relatorio_ind_01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 58.
  (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -671,16 +695,16 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count154
-\scratchdimen=\dimen180
+\scratchcounter=\count155
+\scratchdimen=\dimen187
 \scratchbox=\box62
-\nofMPsegments=\count155
-\nofMParguments=\count156
+\nofMPsegments=\count156
+\nofMParguments=\count157
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count157
-\MPscratchDim=\dimen181
-\MPnumerator=\count158
-\makeMPintoPDFobject=\count159
+\MPscratchCnt=\count158
+\MPscratchDim=\dimen188
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
 \everyMPtoPDFconversion=\toks34
 )
 \AtBeginShipoutBox=\box63
@@ -692,8 +716,8 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
-\c@lstlisting=\count160
-Package hyperref Info: Link coloring ON on input line 57.
+\c@lstlisting=\count161
+Package hyperref Info: Link coloring ON on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -701,144 +725,188 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count161
+\c@section@level=\count162
 )
-LaTeX Info: Redefining \ref on input line 57.
-LaTeX Info: Redefining \pageref on input line 57.
-LaTeX Info: Redefining \nameref on input line 57.
+LaTeX Info: Redefining \ref on input line 58.
+LaTeX Info: Redefining \pageref on input line 58.
+LaTeX Info: Redefining \nameref on input line 58.
 
 (./relatorio_ind_01.out) (./relatorio_ind_01.out)
 \@outlinefile=\write4
 \openout4 = `relatorio_ind_01.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 63.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 64.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 63.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 64.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 63.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 64.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 63.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 64.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 63.
+(Font)              <14.4> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 63.
+(Font)              <10> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 63.
-LaTeX Font Info:    Try loading font information for U+msa on input line 63.
+(Font)              <7> on input line 64.
+LaTeX Font Info:    Try loading font information for U+msa on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 63.
+LaTeX Font Info:    Try loading font information for U+msb on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 63.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 63.
+(babel)             in language  on input line 64.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./relatorio_ind_01.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 2.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 2.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 2.
+(Font)              <6> on input line 4.
 )
 \tf@toc=\write5
 \openout5 = `relatorio_ind_01.toc'.
 
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 67.
- (./codigo.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 2.
-
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 7.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 67.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.7 \begin{flushleft}
-                      [1
+l.67 \chapter
+             {Introdução} [1
 
 ]
-<figuras/install_01.png, id=42, 933.4875pt x 269.005pt>
+Cap\'{\i }tulo 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 67.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 68.
+(./codigo.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [2
+
+]
+Cap\'{\i }tulo 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 2.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (25.9411pt too wide) in paragraph at lines 4--5
+[]\T1/lmss/m/n/12 Nesta se-ção se-rão apre-sen-ta-dos tam-bém al-guns re-qui-si
+-tos com-pu-ta-ci-o-nais ne-ces-sá-rios à im-ple-men-ta-ção
+ []
+
+
+Overfull \hbox (4.37288pt too wide) in paragraph at lines 4--5
+\T1/lmss/m/n/12 dos mé-to-dos nu-mé-ri-cos e re-so-lu-ção das equa-ções dis-cre
+-ti-za-das. Tam-bém será exi-bido uma in-tro-du-ção,
+ []
+
+
+Overfull \hbox (0.80867pt too wide) in paragraph at lines 4--5
+\T1/lmss/m/n/12 ins-ta-la-ção e con-fi-gu-ra-ção da bi-bli-o-teca PETSC para o 
+sis-tema Li-nux Ubuntu 16.04. PETSc (Por-ta-ble,
+ []
+
+<figuras/install_01.png, id=59, 933.4875pt x 269.005pt>
 File: figuras/install_01.png Graphic file (type png)
 
 <use figuras/install_01.png>
 Package pdftex.def Info: figuras/install_01.png used on input line 13.
 (pdftex.def)             Requested size: 338.58632pt x 97.57236pt.
 
-<figuras/install_02.png, id=45, 933.4875pt x 269.005pt>
+Overfull \hbox (2.49988pt too wide) in paragraph at lines 10--16
+\T1/lmss/m/n/12 Esse co-mando, além de con-fi-gu-rar o PETSC, tam-bém ins-tala 
+al-gu-mas fer-ra-men-tas como com-pi-la-do-res
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 17.
+[3
+
+]
+Overfull \hbox (28.82838pt too wide) in paragraph at lines 19--20
+[]\T1/lmtt/m/n/12 make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=a
+rch-linux2-c-debug all  
+ []
+
+<figuras/install_02.png, id=69, 933.4875pt x 269.005pt>
 File: figuras/install_02.png Graphic file (type png)
 
 <use figuras/install_02.png>
 Package pdftex.def Info: figuras/install_02.png used on input line 24.
 (pdftex.def)             Requested size: 338.58632pt x 97.57236pt.
 
-<figuras/install_03.png, id=47, 816.04875pt x 234.8775pt>
+Overfull \hbox (35.00339pt too wide) in paragraph at lines 30--31
+[]\T1/lmtt/m/n/12 make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=a
+rch-linux2-c-debug test  
+ []
+
+<figuras/install_03.png, id=71, 816.04875pt x 234.8775pt>
 File: figuras/install_03.png Graphic file (type png)
 
 <use figuras/install_03.png>
 Package pdftex.def Info: figuras/install_03.png used on input line 35.
 (pdftex.def)             Requested size: 338.58632pt x 97.45442pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
- [2 <./figuras/install_01.png> <./figuras/install_02.png>]
-Overfull \hbox (16.44295pt too wide) in paragraph at lines 41--42
-[]\T1/lmtt/m/n/10.95 make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARC
-H=arch-linux2-c-debug streams  
+
+Overfull \hbox (53.5284pt too wide) in paragraph at lines 41--42
+[]\T1/lmtt/m/n/12 make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=a
+rch-linux2-c-debug streams  
  []
 
-<figuras/install_04.png, id=57, 689.57625pt x 456.70625pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+[4 <./figuras/install_01.png> <./figuras/install_02.png> <./figuras/install_03.
+png>] <figuras/install_04.png, id=82, 689.57625pt x 456.70625pt>
 File: figuras/install_04.png Graphic file (type png)
 
 <use figuras/install_04.png>
 Package pdftex.def Info: figuras/install_04.png used on input line 46.
 (pdftex.def)             Requested size: 290.22107pt x 192.21252pt.
 
-<figuras/install_speedup.png, id=58, 589.20125pt x 457.71pt>
+<figuras/install_speedup.png, id=83, 589.20125pt x 457.71pt>
 File: figuras/install_speedup.png Graphic file (type png)
 
 <use figuras/install_speedup.png>
 Package pdftex.def Info: figuras/install_speedup.png used on input line 53.
 (pdftex.def)             Requested size: 290.22107pt x 225.45319pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 57.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 57.
- [3 <./figuras/install_03.png> <./figuras/install_04.png>] <figuras/install_env
-ironment.png, id=68, 867.24pt x 232.87pt>
+
+<figuras/install_environment.png, id=85, 867.24pt x 232.87pt>
 File: figuras/install_environment.png Graphic file (type png)
 
 <use figuras/install_environment.png>
@@ -846,39 +914,37 @@ Package pdftex.def Info: figuras/install_environment.png used on input line 61.
 
 (pdftex.def)             Requested size: 338.58632pt x 90.91841pt.
 
-<figuras/make_ex1.png, id=70, 797.98125pt x 405.515pt>
+Overfull \hbox (0.52252pt too wide) in paragraph at lines 58--64
+[]\T1/lmtt/m/n/12 PETSC_DIR=/home/user/Documentos/petsc-3.7.5 \T1/lmss/m/n/12 e
+ []\T1/lmtt/m/n/12 PETSC_ARCH=arch-linux2-c-debug \T1/lmss/m/n/12 com
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 64.
+[5 <./figuras/install_04.png> <./figuras/install_speedup.png>]
+<figuras/make_ex1.png, id=95, 797.98125pt x 405.515pt>
 File: figuras/make_ex1.png Graphic file (type png)
 
 <use figuras/make_ex1.png>
 Package pdftex.def Info: figuras/make_ex1.png used on input line 73.
 (pdftex.def)             Requested size: 338.58632pt x 172.06004pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 77.
- [4 <./figuras/install_speedup.png> <./figuras/install_environment.png>] <figur
-as/exec_ex1.png, id=80, 797.98125pt x 388.45125pt>
+
+<figuras/exec_ex1.png, id=97, 797.98125pt x 388.45125pt>
 File: figuras/exec_ex1.png Graphic file (type png)
 
 <use figuras/exec_ex1.png>
 Package pdftex.def Info: figuras/exec_ex1.png used on input line 80.
 (pdftex.def)             Requested size: 338.58632pt x 164.8199pt.
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 84.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 84.
+ [6 <./figuras/install_environment.png> <./figuras/make_ex1.png>]
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 87.
-
-
-LaTeX Warning: Citation `bueler:2017' on page 5 undefined on input line 88.
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 92.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 92.
-[5 <./figuras/make_ex1.png> <./figuras/exec_ex1.png>]
-
-LaTeX Warning: Reference `code:code_euler' on page 6 undefined on input line 93
-.
-
-(./codigo/code_euler.c
+ (./codigo/code_euler.c
 LaTeX Font Info:    Try loading font information for OMS+lmss on input line 3.
 LaTeX Font Info:    No file OMSlmss.fd. on input line 3.
 
@@ -887,6 +953,11 @@ LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textasteriskcentered' on input line 3.
 
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 10.
+[7 <./figuras/exec_ex1.png>]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 12.
 
@@ -897,58 +968,57 @@ Overfull \hbox (50.30856pt too wide) in paragraph at lines 23--24
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 25.
 )
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 99.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 99.
- [6]
 
-LaTeX Warning: Citation `petsc' on page 7 undefined on input line 99.
+LaTeX Warning: Citation `petsc' on page 8 undefined on input line 99.
 
 
-LaTeX Warning: Reference `code:make' on page 7 undefined on input line 99.
+LaTeX Warning: Reference `code:make' on page 8 undefined on input line 99.
 
 (./codigo/makefile
-Overfull \hbox (20.30826pt too wide) in paragraph at lines 21--22
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 13.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 13.
+ [8]
+Overfull \hbox (20.30826pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 119.
- [7]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
- [8]
+(babel)             in language  on input line 126.
+ [9]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 144.
- (./codigo/build_vector.c)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 151.
+(babel)             in language  on input line 146.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 151.
- [9] (./codigo/makefile
-Overfull \hbox (20.30826pt too wide) in paragraph at lines 21--22
+(babel)             in language  on input line 146.
+ [10] (./codigo/build_vector.c)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+ [11] (./codigo/makefile
+Overfull \hbox (20.30826pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 176.
+(babel)             in language  on input line 173.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 176.
- [10] (./codigo/build_matrix.c)
+(babel)             in language  on input line 173.
+ [12] (./codigo/build_matrix.c)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 192.
+(babel)             in language  on input line 190.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 192.
- [11]
+(babel)             in language  on input line 190.
+ [13]
 
-LaTeX Warning: Citation `bueler' on page 12 undefined on input line 203.
+LaTeX Warning: Citation `bueler' on page 14 undefined on input line 203.
 
 (./codigo/solve_linear_ksp.c
 Overfull \hbox (2.30807pt too wide) in paragraph at lines 1--3
@@ -957,15 +1027,15 @@ Overfull \hbox (2.30807pt too wide) in paragraph at lines 1--3
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 25.
-[12]) (./codigo/solve_linear_arbitrary.c
+(babel)             in language  on input line 21.
+[14])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 247.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3.
- [13]
+(babel)             in language  on input line 247.
+ [15] (./codigo/solve_linear_arbitrary.c
 Overfull \hbox (44.3085pt too wide) in paragraph at lines 17--18
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -977,65 +1047,104 @@ Overfull \hbox (74.3088pt too wide) in paragraph at lines 18--19
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 50.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 50.
-[14]
+(babel)             in language  on input line 45.
+[16]
 Overfull \hbox (32.30838pt too wide) in paragraph at lines 65--67
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][] 
  []
 
 )
-Overfull \hbox (150.10817pt too wide) in paragraph at lines 258--259
-[]\T1/lmss/m/n/10.95 Como ob-ser-vado no iní-cio do có-digo []\T1/lmtt/m/n/10.9
-5 solve_linear_arbitrary.c\T1/lmss/m/n/10.95 , cha-ma-mos  fun-ção []\T1/lmtt/m
-/n/10.95 MatGetOwnershipRange(A, &Istart, &Iend)
- []
-
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 259.
+(babel)             in language  on input line 257.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 259.
-[15]
+(babel)             in language  on input line 257.
+ [17]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 280.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 289.
- [16]
+(babel)             in language  on input line 280.
+ [18]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 297.
 
-Overfull \hbox (625.91858pt too wide) in paragraph at lines 298--299
-\T1/lmss/m/n/10.95 sis-tema li-near re-sul-tante será re-so-vido em pa-ra-lelo 
-usando um ob-jeto []\T1/lmtt/m/n/10.95 KSP \T1/lmss/m/n/10.95 [[]]. 
+
+LaTeX Warning: Reference `fig:poisson' on page 19 undefined on input line 300.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 317.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 317.
+[19]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 321.
+
+
+LaTeX Warning: Reference `fig:poisson_grid' on page 20 undefined on input line 
+322.
+
+
+LaTeX Warning: Reference `fig:poisson_grid' on page 20 undefined on input line 
+322.
+
+
+LaTeX Warning: Reference `fig:poisson_grid' on page 20 undefined on input line 
+329.
+
+
+LaTeX Warning: Reference `fig:poisson_grid_4_mpi' on page 20 undefined on input
+ line 333.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 334.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 334.
+[20] (./codigo/poisson_fd_2d.c)
+
+LaTeX Warning: Reference `fig:stencil' on page 21 undefined on input line 337.
+
+
+Overfull \hbox (15.82126pt too wide) in paragraph at lines 337--338
+\T1/lmss/m/n/12 ar-gu-men-tos são do tipo []\T1/lmtt/m/n/12 DM_BOUNDARY_NONE \T
+1/lmss/m/n/12 pois as con-di-ções de Di-ri-ch-let não pre-ci-sam de co-mu-ni-ca
+-ção
  []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 339.
+
+LaTeX Warning: Reference `fig:3.8' on page 21 undefined on input line 358.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 359.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 359.
+[21]
+
+LaTeX Warning: Reference `fig:3.8' on page 22 undefined on input line 360.
 
 ) (./relatorio_ind_01.bbl
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [17]
-Overfull \hbox (303.20337pt too wide) in paragraph at lines 10--16
-[]
- []
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
+ [22])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 79.
- [18
+(babel)             in language  on input line 80.
+ [23
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
  (./relatorio_ind_01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
 Package rerunfilecheck Info: File `relatorio_ind_01.out' has not changed.
-(rerunfilecheck)             Checksum: 559834B5A986557DCCD4748FE4E704BE;314.
+(rerunfilecheck)             Checksum: 038454F2A2A85C81A1F1E19B4D2CB32A;501.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1043,33 +1152,38 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 80.
  ) 
 Here is how much of TeX's memory you used:
- 11715 strings out of 493029
- 173686 string characters out of 6136234
- 299368 words of memory out of 5000000
- 14681 multiletter control sequences out of 15000+600000
- 76267 words of font info for 72 fonts, out of 8000000 for 9000
+ 12256 strings out of 493029
+ 183108 string characters out of 6136234
+ 308463 words of memory out of 5000000
+ 15173 multiletter control sequences out of 15000+600000
+ 85836 words of font info for 77 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 42i,7n,49p,1177b,1750s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+ 42i,17n,49p,1182b,1814s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmtt10.pfb>
-Output written on relatorio_ind_01.pdf (19 pages, 821873 bytes).
+s/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmtt12.pfb>
+Output written on relatorio_ind_01.pdf (24 pages, 742677 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 476 compressed objects within 5 object streams
- 291 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 614 PDF objects out of 1000 (max. 8388607)
+ 550 compressed objects within 6 object streams
+ 321 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,48 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: relatorio_ind_01.aux
 The style file: elsarticle-harv.bst
 Database file #1: bibliografia.bib
-Warning--I didn't find a database entry for "bueler:2017"
 Warning--I didn't find a database entry for "petsc"
 Warning--I didn't find a database entry for "bueler"
-You've used 1 entry,
+You've used 2 entries,
             2821 wiz_defined-function locations,
-            641 strings with 5078 characters,
-and the built_in function-call counts, 1083 in all, are:
-= -- 71
-> -- 139
-< -- 1
-+ -- 52
-- -- 51
-* -- 127
-:= -- 217
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 22
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 18
-empty$ -- 25
-format.name$ -- 54
-if$ -- 182
+            645 strings with 4875 characters,
+and the built_in function-call counts, 802 in all, are:
+= -- 76
+> -- 37
+< -- 2
++ -- 14
+- -- 12
+* -- 61
+:= -- 155
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 13
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 34
+empty$ -- 57
+format.name$ -- 16
+if$ -- 156
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 11
-num.names$ -- 4
-pop$ -- 22
+missing$ -- 2
+newline$ -- 14
+num.names$ -- 8
+pop$ -- 16
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 12
 quote$ -- 0
-skip$ -- 12
+skip$ -- 26
 stack$ -- 0
-substring$ -- 11
-swap$ -- 3
+substring$ -- 22
+swap$ -- 4
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 9
+type$ -- 15
 warning$ -- 0
-while$ -- 3
+while$ -- 6
 width$ -- 0
-write$ -- 18
-(There were 3 warnings)
+write$ -- 28
+(There were 2 warnings)

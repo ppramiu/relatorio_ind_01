@@ -1,0 +1,1 @@
+  $ ./configure --with-cc=gcc --with-cxx=g++ --with-X=1 --with-fc=gfortran --download-mpich --download-fblaslapack

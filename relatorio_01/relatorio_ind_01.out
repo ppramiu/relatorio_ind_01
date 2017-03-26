@@ -1,4 +1,7 @@
-\BOOKMARK [1][-]{section.0.1}{Instalação e Configuração do PETSC}{}% 1
-\BOOKMARK [1][-]{section.0.2}{Primeiros exemplos com PETSC}{}% 2
-\BOOKMARK [2][-]{subsection.0.2.1}{Objetos do tipo vetores e matrizes em PETSC}{section.0.2}% 3
-\BOOKMARK [1][-]{section.0.3}{A equação de Poisson em uma malha estruturada}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Introdução}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Instalação e Configuração do PETSC}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Primeiros exemplos com PETSC}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Objetos do tipo vetores e matrizes em PETSC}{section.2.1}% 4
+\BOOKMARK [1][-]{section.2.2}{A equação de Poisson em uma malha estruturada}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.3}{Geração da malha}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.4}{Diferenças finitas}{chapter.2}% 7
