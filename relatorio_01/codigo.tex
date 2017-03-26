@@ -294,8 +294,9 @@ Como esperado, o tempo de execução caiu de 17 para 5 segundos, indicando um spee
   546546
 \end{equation}
 
-\section{A equaçã de Poisson em uma malha estruturada}
-Esta seção é dedicada a resolução numérica do problema de Poisson em um quadrado. Este é um problema que permite compreender partes essenciais  da implementação de códigos empregando a biblioteca PETSc. A discretização da EDP gera um sistema linear que é mais interessante do que o sistema tridiagonal que foi resolvido anteriormente. Será construiída uma malha estruturada usando um objeto \verb|DMDA|, que será introduzido nesta  seção, e depois será montada uma matriz em paralelo com base nessa malha. Por último o sistema linear resultante será resovido em paralelo usando um objeto \verb|KSP|.
+\section{A equação de Poisson em uma malha estruturada}
+Esta seção é dedicada a resolução numérica do problema de Poisson em um quadrado. Este é um problema que permite compreender partes essenciais  da implementação de códigos empregando a biblioteca PETSc. A discretização da EDP gera um sistema linear que é mais interessante do que o sistema tridiagonal que foi resolvido anteriormente. Será construiída uma malha estruturada usando um objeto \verb|DMDA|, que será introduzido nesta  seção, e depois será montada uma matriz em paralelo com base nessa malha. Por último o sistema linear resultante será resovido em paralelo usando um objeto \verb|KSP| \cite{petsc-user-ref}.
+
 
 
 

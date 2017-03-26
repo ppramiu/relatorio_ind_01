@@ -1,0 +1,5 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {0.1}Instalação e Configuração do PETSC}{1}{section.0.1}
+\contentsline {section}{\numberline {0.2}Primeiros exemplos com PETSC}{5}{section.0.2}
+\contentsline {subsection}{\numberline {0.2.1}Objetos do tipo vetores e matrizes em PETSC}{9}{subsection.0.2.1}
+\contentsline {section}{\numberline {0.3}A equação de Poisson em uma malha estruturada}{17}{section.0.3}

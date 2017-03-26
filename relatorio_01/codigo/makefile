@@ -5,6 +5,11 @@ code_euler: code_euler.o  chkopts
 	-${CLINKER} -o code_euler code_euler.o  ${PETSC_LIB}
 	${RM} code_euler.o
 
+build_vector_01: build_vector_01.o  chkopts
+	-${CLINKER} -o build_vector_01 build_vector_01.o  ${PETSC_LIB}
+	${RM} build_vector_01.o
+
+
 build_vector: build_vector.o  chkopts
 	-${CLINKER} -o build_vector build_vector.o  ${PETSC_LIB}
 	${RM} build_vector.o
