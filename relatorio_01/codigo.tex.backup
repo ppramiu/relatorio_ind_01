@@ -363,18 +363,18 @@ Como exemplo, a seguir será construído o sistema de equações para o caso da malh
   \label{eq:sistema_01}
     \left[
     \begin{array}{cccccccccccc}
-     1 &  &  &  & & & & & & & & \\
-      &1  &  &  & & & & & & & & \\
-      &  &1  &  & & & & & & & & \\
-      &  &  &1  & & & & & & & & \\
-      &  &  &  &1 & & & & & & & \\
-      & c &  &  &b &a &b & & &c & & \\
-      &  &c  &  & &b &a &b & & &c & \\
-      &  &  &  & & & &1 & & & & \\
-      &  &  &  & & & & &1 & & & \\
-      &  &  &  & & & & & &1 & & \\
-      &  &  &  & & & & & & &1 & \\
-      &  &  &  & & & & & & & &1      
+      1 & & & & & & & & & & & \\
+      &1& & & & & & & & & & \\
+      & &1& & & & & & & & & \\
+      & & &1& & & & & & & & \\
+      & & & &1& & & & & & & \\
+      &c& & &b&a&b& & &c& & \\
+      & &c& & &b&a&b& & &c& \\
+      & & & & & & &1& & & & \\
+      & & & & & & & &1& & & \\
+      & & & & & & & & &1& & \\
+      & & & & & & & & & &1& \\
+      & & & & & & & & & & &1      
      \end{array} 
      \right]
      \left[
@@ -408,6 +408,11 @@ Como exemplo, a seguir será construído o sistema de equações para o caso da malh
       0
      \end{array}
    \right] 
+\end{equation}
+em que $a=2/h_x^2+2/h_y^2 = 26$, $b= -1/h_x^2=-9$ e $c = -1/h_y^2=-4$. A matriz $A$ não é simétrica e seu número de condição na norma 2 é $k(A)=||A||_2||A^{-1}||_2=43.16$. Dois detalhes importantes devem ser considerados nessa primeira discretização. O primeiro é que a equação \eqref{eq:poisson_fd_2d} tem diferentes escalas ou ordem de grandeza. Por exemplo, ao tomar $m_x=m_y=1001$, tem-se $h_x=h_y=0,001$ o que resulta em coeficientes para os nodos internos do domínio da ordem de $4/0.001^2=x \times 10^6$, enquanto que os coeficientes para os nodos do contorno são iguais a 1. Para mitigar esse problema, pode multiplicar \eqref{eq:poisson_fd_2d} pela área do elemento de malha, $h_xh_y$.
+\begin{equation}
+ \label{eq:poisson_fd_2d_area}
+ 2(a+b)u_{i,j}-a(u_{i+1,j}+u_{i-1,j})-
 \end{equation}
 
 
