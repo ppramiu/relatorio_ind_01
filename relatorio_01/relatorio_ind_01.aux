@@ -50,31 +50,38 @@
 \newlabel{code:code_euler}{{2.1}{7}{Código constante de Euler}{lstlisting.2.1}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2.1}Código constante de Euler.}{7}{lstlisting.2.1}}
 \citation{petsc}
-\@writefile{lol}{\contentsline {lstlisting}{codigo/makefile}{8}{lstlisting.2.-1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Objetos do tipo vetores e matrizes em PETSC}{11}{subsection.2.1.1}}
-\@writefile{lol}{\contentsline {lstlisting}{codigo/build\textunderscore vector.c}{11}{lstlisting.2.-2}}
-\@writefile{lol}{\contentsline {lstlisting}{codigo/makefile}{12}{lstlisting.2.-3}}
-\@writefile{lol}{\contentsline {lstlisting}{codigo/build\textunderscore matrix.c}{13}{lstlisting.2.-4}}
 \citation{bueler}
 \newlabel{eq:sistema_01}{{2.2}{14}{Objetos do tipo vetores e matrizes em PETSC}{equation.2.1.2}{}}
-\@writefile{lol}{\contentsline {lstlisting}{codigo/solve\textunderscore linear\textunderscore ksp.c}{14}{lstlisting.2.-5}}
-\@writefile{lol}{\contentsline {lstlisting}{codigo/solve\textunderscore linear\textunderscore arbitrary.c}{16}{lstlisting.2.-6}}
 \citation{petsc-user-ref}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}A equação de Poisson em uma malha estruturada}{19}{section.2.2}}
-\newlabel{eq:poisson}{{2.4}{19}{A equação de Poisson em uma malha estruturada}{equation.2.2.4}{}}
-\newlabel{eq:laplaciano}{{2.5}{19}{A equação de Poisson em uma malha estruturada}{equation.2.2.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Geração da malha}{20}{section.2.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}A equação de Poisson}{19}{section.2.2}}
+\newlabel{eq:poisson}{{2.4}{19}{A equação de Poisson}{equation.2.2.4}{}}
+\newlabel{eq:laplaciano}{{2.5}{20}{A equação de Poisson}{equation.2.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Geração da malha}{20}{subsection.2.2.1}}
 \newlabel{code:code_poisson_fd_2d}{{2.2}{21}{DMDA()}{lstlisting.2.2}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2.2}DMDA()}{21}{lstlisting.2.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Diferenças finitas}{21}{section.2.4}}
-\newlabel{eq:poisson_fd_2d}{{2.6}{21}{Diferenças finitas}{equation.2.4.6}{}}
-\newlabel{eq:poisson_fd_2d_bd}{{2.7}{21}{Diferenças finitas}{equation.2.4.7}{}}
-\newlabel{eq:poisson_fd_2d_lse}{{2.8}{21}{Diferenças finitas}{equation.2.4.8}{}}
-\newlabel{eq:sistema_01}{{2.9}{22}{Diferenças finitas}{equation.2.4.9}{}}
-\newlabel{eq:poisson_fd_2d_area}{{2.10}{22}{Diferenças finitas}{equation.2.4.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Discretização em diferenças finitas}{21}{subsection.2.2.2}}
+\newlabel{eq:poisson_fd_2d}{{2.6}{21}{Discretização em diferenças finitas}{equation.2.2.6}{}}
+\newlabel{eq:poisson_fd_2d_bd}{{2.7}{21}{Discretização em diferenças finitas}{equation.2.2.7}{}}
+\newlabel{eq:poisson_fd_2d_lse}{{2.8}{21}{Discretização em diferenças finitas}{equation.2.2.8}{}}
+\newlabel{eq:sistema_01}{{2.9}{22}{Discretização em diferenças finitas}{equation.2.2.9}{}}
+\newlabel{eq:poisson_fd_2d_area}{{2.10}{22}{Discretização em diferenças finitas}{equation.2.2.10}{}}
+\newlabel{eq:sistema_02}{{2.11}{23}{Discretização em diferenças finitas}{equation.2.2.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Montagem da matriz em PETSc}{23}{subsection.2.2.3}}
+\newlabel{code:formMatrix}{{2.3}{23}{formMatrix()}{lstlisting.2.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.3}formMatrix()}{23}{lstlisting.2.3}}
+\citation{briggs:2000}
+\citation{bueler:2017}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Um problema particular}{25}{subsection.2.2.4}}
+\newlabel{eq:poisson_an}{{2.12}{25}{Um problema particular}{equation.2.2.12}{}}
+\newlabel{eq:poisson_laplacian}{{2.13}{25}{Um problema particular}{equation.2.2.13}{}}
+\newlabel{code:formExact}{{2.4}{25}{formExact()}{lstlisting.2.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.4}formExact()}{25}{lstlisting.2.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Resolução do sistema de equações}{26}{subsection.2.2.5}}
+\newlabel{code:solve}{{2.5}{26}{formExact()}{lstlisting.2.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.5}formExact()}{26}{lstlisting.2.5}}
 \bibstyle{elsarticle-harv}
 \citation{*}
 \bibdata{bibliografia}
-\newlabel{eq:sistema_01}{{2.11}{23}{Diferenças finitas}{equation.2.4.11}{}}
 \bibcite{petsc-user-ref}{Balay et~al.(2016)Balay, Abhyankar, and Smith}
 \bibcite{bueler:2017}{Bueler(2018)}

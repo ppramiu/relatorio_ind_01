@@ -294,7 +294,7 @@ Como esperado, o tempo de execução caiu de 17 para 5 segundos, indicando um spee
   546546
 \end{equation}
 
-\section{A equação de Poisson em uma malha estruturada}
+\section{A equação de Poisson}
 Esta seção é dedicada a resolução numérica do problema de Poisson em um quadrado. Este é um problema que permite compreender partes essenciais  da implementação de códigos empregando a biblioteca PETSc. A discretização da EDP gera um sistema linear que é mais interessante do que o sistema tridiagonal que foi resolvido anteriormente. Será construiída uma malha estruturada usando um objeto \verb|DMDA|, que será introduzido nesta  seção, e depois será montada uma matriz em paralelo com base nessa malha. Por último o sistema linear resultante será resovido em paralelo usando um objeto \verb|KSP| \cite{petsc-user-ref}.
 
 Neste exemplo a equação de Poisson será resolvida numa região quadrada aberta, $S, (0,1)\times(0,1)$ cujo contorno é representado por $\partial S$. O problema é ilustrado na Figura \ref{fig:poisson} e formulado em \eqref{eq:poisson}.
@@ -318,7 +318,7 @@ e aparece com frequência em modelos matemáticos que expressam a conservação de a
 O problema de Poisson pode modelar o potencial eletrostático, a distribuição de equilíbrio de certas caminhos aleatórios ou vários outros  fenômenos físicos. Para um exemplo, a condução de calor em sólidos segue a lei de Fourier, que diz que o fluxo de calor é $q = -k\nabla u$, onde $k$ é a condutividade térmica. A conservação da energia diz que $c\rho \partial u / \partial t = -\nabla \cdot q + f$ se $f$ representa uma fonte de calor no interior do domínio. O coeficiente $c\rho$ parametriza a capacidade do material para manter o calor por um ganho de temperatura. Se $k$ é constante, então em estado estacionário essas condições resultam na equação de Poisson $ 0 = k \nabla^2 u + f$. Mantendo a temperatura nula
 ao longo do limite da região (contorno), tem-se o problema \eqref{eq:poisson}, que será resolvido numericamente através do método de diferenças finitas.
  
-\section{Geração da malha}
+\subsection{Geração da malha}
 O método de diferenças finitias é desenvolvido sobre uma malha composta por $m_xm_y$ pontos igualmente espaçados, como ilustrado na Figura \ref{fig:poisson_grid}, cujo espaçamento na direção $x$ é especificado por $h_x = 1/(m_x-1)$ e por $h_y = 1/(m_y-1)$ na direção $y$. Considerando a malha da Figura \ref{fig:poisson_grid} em $m_x=5$ e $m_y=7$, as coordenadas da malha são $(x_i = ih_x, y_j=j h_y)$, para $i=0,...,m_x-1$ e $j=0,...,m_y-1$.
 
 Para construção dessa malha 2D de forma distribuida em processos MPI, utiliza-se um novo objeto PETSc que cria uma instância do tipo PETSc \texttt{DM} para descrever a topologia (conexão) da malha, a forma como ela é distribuída através de processos MPI e a forma como cada processo pode acessar dados de seus processos vizinhos. Este caso específico aqui é um \texttt{DMDA}, que é uma sub-classe de \texttt{DM}. A designação \texttt{DM}" pode significar ``distributed mesh'' ou ''domain management'', e \texttt{DA} significa ``distributed array''. Ao executar os comandos abaixo:
@@ -336,7 +336,7 @@ então a biblioteca PETSc faz o equilíbrio de carga para os pontos da malha entre
 
 No Código \ref{code:code_poisson_fd_2d}, o primeiro argumento é referente ao comunicador. O segundo e terceiro argumentos são do tipo \verb|DM_BOUNDARY_NONE| pois as condições de Dirichlet não precisam de comunicação para o próximo processo. No quarto argumento, escolhe-se o método \verb|DMDA_STENCIL_STAR| porque somente os vizinhos cardeais de um ponto da malha são usados na discretização. A Figura \ref{fig:stencil} mostra seu stencil computacional. Os dois argumentos \verb|PETSC_DECIDE| depois disso dão ao \texttt{PETSc} autonomia para distribuir a malha sobre os processos de acordo com a quantidade de processos no comunicador MPI usando a lógica interna PETSc. Os dois argumentos seguintes, na nona e décima posições, dizem que nossa PDE é escalar, com grau de liberda igual a 1 (dof = 1) e que o método de diferenças finitas só precisará de um vizinho em cada direção (s = 1). Os próximos dois argumentos depois disso são NULL porque não estamos dizendo PETSc quaisquer detalhes sobre como distribuir processos sobre a malha. Finalmente, o objeto \texttt{DMDA} é retornado através de um argumento ponteiro.
 
-\section{Diferenças finitas}
+\subsection{Discretização em diferenças finitas}
 Considerando uma discretização da equação \eqref{eq:poisson} em diferenças finitas, ela pode ser escrita como:
 \begin{equation}
   \label{eq:poisson_fd_2d}
@@ -417,10 +417,10 @@ O primeiro é que a equação \eqref{eq:poisson_fd_2d} tem diferentes escalas ou or
 \end{equation}
 em que $a = h_y/h_x$ e $b=h_x/h_y$. 
 
-Em segundo, as equações de diferenças finitas podem ser reescritas para formar uma matriz simétrica A. Por exemplo, em um ponto de malha adjacente ao limite esquerdo do domínio, o caso $i = 1$ de  \eqref{eq:poisson_fd_2d_area}, o valor de localização da incógnita $u_{0,j}$ aparece na equação. A matriz do sistema linear será simétrica ao mover tais valores para o vetor do lado direito $\boldsymbol{b}$. Isso é possível pois o valor $u_{0,j}$ é explicitado pelas condições de contorno. Isso converte as entradas das sub-diagonais  de A para zero nas colunas correspondentes aos valores de contorno conhecidos. Desta forma, pode-se resolver o sistema de equações por meio de álgebra linear mais eficientes, como gradientes conjugados, KSP e pré-condicionadores de Cholesky. Ao realizar estas duas alterações no sistema linear   \eqref{eq:sistema_01}, tem-se:
+Em segundo, as equações de diferenças finitas podem ser reescritas para formar uma matriz simétrica A. Por exemplo, em um ponto de malha adjacente ao limite esquerdo do domínio, o caso $i = 1$ de  \eqref{eq:poisson_fd_2d_area}, o valor de localização da incógnita $u_{0,j}$ aparece na equação. A matriz do sistema linear será simétrica ao mover tais valores para o vetor do lado direito $\boldsymbol{b}$. Isso é possível pois o valor $u_{0,j}$ é explicitado pelas condições de contorno. Isso converte as entradas das sub-diagonais  de A para zero nas colunas correspondentes aos valores de contorno conhecidos. Desta forma, pode-se resolver o sistema de equações por meio de álgebra linear mais eficientes, como gradientes conjugados, KSP e pré-condicionadores de Cholesky. Ao realizar estas duas alterações no sistema linear \eqref{eq:sistema_01}, tem-se:
 
 \begin{equation}
-  \label{eq:sistema_01}
+  \label{eq:sistema_02}
     \left[
     \begin{array}{cccccccccccc}
       1 & & & & & & & & & & & \\
@@ -471,7 +471,46 @@ Em segundo, as equações de diferenças finitas podem ser reescritas para formar u
 \end{equation}
 em que $\alpha=2(h_x/h_y + h_y/h_x) = 13/3$, $\beta = -h_y/h_x=-3/2$. A nova matriz $A$ é simétrica e positiva definida, está melhor escalada que antes e tem um número de condição $k(A) = 5.83$.
 
+\subsection{Montagem da matriz em PETSc}
+A função denominada \verb|formMatrix()| no Código \ref{code:formMatrix} é responsável pela montagem da matriz $A$ do sistema linear \eqref{eq:sistema_02}.
+
+\lstinputlisting[label=code:formMatrix,linerange={6-45},language=C,caption=formMatrix()]{codigo/poisson_fd_2d.c}
+
+A variável \verb|DMDALocalInfo info| declarada no Código \ref{code:formMatrix} precisa de uma descrição especial. Ela é uma estrutura de inteiros em C, definida pela biblioteca PETSc, e serve para  descrever tanto o tamanho da malha global como a extensão das submalhas locais. A extensão da malha global está nos membros \verb|info.mx| e \verb|info.my|. Os processos locais possem sub-malhas rectangulares com dimensão \verb|info.xm| e \verb|info.ym|, com um intervalo de índices locais em duas dimensões da forma:
+\begin{center}
+ \texttt{info.xs} $\leq i \leq $ \texttt{info.xs + info.xm -1}\\
+ \texttt{info.ys} $\leq j \leq $ \texttt{info.ys + info.ym -1}
+\end{center}
+Para melhor compreensão, considere a malha da Figura ????3.3, em que \verb|info.mx|=5 e \verb|info.my|=7. Ao considerar o caso em que são empregados 4 processos MPI, tem-se que os processos com rank 0 e 2 têm \verb|info.xs|=0 e \verb|info.xm|=3, por outro lado, os processos com rank 1 e 3 têm \verb|info.xs|=3 e \verb|info.xm|=2, respectivamente. Para a coordenada $j$, os processos com rank 0 e 1 têm \verb|info.ys|=0 e \verb|info.ym|=4, por outro lado, os processos com rank 2 e 3 têm \verb|info.ys|=4 e \verb|info.xm|=3, respectivamente. Com esses índices, é possível montar a matriz bidimensional em paralelo.
+
+Em particular, os índices locais $(i, j)$ podem ser usados para inserir entradas na \verb|Mat A|. No Código \ref{code:formMatrix}, vemos um uso de \verb|MatSetValuesStencil()| para cada ponto da malha  local. Para um ponto interior genérico, este comando insere cinco coeficientes na matriz, cuja  estrutura de dados é do tipo \verb|MatStencil|, que é uma estrutura da biblioteca PETSc que apresenta quatro valores inteiros, $k,j,i,c$. No caso 2D, com um único grau de liberdade em cada nodo, usamos apenas os membros $i$ e $j$ da estrutura  \verb|MatStencil|. A partir de \eqref{eq:poisson_fd_2d_area}, as entradas da matriz são $a_{i,i} = 2 (h_y / h_x + h_x / h_y)$ na diagonal e $a_{i,j} = -h_y / h_x$ ou $a_{i,j} = - h_x / h_y$ para as diagonais secundárias.
+
+% Ainda considerando o Código \ref{code:formMatrix}, a variável \verb|MAT A| montado por \verb|formMatrix()| tem intervalos de linhas pertencentes a cada processo, o layout paralelo padrão MATMPIAIJ de objetos Mat no PETSc (Capítulo 1). No entanto, como trabalhamos com a subgrid de propriedade local usando índices (i, j), podemos ignorar o layout real de um Mat e concentrar-nos apenas na parte da grade pertencente ao processo, em vez de nos preocuparmos com a própria matriz.
 
 
+figura............ 3.9
 
 
+\subsection{Um problema particular}
+Neste seção, será especificado uma função $u(x,y)$ para que o problema de Poisson tenha uma solução exata e cuidando para que ela satisfaça as condições de contorno de Dirichlet homogêneas ($u = 0$ ao longo de $\partial S)$:
+\begin{equation}
+ \label{eq:poisson_an}
+ u(x,y)=(x^2-x^4)(y^4-y^2)
+\end{equation}
+Cujo laplaciano é igual a $f = - \nabla^2u$:
+\begin{equation}
+ \label{eq:poisson_laplacian}
+ f(x,y) = 2(1-6x^2)y^2(1-y^2)+2(1-6y^2)x^2(1-x^2)
+\end{equation}
+A expressão \eqref{eq:poisson_an} será referenciada como solução exata, $u_{ex}$ a partir de agora. Este mesmo problema é ilustrado no capítulo 4 \cite{briggs:2000} e em \cite{bueler:2017},
+
+O Código \ref{code:formExact} mostra como a solução exata é implementado na função \verb|formExact()|, e mostra como  \eqref{eq:poisson_laplacian} é implementada na função  \verb|formRHS()|. Os cálculos nestes códigos usam apenas coordenadas da malha local $(i, j)$. Ou seja, a aritmética de ponteiros PETSc permite indexar as arrays que obtemos de \verb|DMDAVecGetArray()| usando as coordenadas da malha $i$ e $j$, sem conhecer os índices das incógnitas no \verb|Vec u|, considerado como vetor de coluna de comprimento $L = m_x m_y$. Ao terminar de construir os vetores, restaura-se as arrays chamando a função \verb| DMDAVecRestoreArray()|.
+
+\lstinputlisting[label=code:formExact,linerange={49-93},language=C,caption=formExact()]{codigo/poisson_fd_2d.c}
+
+\subsection{Resolução do sistema de equações}
+O Código \ref{code:solve}  mostra os vários objetos necessários para resolver o problema de Poisson, um \verb|DM|, um \verb|Mat| e três \verb|Vec|. Um objeto \verb|DM| pode calcular tamanhos de matriz e vetor a partir das dimensões da malha, o que acontece quando chamamos \verb|DMCreateMatrix()| e \verb|DMCreateGlobalVector()| para criar objetos \verb|Mat| e \verb|Vec|, respectivamente. Então chamamos as funções mostradas nos Códigos \ref{code:formMatrix} e \ref{code:formExact} para montar a matriz e vetores.
+
+\lstinputlisting[label=code:solve,linerange={97-148},language=C,caption=formExact()]{codigo/poisson_fd_2d.c}
+
+O sistema linear é resolvido por um objeto de solução linear KSP. No Código \ref{code:solve} criamos e contamos sobre Mat A através de uma chamada para KSPSetOperators (). Existem duas formas de utilização de A, nomeadamente a matriz do sistema e o "material" a partir do qual o preconicionador é construído, e isto explica por que A aparece como dois argumentos de KSPSetOperators (). Também chamamos KSPSetFromOptions () para que possamos alterar o tipo de KSP no tempo de execução (ilustrado abaixo). O sistema é resolvido chamando KSPSolve (). Então calculamos e relatamos o erro numérico k u - u ex k. Finalmente, destruímos objetos e chamamos PetscFinalize ().

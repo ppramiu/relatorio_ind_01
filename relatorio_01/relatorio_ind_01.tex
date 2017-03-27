@@ -15,6 +15,7 @@
 \usepackage{multicol} 
 \usepackage{varwidth}
 \usepackage{color}
+\usepackage{xcolor}
 \usepackage{lmodern}
 \renewcommand*\familydefault{\sfdefault}
 \usepackage{subfigure}
@@ -32,7 +33,41 @@
 \usepackage{multirow}
 \usepackage{pdfpages}
 \usepackage{listings}
-\lstset{basicstyle=\footnotesize,language=C,frame=lines}
+\lstset{
+  language=C,                % choose the language of the code
+  numbers=left,                   % where to put the line-numbers
+  stepnumber=1,                   % the step between two line-numbers.        
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=true,         % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  }
+  
+% \lstdefinestyle{customc}{
+%   belowcaptionskip=1\baselineskip,
+%   breaklines=true,
+%   frame=L,
+%   xleftmargin=\parindent,
+%   language=C,
+%   showstringspaces=false,
+%   basicstyle=\footnotesize\ttfamily,
+%   keywordstyle=\bfseries\color{green!40!black},
+%   commentstyle=\itshape\color{purple!40!black},
+%   identifierstyle=\color{blue},
+%   stringstyle=\color{orange},
+% }
+
 % \usepackage{minted}
 %\journal{Applied Numerical Mathematics}
 \newcommand{\red}[1]{\textcolor{red}{#1}}

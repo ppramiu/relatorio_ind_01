@@ -5,9 +5,10 @@ The style file: elsarticle-harv.bst
 Database file #1: bibliografia.bib
 Warning--I didn't find a database entry for "petsc"
 Warning--I didn't find a database entry for "bueler"
+Warning--I didn't find a database entry for "briggs:2000"
 You've used 2 entries,
             2821 wiz_defined-function locations,
-            645 strings with 4875 characters,
+            646 strings with 4886 characters,
 and the built_in function-call counts, 802 in all, are:
 = -- 76
 > -- 37
@@ -46,4 +47,4 @@ warning$ -- 0
 while$ -- 6
 width$ -- 0
 write$ -- 28
-(There were 2 warnings)
+(There were 3 warnings)
