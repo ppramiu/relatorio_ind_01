@@ -1,17 +1,17 @@
-\chapter{Instalação e Configuração do PETSC}
-Esta seção é breve e tem como objetivo auxiliar na instalação e configuração do pacote de ferramentas PETSC, seguindo o manual do software. Informações adicionais podem ser obtidas diretamente no site do desenvolvedor da ferramenta: \url{https://www.mcs.anl.gov/petsc/}. 
+\chapter{Instalação e Configuração do PETSc}
+Esta seção tem como objetivo auxiliar na instalação e configuração do pacote de ferramentas PETSc, seguindo o manual do software. Informações adicionais podem ser obtidas diretamente no site do desenvolvedor da ferramenta: \url{https://www.mcs.anl.gov/petsc/}. 
 
-Nesta seção serão apresentados também alguns requisitos computacionais necessários à implementação dos métodos numéricos e resolução das equações discretizadas. Também será exibido uma introdução, instalação e configuração da biblioteca PETSC para o sistema Linux Ubuntu 16.04. PETSc (Portable, Extensible Toolkit for Scientific Computation), é um conjunto de estruturas de dados e rotinas para solução paralela de aplicações científicas modeladas por meio de equações diferenciais parciais. 
+Nesta seção serão apresentados também alguns requisitos computacionais necessários à implementação dos métodos numéricos e resolução das equações discretizadas. Também será exibido uma introdução, instalação e configuração da biblioteca PETSc para o sistema Linux Ubuntu 16.04. PETSc (Portable, Extensible Toolkit for Scientific Computation), é um conjunto de estruturas de dados e rotinas para solução paralela de aplicações científicas modeladas por meio de equações diferenciais parciais. 
 
-Para instalação do PETSc é necessário a realização do download da distribuição mais atual do pacote, o que pode ser obtido no link \url{https://www.mcs.anl.gov/petsc/download/index.html}. Após a obtenção do arquivo \texttt{.tar.gz} é necessário extraí-lo em alguma pasta do computador local. Isto pode ser feito por meio do terminal e empregando o comando \texttt{tar -xf petsc-3.7.5.tar.gz}. Após a extração, deve-se acessar a pasta que foi criada e que neste tutorial chama-se \texttt{/petsc-3.7.5.tar.gz} e executar o comando para configuração do PETSC: 
+Para instalação do PETSc é necessário a realização do download da distribuição mais atual do pacote, o que pode ser obtido no link \url{https://www.mcs.anl.gov/petsc/download/index.html}. Após a obtenção do arquivo \texttt{.tar.gz} é necessário extraí-lo em alguma pasta do computador local. Isto pode ser feito por meio do terminal e empregando o comando \texttt{tar -xf petsc-3.7.5.tar.gz}. Após a extração, deve-se acessar a pasta que foi criada e que neste tutorial chama-se \texttt{/petsc-3.7.5.tar.gz} e executar o comando para configuração do PETSc: 
 \begin{flushleft}
  \texttt{./configure --with-cc=gcc --with-cxx=g++ --with-X=1 --with-fc=gfortran --download-mpich --download-fblaslapack}
 \end{flushleft}
-Esse comando, além de configurar o PETSC, também instala algumas ferramentas como compiladores e bibliotecas. Caso a configuração ocorra corretamente uma mensagem semelhante à da Figura \ref{fig:install_01} deve ser exibida no terminal.
-\begin{figure}[H]
+Esse comando, além de configurar o PETSc, também instala algumas ferramentas como compiladores e bibliotecas. Caso a configuração ocorra corretamente uma mensagem semelhante à da Figura \ref{fig:install_01} deve ser exibida no terminal.
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.7\textwidth]{figuras/install_01.png}
- \caption{Terminal configuração PETSC.}
+ \caption{Terminal configuração PETSc.}
  \label{fig:install_01}
 \end{figure}
 Como indicado, o usuário deve em seguida executar o seguinte comando:
@@ -19,10 +19,10 @@ Como indicado, o usuário deve em seguida executar o seguinte comando:
  \verb|make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=arch-linux2-c-debug all|
 \end{flushleft}
 o que resultará na seguinte Figura \ref{fig:install_02}.
-\begin{figure}[H]
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.7\textwidth]{figuras/install_02.png}
- \caption{Terminal configuração PETSC.}
+ \caption{Terminal configuração PETSc.}
  \label{fig:install_02}
 \end{figure}
 Como indicado, o usuário deve verificar se as bibliotecas estão trabalhando corretamente, por meio do comando:
@@ -30,10 +30,10 @@ Como indicado, o usuário deve verificar se as bibliotecas estão trabalhando corr
  \verb|make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=arch-linux2-c-debug test|
 \end{flushleft}
 o que resultará na seguinte Figura \ref{fig:install_03}.
-\begin{figure}[H]
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.7\textwidth]{figuras/install_03.png}
- \caption{Terminal configuração PETSC.}
+ \caption{Terminal configuração PETSc.}
  \label{fig:install_03}
 \end{figure}
 Para finalizar a configuração, o usuário deve o sistema, por meio do comando:
@@ -41,25 +41,25 @@ Para finalizar a configuração, o usuário deve o sistema, por meio do comando:
  \verb|make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=arch-linux2-c-debug streams|
 \end{flushleft}
 o que resultará na seguinte Figura \ref{fig:install_04}.
-\begin{figure}[H]
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.6\textwidth]{figuras/install_04.png}
- \caption{Terminal configuração PETSC.}
+ \caption{Terminal configuração PETSc.}
  \label{fig:install_04}
 \end{figure}
 Se a instalação foi realizada com êxito uma janela com o speedup em função do número de processadores será exibida.
-\begin{figure}[H]
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.6\textwidth]{figuras/install_speedup.png}
- \caption{Terminal configuração PETSC.}
+ \caption{Terminal configuração PETSc.}
  \label{fig:install_speedup}
 \end{figure}
 
 Ao término da instalação deve-se também configurar, via terminal, as variáveis de ambiente \verb|PETSC_DIR=/home/user/Documentos/petsc-3.7.5| e \verb|PETSC_ARCH=arch-linux2-c-debug| com auxílio do comando \texttt{export}. Ver Figura \ref{fig:install_environment}.
-\begin{figure}[H]
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.7\textwidth]{figuras/install_environment.png}
- \caption{Terminal configuração PETSC.}
+ \caption{Terminal configuração PETSc.}
  \label{fig:install_environment}
 \end{figure}
 
@@ -68,43 +68,45 @@ Para verificar se a instalação e configuração foram realizadas com êxito, é poss
  \verb|make ex1|
 \end{flushleft}
 o que resultará na Figura \ref{fig:make_ex1}.
-\begin{figure}[H]
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.7\textwidth]{figuras/make_ex1.png}
  \caption{Terminal exemplo ex1.c.}
  \label{fig:make_ex1}
 \end{figure}
 Para executar o código acima compilado, digita-se \verb|./ex1|, o que deve resultar em algo semelhante à Figura \ref{fig:exec_ex1}.
-\begin{figure}[H]
+\begin{figure}[H] \centering
  \centering
  \includegraphics[width=0.7\textwidth]{figuras/exec_ex1.png}
  \caption{Execução do exemplo ./ex1}
  \label{fig:exec_ex1}
 \end{figure}
 
-Para uma configuraçã completa do PETSC, talvez seja necessária a instalação de alguns pacotes adicionais como é o caso do X11 para criação de janelas gráficas. Sua instalação pode ser realizada via terminal com o comando: \verb|apt install libxt-dev|.
+Para uma configuraçã completa do PETSc, talvez seja necessária a instalação de alguns pacotes adicionais como é o caso do X11 para criação de janelas gráficas. Sua instalação pode ser realizada via terminal com o comando: \verb|apt install libxt-dev|.
 
-\section{Primeiros exemplos com PETSC}
-Como já mencionado o PETSC é uma suite de ferramentas que permite a solução de sistemas de equações em paralelo. Essa suite foi desenvolvida para resolução de Equações Diferenciais Parciais, em que sua resolução conduz à resolução de sistemas de equações de grandes dimensões, o que demanda algoritmos eficientes e programação paralela. Desta forma o propóstico da biblioteca PETSC é auxiliar na solução de problemas científicos e de engenharia em computadores multiprocessados. O primeiro exemplo aqui ilustrado é apresentado em \cite{bueler:2017} e aproxima a constante de Euler por meio da série de Maclaurin:
+\section{Primeiros exemplos com PETSc}
+Como já mencionado, o PETSc é uma suite de ferramentas que permite a solução de sistemas de equações em paralelo. Essa biblioteca foi desenvolvida para resolução de Equações Diferenciais Parciais, em que sua resolução conduz à resolução de sistemas de equações de grandes dimensões, o que demanda algoritmos eficientes e programação paralela. Desta forma o propóstico da biblioteca PETSc é auxiliar na solução de problemas científicos e de engenharia em computadores multiprocessados. 
+
+O primeiro exemplo aqui ilustrado é apresentado em \cite{bueler:2017} e aproxima a constante de Euler por meio da série de Maclaurin:
 \begin{equation}
   \label{eq:ex_01}	
   e = \sum_{n=0}^\infty \dfrac{1}{n!} \approx 2.718281828
 \end{equation}
-O programa \verb|code_euler.c| , ilustrado no código \ref{code:code_euler}, realiza a computação de cada termo da série infinita em cada processo, resultando numa melhor estimativa de $e$ quando executado em vários processos MPI. Embora seja um exemplo ingênuo do emprego da biblioteca PETSC, ele auxilia na compreensão de algumas ideias envolvidas em computação paralela.
+O programa \verb|code_euler.c| , ilustrado no código \ref{code:code_euler}, realiza a computação de cada termo da série infinita em cada processo, resultando numa melhor estimativa de $e$ quando executado em vários processos MPI. Embora seja um exemplo ingênuo do emprego da biblioteca PETSc, ele auxilia na compreensão de algumas ideias envolvidas em computação paralela.
 
 \lstinputlisting[language=C,caption=Código constante de Euler.,label=code:code_euler]{codigo/code_euler.c}
 
-Como qualquer programa escrito em linguagem C, o código é iniciado com uma função chamada \texttt{main()} a qual tem os argumentos \texttt{argc} e \texttt{argv} passados via linha de comando. No exemplo ilustrado esses argumentos serão passados à biblioteca através da função \texttt{PetscInitialize()}, e a biblioteca obtém as informações passadas em linha de comando. A função \texttt{main()} também tem como retorno um valor inteiro, que é igual a 0 se o programa foi executado corretamente. Além disso, é importante utilizar a função PETSC para vericação de erros associados à sua utilização, \texttt{CHKERRQ(ierr)}, a qual retorna um valor inteiro diferente de 0 caso alguma anomalia ocorra na execução de alguma função pertencente à biblioteca.
+Como qualquer programa escrito em linguagem C, o código é iniciado com uma função chamada \texttt{main()} a qual tem os argumentos \texttt{argc} e \texttt{argv} passados via linha de comando. No exemplo ilustrado esses argumentos serão passados à biblioteca através da função \texttt{PetscInitialize()}, e a biblioteca obtém as informações passadas em linha de comando. A função \texttt{main()} também tem como retorno um valor inteiro, que é igual a 0 se o programa foi executado corretamente. Além disso, é importante utilizar a função PETSc para vericação de erros associados à sua utilização, \texttt{CHKERRQ(ierr)}, a qual retorna um valor inteiro diferente de 0 caso alguma anomalia ocorra na execução de alguma função pertencente à biblioteca.
 
-Como indicado no manual \cite{petsc} para compilar um arquivo que utiliza PETSC, deve-se ter no mesmo diretório do arquivo fonte, um arquivo \texttt{makefile}, cujo conteúdo é exibido no código \ref{code:make}.
+Como indicado no manual \cite{petsc-web-page} para compilar um arquivo que utiliza PETSc, deve-se ter no mesmo diretório do arquivo fonte, um arquivo \texttt{makefile}, cujo conteúdo é exibido no código \ref{code:make}.
 
-\lstinputlisting[language=C]{codigo/makefile}
+\lstinputlisting[language=C, label=code:make, caption=Exemplo de \texttt{makefile}.]{codigo/makefile}
 
-Após ter criado o arquivo \texttt{makefile} é possível compilar o código programa \verb|code_euler.c| com o seguinte comando:
+Após criar o arquivo \texttt{makefile} é possível compilar o código programa \verb|code_euler.c| com o seguinte comando:
 \begin{flushleft}
 \verb|user@user-G73Sw:~$ make code_euler|
 \end{flushleft}
-Para executar o código compilado basta digitar
+Para executar o código compilado deve-se executar
 \begin{flushleft}
 \verb|user@user-G73Sw:~$ ./code_euler|\\
 \verb|O valor da constante 'e' é aproximadamente: 1.000000000000000|\\
@@ -127,13 +129,14 @@ Executando o mesmo programa em 10 processos, obtemos uma boa aproximação constan
 \verb|rank 0 did 0 flops|\\
 \verb|.....|\\
 \end{flushleft}
+
 Com base na execução dos 10 processos acima, pode-se imaginar que o código tenha sido escrito usando um cluster com no mínimo 10 processadores físicos. Na verdade, esses 5 e 10 processos funcionam muito bem em um computador pessoal com 2 núcleos (processodor i3 2120). Os processos MPI são criados conforme necessário, usando um recurso antigo de sistemas operacionais: multitarefa. Obviamente a aceleração real do paralelismo (speedup) é outra questão.
 
 No exemplo do programa \verb|code_euler.c|, cada processo MPI calcula o termo $1/n!$, onde $n$ é o retorno de \verb|MPI_Comm_rank()|. É importante notar que \verb|PETSC_COMM_WORLD| é um comunicador MPI contendo todos os processos gerados usando \verb|mpiexec -n N| na linha de comando. Uma chamada para \verb|MPI_Allreduce()| calcula a soma parcial de expressão \eqref{eq:ex_01} e envia o resultado de volta para cada processo. Esses usos diretos da API MPI são uma parte (relativamente pequena) do uso do PETSc, mas ocorrem porque o PETSc geralmente evita a duplicação da funcionalidade MPI.
 
 A estimativa calculada de $e$ é impressa de uma só vez. Além disso, cada processo também imprime seu \verb|rank| e o trabalho que ele fez. O comando de impressão formatado \verb|PetscPrintf()|, semelhante ao \verb|fprintf()| da biblioteca padrão C, é chamado duas vezes no código. Na primeira vez MPI usa o comunicador \verb|PETSC_COMM_WORLD| e a segunda vez \verb|PETSC_COMM_SELF|. O primeiro desses trabalhos de impressão é, portanto, coletivo em todos os processos, e apenas uma linha de saída é produzida, enquanto a segunda é individual para cada processo e obtemos $n$ linhas impressas. As linhas de saída \verb|PETSC_COMM_SELF| podem aparecer em ordem aparentemente aleatória uma vez que a impressão ocorre na ordem que essa classificação encontra o comando \verb|PetscPrintf()| no código.
 
-Todo programa ou parte de comando que utiliza a biblioteca PETSC, deve iniciar e terminar com as funções \verb|PetscInitialize()| e \verb|PetscFinalize()|, respectivamente. Observa-se que o último argumento da função \verb|PetscInitialize(&argc, &argv, NULL, help)| fornece uma string que informa ao usuário uma breve descrição do programa, e pode ser visualizada através do comando:
+Todo programa ou parte de programa que utiliza a biblioteca PETSc, deve iniciar e terminar com as funções \verb|PetscInitialize()| e \verb|PetscFinalize()|, respectivamente. Observa-se que o último argumento da função \verb|PetscInitialize(&argc, &argv, NULL, help)| fornece uma string que informa ao usuário uma breve descrição do programa, e pode ser visualizada através do comando:
 \begin{flushleft}
 \verb|user@user-G73Sw:~$ ./code_euler --help|\\
 \verb|O valor da constante 'e' é aproximadamente: 2.718281525573192|\\
@@ -141,8 +144,8 @@ Todo programa ou parte de comando que utiliza a biblioteca PETSC, deve iniciar e
 \verb|.....|\\
 \end{flushleft}
 
-\subsection{Objetos do tipo vetores e matrizes em PETSC}
-A maioria dos métodos de resolução numérica de equações diferenciais cumlmina na solução de sistemas lineares de dimensão finita. Como esses sistemas lineares se tornam representações mais precisas do PDE à medida que seu tamanho vai para o infinito, busca-se resolver os maiores sistemas lineares que a tecnologia de computação disponível possa ser capaz de suportar. Resolver tais sistemas lineares, usando algoritmos que têm o potencial de escalar para tamanhos muito grandes - tão grandes, por exemplo, que a solução vetorial do sistema deve ser distribuída através de muitos processadores até mesmo se encaixar na memória - representa a tecnologia de núcleo em PETSc.
+\subsection{Objetos do tipo vetores e matrizes em PETSc}
+A maioria dos métodos de resolução numérica de equações diferenciais culmina na solução de sistemas lineares de dimensão finita. Como esses sistemas lineares se tornam representações mais precisas da EDP à medida que seu tamanho vai para o infinito, busca-se resolver os maiores sistemas lineares que a tecnologia disponível possa ser capaz de computar. Resolver tais sistemas lineares, usando algoritmos que têm o potencial de escalar para tamanhos muito grandes - tão grandes, por exemplo, que a solução vetorial do sistema deve ser distribuída através de muitos processadores até mesmo em memória distribuída - representa a biblioteca PETSc.
 
 Uma observação a ser feita, é que muitas das PDEs discretizadas geram sistemas lineares com estrutura explorável, especialmente a esparcidade, o que significa que há poucas entradas diferentes de zero por linha na matriz. Para que os métodos convirjam, também precisa haver outra estrutura no sistema linear, tal como a regularidade das entradas de matrizes que surgem da suavidade dos coeficientes na PDE. A aplicação ingênua de métodos diretos é na maioria das vezes, muito lenta.
 
@@ -176,7 +179,7 @@ A seguir é apresentado um exemplo simples de como preencher uma matriz $4 \times
 
 \lstinputlisting[language=C]{codigo/build_matrix.c}
 
-O resultado ou a matriz criada pode ser visualizada de várias formas, e aqui faremos duas visualizações uma no formato esparso e outra mostrando todos os seus elementos.
+Neste exemplo a matriz é montada por linhas, e em cada iteração do laço 'for', são inseridas quatro colunas em cada linha, a saber as colunas indicadas pelo  vetor $j$. O resultado ou a matriz criada pode ser visualizada de várias formas, e aqui faremos duas visualizações uma no formato esparso e outra mostrando todos os seus elementos.
 \begin{flushleft}
 \verb|user@user-G73Sw:~$ ./build_matrix -mat_view|\\
 \verb|Mat Object: 1 MPI processes|\\
@@ -200,7 +203,9 @@ O resultado ou a matriz criada pode ser visualizada de várias formas, e aqui far
 \verb|./build_matrix -mat_view ascii:build_matrix.txt:ascii_dense|.
 \end{flushleft}
 
-Como descrito em \cite{bueler}, embora PETSC seja escrito em C, e não em C ++, ela é uma biblioteca orientada a objetos. Para construir o nosso primeiro código PETSc para resolver um sistema linear, vamos usar os tipos de dados \verb|Vec| e \verb|Mat|, que são essencialmente objetos, que possuem vetores e matrizes. O exemplo a seguir descreve a solução do sistema linear:
+
+\subsection{Solução de sistema linear}
+Como descrito em \cite{bueler:2017}, embora PETSc seja escrito em C, e não em C ++, ela é uma biblioteca orientada a objetos. Para construir o nosso primeiro código PETSc para resolver um sistema linear, vamos usar os tipos de dados \verb|Vec| e \verb|Mat|, que são essencialmente objetos, que possuem vetores e matrizes. O exemplo a seguir descreve a solução do sistema linear:
 \begin{equation}
   \label{eq:sistema_01}
     \left[
@@ -232,7 +237,7 @@ Um objeto KSP resolve o sistema linear, com o algoritmo de solução específico es
 
 \lstinputlisting[language=C]{codigo/solve_linear_ksp.c}
 
-O resulta final da execução do programa \verb|solve_linear_ksp.c| é:
+O resultado final da execução do programa \verb|solve_linear_ksp.c| é:
 \begin{flushleft}
 \verb|user@user-G73Sw:~$ ./solve_linear_ksp|\\
 \verb|Vec Object: 1 MPI processes|\\
@@ -243,21 +248,21 @@ O resulta final da execução do programa \verb|solve_linear_ksp.c| é:
 \verb|-1.|
 \end{flushleft}
 
-O código \verb|solve_linear_ksp.c| apresentou a solução de um sistema com dimensão fixa, no entanto pode ser necessário, alterar essa dimensão em tempo de execução, como é o caso do próximo exemplo. Ele resovle um sistema de equação com tamanho arbitrário e definido no momento da execução, através de um valor inteiro passado na função \verb|PetscOptionsXXX()|. Além disso, nesse exemplo serão vistos algumas formas de manipulação de vetores como soma e determinação da sua norma euclidiana, utilizando \verb|VecAXPY| e \verb|VecNorm|, respectivamente. O programa é ilustrado no código..................
+O código \verb|solve_linear_ksp.c| apresentou a solução de um sistema com dimensão fixa, no entanto pode ser necessário, alterar essa dimensão em tempo de execução, como é o caso do próximo exemplo. Ele resovle um sistema de equação com tamanho arbitrário e definido no momento da execução através de um valor inteiro passado na função \verb|PetscOptionsXXX()|. Além disso, nesse exemplo serão vistos algumas formas de manipulação de vetores como soma e determinação da sua norma euclidiana, utilizando \verb|VecAXPY| e \verb|VecNorm|, respectivamente. O programa é ilustrado no Código \ref{code:solve_linear_arbitrary}.
 
-\lstinputlisting[language=C]{codigo/solve_linear_arbitrary.c}
+\lstinputlisting[language=C,label=code:solve_linear_arbitrary,caption=Resolução de sistema com tamanho arbitrário.]{codigo/solve_linear_arbitrary.c}
 
-É importante destacar que embora o tamanho do sistem seja arbitrário, ele sempre terá a forma tridiagonal, com valores 3 na diagonal principal e valor -1 na diagonal superior e inferior. 
+É importante destacar que embora o tamanho do sistema seja arbitrário, ele sempre terá a forma tridiagonal, com valores 3 na diagonal principal e valor -1 na diagonal superior e inferior. 
 
 O primeiro novo recurso usado neste código é \verb|PetscOptionsBegin()| e \verb|PetscOptionsEnd()|, ou seja, a chamada para \verb|PetscOptionsInt()|. O início do método define um prefixo \verb|-tri_| para que a nova opção criada seja distinguida das muitas opções integradas do PETSc que começam por exemplo com \verb|-ksp_| ou \verb|-vec_| ou algo do tipo. Aqui \verb|PetscOptionsInt()| cria a opção \verb|-tri_m| para que o usuário possa definir a variável $m$ e deixa como padrão $m = 4$ inalterado se a opção não for definida na execução. 
 
-Após configurar a nova opção em \verb|solve_linear_arbitrary.c| a solução numérica \verb|Vec x| é criada exatamente como fizemos no último exemplo. Mas agora também é necessário criar \verb|Vec s|,  \verb|Vec b| e \verb|Vec xexact|. O primeiro vetor é o lado direito do sistema linear e este último mantém a solução exata para o sistema linear para que seja possível avaliar o erro associado à solução numérica.
+Após configurar a nova opção em \verb|solve_linear_arbitrary.c| a solução numérica \verb|Vec x| é criada exatamente como realizado no último exemplo. Mas agora também é necessário criar \verb|Vec s|,  \verb|Vec b| e \verb|Vec xexact|. O primeiro vetor é o lado direito do sistema linear e este último mantém a solução exata para o sistema linear para que seja possível avaliar o erro associado à solução numérica.
 
 Em seguida, deve-se montar a matriz A, que como mencionado é uma matriz tridiagonal. É importante montá-la de forma eficiente em paralelo, algo que será relevante na resolução de equações diferenciais 2D e 3D posteriormente. No entanto, somente quando o \verb|solve_linear_arbitrary.c| é executado, sabemos quantos processos estão em uso. O método \verb|MatGetOwnershipRange()| informa o programa, executando em um determinado processo (rank), quais linhas ele possui localmente. %No caso de muitas matrizes estruturadas como esta, pode-se evitar toda comunicação entre processos, reunindo exatamente as linhas que possuímos.
 
-Como observado no início do código \verb|solve_linear_arbitrary.c|, chamamos \ função \verb|MatGetOwnershipRange(A, &Istart, &Iend)| para obter os índices de linha inicial e final para o processo local. Estes índices são usados como limites no loop 'for' que preenche as linhas da matriz localmente. utiliza-se  \verb|MatSetValues()| para realmente definir as entradas da matriz  A e \verb|MatAssemblyBegin/End()| para completar a montagem de A. 
+Como observado no início do código \verb|solve_linear_arbitrary.c|, chamamos a função \verb|MatGetOwnershipRange(A, &Istart, &Iend)| para obter os índices de linha inicial e final para o processo local. Estes índices são usados como limites no loop 'for' que preenche as linhas da matriz localmente. utiliza-se  \verb|MatSetValues()| para realmente definir as entradas da matriz  A e \verb|MatAssemblyBegin/End()| para completar a montagem de A. 
 
-Adicionalmente, é necessário montar o lado direito do sistema linear e também a solução exacta para o sistema linear $(A \,xexato = b)$. A maneira mais simples de fazer isso, é escolher uma solução exata, e em seguida, calcular $b$, multiplicando A pela solução exata. Assim, definimos valores para \verb|xexact|. Em seguida calculamos $b$ com auxílio da função \verb|MatMult(A, xexact, b)|. 
+Adicionalmente, é necessário montar o lado direito do sistema linear e também a solução exacta para o sistema linear $(A \,x_{ex} = b)$. A maneira mais simples de fazer isso, é escolher uma solução exata, e em seguida, calcular $b$, multiplicando A pela solução exata. Assim, definimos valores para \verb|xexact|. Em seguida calculamos $b$ com auxílio da função \verb|MatMult(A, xexact, b)|. 
 
 Como em vecmatksp.c criamos o objeto KSP e então chamamos o solver \verb|KSPSolve()| para resolver aproximadamente $A x = b$. A opção \verb|-ksp_monitor| imprime a norma residual $||b - Ax||_2$ em tempo de execução. Neste caso, também queremos ver que o erro real $||x - x_{ex}||_2$ é pequeno quando o solver KSP é concluido. Assim, depois de obter x do KSPSolve (), calculamos o erro com os códigos:
 \begin{flushleft}
@@ -289,15 +294,12 @@ A princípio um sistema de equações contendo $10^7$ variáveis parece ser grande. 
 \verb|user	0m38.976s|\\
 \verb|sys	0m2.260s|
 \end{flushleft}
-Como esperado, o tempo de execução caiu de 17 para 5 segundos, indicando um speedup de:
-\begin{equation}
-  546546
-\end{equation}
+Como esperado, o tempo de execução foi reduzido, neste caso caiu de 17 para 5 segundos.
 
 \section{A equação de Poisson}
-Esta seção é dedicada a resolução numérica do problema de Poisson em um quadrado. Este é um problema que permite compreender partes essenciais  da implementação de códigos empregando a biblioteca PETSc. A discretização da EDP gera um sistema linear que é mais interessante do que o sistema tridiagonal que foi resolvido anteriormente. Será construiída uma malha estruturada usando um objeto \verb|DMDA|, que será introduzido nesta  seção, e depois será montada uma matriz em paralelo com base nessa malha. Por último o sistema linear resultante será resovido em paralelo usando um objeto \verb|KSP| \cite{petsc-user-ref}.
+Esta seção é dedicada a resolução numérica do problema de Poisson em um quadrado. Este é um problema que permite compreender partes essenciais  da implementação de códigos empregando a biblioteca PETSc. A discretização da EDP gera um sistema linear que é mais interessante do que o sistema tridiagonal que foi resolvido anteriormente. Será construída uma malha estruturada usando um objeto \verb|DMDA|, que será introduzido nesta  seção, e depois será montada uma matriz em paralelo com base nessa malha. Por último o sistema linear resultante será resovido em paralelo usando um objeto \verb|KSP| \cite{petsc-user-ref}.
 
-Neste exemplo a equação de Poisson será resolvida numa região quadrada aberta, $S, (0,1)\times(0,1)$ cujo contorno é representado por $\partial S$. O problema é ilustrado na Figura \ref{fig:poisson} e formulado em \eqref{eq:poisson}.
+Neste exemplo a equação de Poisson será resolvida numa região quadrada, $S, (0,1)\times(0,1)$ cujo contorno é representado por $\partial S$. O  domínio do problema é ilustrado na Figura \ref{fig:dominio_poisson_2d} e formulado em \eqref{eq:poisson}.
 \begin{equation}
  \label{eq:poisson}
  \begin{split}
@@ -315,29 +317,65 @@ O Laplaciano de $u(x,y)$ é especificado por:
 \end{equation}
 e aparece com frequência em modelos matemáticos que expressam a conservação de alguma quantidade $u$, juntamente com a suposição de que o fluxo de $u$ é proporcional ao seu gradiente. O problema aqui estudado está sujeito à condições de contorno homogêneas de Dirichlet. 
 
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/dominio_poisson_2d}
+ \caption{Domínio do problema.}
+ \label{fig:dominio_poisson_2d}
+\end{figure}
+
 O problema de Poisson pode modelar o potencial eletrostático, a distribuição de equilíbrio de certas caminhos aleatórios ou vários outros  fenômenos físicos. Para um exemplo, a condução de calor em sólidos segue a lei de Fourier, que diz que o fluxo de calor é $q = -k\nabla u$, onde $k$ é a condutividade térmica. A conservação da energia diz que $c\rho \partial u / \partial t = -\nabla \cdot q + f$ se $f$ representa uma fonte de calor no interior do domínio. O coeficiente $c\rho$ parametriza a capacidade do material para manter o calor por um ganho de temperatura. Se $k$ é constante, então em estado estacionário essas condições resultam na equação de Poisson $ 0 = k \nabla^2 u + f$. Mantendo a temperatura nula
 ao longo do limite da região (contorno), tem-se o problema \eqref{eq:poisson}, que será resolvido numericamente através do método de diferenças finitas.
  
 \subsection{Geração da malha}
-O método de diferenças finitias é desenvolvido sobre uma malha composta por $m_xm_y$ pontos igualmente espaçados, como ilustrado na Figura \ref{fig:poisson_grid}, cujo espaçamento na direção $x$ é especificado por $h_x = 1/(m_x-1)$ e por $h_y = 1/(m_y-1)$ na direção $y$. Considerando a malha da Figura \ref{fig:poisson_grid} em $m_x=5$ e $m_y=7$, as coordenadas da malha são $(x_i = ih_x, y_j=j h_y)$, para $i=0,...,m_x-1$ e $j=0,...,m_y-1$.
+O método de diferenças finitias é desenvolvido sobre uma malha composta por $m_xm_y$ pontos igualmente espaçados, como ilustrado na Figura \ref{fig:poisson_grid_2d}, cujo espaçamento na direção $x$ é especificado por $h_x = 1/(m_x-1)$ e por $h_y = 1/(m_y-1)$ na direção $y$. 
 
-Para construção dessa malha 2D de forma distribuida em processos MPI, utiliza-se um novo objeto PETSc que cria uma instância do tipo PETSc \texttt{DM} para descrever a topologia (conexão) da malha, a forma como ela é distribuída através de processos MPI e a forma como cada processo pode acessar dados de seus processos vizinhos. Este caso específico aqui é um \texttt{DMDA}, que é uma sub-classe de \texttt{DM}. A designação \texttt{DM}" pode significar ``distributed mesh'' ou ''domain management'', e \texttt{DA} significa ``distributed array''. Ao executar os comandos abaixo:
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/poisson_grid_2d}
+ \caption{Malha computacional.}
+ \label{fig:poisson_grid_2d}
+\end{figure}
+
+Considerando a malha da Figura \ref{fig:poisson_grid_2d_5x7} em $m_x=5$ e $m_y=7$, as coordenadas da malha são $(x_i = ih_x, y_j=j h_y)$, para $i=0,...,m_x-1$ e $j=0,...,m_y-1$.
+
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/poisson_grid_2d_5x7}
+ \caption{Malha computacional $5\times 7$.}
+ \label{fig:poisson_grid_2d_5x7}
+\end{figure}
+
+Para construção dessa malha 2D de forma distribuida em processos MPI, utiliza-se um novo objeto PETSc que cria uma instância do tipo PETSc \texttt{DM} para descrever a topologia (conexão) da malha, a forma como ela é distribuída através de processos MPI e a forma como cada processo pode acessar dados de seus processos vizinhos. Este caso específico aqui é um \texttt{DMDA}, que é uma sub-classe de \texttt{DM}. A designação \texttt{DM} pode significar ``distributed mesh'' ou ''domain management'', e \texttt{DA} significa ``distributed array''. Ao executar os comandos abaixo:
 \begin{flushleft}
 \verb|user@user-G73Sw:~$ make poisson|\\
 \verb|user@user-G73Sw:~$./poisson -da_grid_x 5 -da_grid_y 7|
 \end{flushleft}
-uma malha correspondente à da Figura \ref{fig:poisson_grid} será criada, em que todos os nodos são construídos e pertencentes a um único processo MPI. No entanto, ao digitar o comando:
+uma malha correspondente à da Figura \ref{fig:poisson_grid_2d_5x7} será criada, em que todos os nodos são construídos e pertencentes a um único processo MPI. No entanto, ao digitar o comando:
 \begin{flushleft}
 \verb|user@user-G73Sw:~$mpiexec -n 4 ./poisson -da_grid_x 5 -da_grid_y 7|
 \end{flushleft}
-então a biblioteca PETSc faz o equilíbrio de carga para os pontos da malha entre os processos, com a restrição de que cada processo MPI possui uma sub-malha retangular. Como observado na Figura \ref{fig:poisson_grid_4_mpi}, PETSc distribui os quatro processos através dos 35 pontos da malha de forma relativamente uniforme (O processo rank 0 possui 12 pontos e o rank 3 possui 6, enquanto os outros estão entre eles). O bloco de código referente ao emprego do objeto \texttt{DMDACreate2d} é descrito a seguir:
+então a biblioteca PETSc faz o equilíbrio de carga para os pontos da malha entre os processos, com a restrição de que cada processo MPI possui uma sub-malha retangular. Como observado na Figura \ref{fig:poisson_grid_2d_5x7_4_mpi}, PETSc distribui os quatro processos através dos 35 pontos da malha de forma relativamente uniforme (O processo rank 0 possui 12 pontos e o rank 3 possui 6, enquanto os outros estão entre eles). 
+
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/poisson_grid_2d_5x7_4_mpi}
+ \caption{Malha computacional $5\times 7$ e 4 processos.}
+ \label{fig:poisson_grid_2d_5x7_4_mpi}
+\end{figure}
+
+O bloco de código referente ao emprego do objeto \texttt{DMDACreate2d} é descrito a seguir:
 
 \lstinputlisting[label=code:code_poisson_fd_2d,linerange={109-112},language=C,caption=DMDA()]{codigo/poisson_fd_2d.c}
 
-No Código \ref{code:code_poisson_fd_2d}, o primeiro argumento é referente ao comunicador. O segundo e terceiro argumentos são do tipo \verb|DM_BOUNDARY_NONE| pois as condições de Dirichlet não precisam de comunicação para o próximo processo. No quarto argumento, escolhe-se o método \verb|DMDA_STENCIL_STAR| porque somente os vizinhos cardeais de um ponto da malha são usados na discretização. A Figura \ref{fig:stencil} mostra seu stencil computacional. Os dois argumentos \verb|PETSC_DECIDE| depois disso dão ao \texttt{PETSc} autonomia para distribuir a malha sobre os processos de acordo com a quantidade de processos no comunicador MPI usando a lógica interna PETSc. Os dois argumentos seguintes, na nona e décima posições, dizem que nossa PDE é escalar, com grau de liberda igual a 1 (dof = 1) e que o método de diferenças finitas só precisará de um vizinho em cada direção (s = 1). Os próximos dois argumentos depois disso são NULL porque não estamos dizendo PETSc quaisquer detalhes sobre como distribuir processos sobre a malha. Finalmente, o objeto \texttt{DMDA} é retornado através de um argumento ponteiro.
+No Código \ref{code:code_poisson_fd_2d}, o primeiro argumento é referente ao comunicador. O segundo e terceiro argumentos são do tipo \verb|DM_BOUNDARY_NONE| pois as condições de Dirichlet não precisam de comunicação para o próximo processo. No quarto argumento, escolhe-se o método \verb|DMDA_STENCIL_STAR| porque somente os vizinhos cardeais de um ponto da malha são usados na discretização. A Figura \ref{fig:stencil_finite_diference_2d} mostra seu stencil computacional. 
+
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/stencil_finite_diference_2d}
+ \caption{Stencil computacional epregado na discretização.}
+ \label{fig:stencil_finite_diference_2d}
+\end{figure}
+
+Os dois argumentos \verb|PETSC_DECIDE| depois disso dão ao \texttt{PETSc} autonomia para distribuir a malha sobre os processos de acordo com a quantidade de processos no comunicador MPI. Os dois argumentos seguintes, na nona e décima posições, dizem que nossa PDE é escalar, com grau de liberdade igual a 1 (dof = 1) e que o método de diferenças finitas só precisará de um vizinho em cada direção (s = 1). Os próximos dois argumentos depois disso são NULL porque não estamos dizendo PETSc quaisquer detalhes sobre como distribuir processos sobre a malha. Finalmente, o objeto \texttt{DMDA} é retornado através de um argumento ponteiro.
 
 \subsection{Discretização em diferenças finitas}
-Considerando uma discretização da equação \eqref{eq:poisson} em diferenças finitas, ela pode ser escrita como:
+Considerando uma discretização da equação \eqref{eq:poisson} em diferenças finitas, ela pode ser escrita na forma discreta como:
 \begin{equation}
   \label{eq:poisson_fd_2d}
   - \dfrac{u_{i+1,j} - 2u_{i,j} + u_{i-1,j}}{h_x^2} - \dfrac{u_{i+1,j} - 2u_{i,j} + u_{i-1,j}}{h_x^2} = f(x_i,y_j)
@@ -355,9 +393,15 @@ Todos os valores $u_{i,j}$ serão tratados como incógnitas, sejam do interior ou 
  A\boldsymbol{u} = \boldsymbol{b} 
 \end{equation}
 em que a matriz A tem dimensão $L\times L$, e os vetores $\boldsymbol{u}$ e $\boldsymbol{b}$, dimensão $L\times 1$. No entanto, para montar  as entradas de $A$ e $\boldsymbol{b}$ no sistema linear \eqref{eq:poisson_fd_2d_lse}, deve-se ordenar as incógnitas. Essa ordenação é implementada dentro do objeto \verb|DMDA|, e o código só precisa usar as coordenadas $(i, j)$. %A capacidade de montar Mat s e Vecs com indexação de tipo (i, j) é uma razão estruturada - códigos de grade usando DMDA pode ser bastante curto.
-A ordenação usada em um processo único (serial) executado por um \verb|DMDA| 2D é mostrada na Figura \ref{fig:3.8}. Em uma malha $m_x$ por $m_y$, pode-se escrever o novo índice global como $k = j m_x + i$ de modo que $u_{i,j}$ seja a $k$-ésima incógnita do sistema. Esse mapeamento de índice feito pelo objeto \verb|DMDA| fica transparente ao usuário.
+A ordenação usada em um processo único (serial) executado por um \verb|DMDA| 2D é mostrada na Figura \ref{fig:poisson_grid_2d_4x3}. Em uma malha $m_x$ por $m_y$, pode-se escrever o novo índice global como $k = j m_x + i$ de modo que $u_{i,j}$ seja a $k$-ésima incógnita do sistema. Esse mapeamento de índice feito pelo objeto \verb|DMDA| fica transparente ao usuário. 
 
-Como exemplo, a seguir será construído o sistema de equações para o caso da malha representada na Figura \ref{fig:3.8}, em que $m_x=4$ e $m_y=3$, o que resulta em $h_x=1/3$ e $h_y=1/2$. Somente os pontos com índice global $k=5$ e $k=6$ não são condições de contorno e o sistema linar é dado por:
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/poisson_grid_2d_4x3}
+ \caption{Malha computacional $4\times 3$.}
+ \label{fig:poisson_grid_2d_4x3}
+\end{figure}
+
+Como exemplo, a seguir será construído o sistema de equações para o caso da malha representada na Figura \ref{fig:poisson_grid_2d_4x3}, em que $m_x=4$ e $m_y=3$, o que resulta em $h_x=1/3$ e $h_y=1/2$. Somente os pontos com índice global $k=5$ e $k=6$ não são condições de contorno e o sistema linear é dado por:
 \begin{equation}
   \label{eq:sistema_01}
     \left[
@@ -410,14 +454,14 @@ Como exemplo, a seguir será construído o sistema de equações para o caso da malh
 \end{equation}
 em que $a=2/h_x^2+2/h_y^2 = 26$, $b= -1/h_x^2=-9$ e $c = -1/h_y^2=-4$. A matriz $A$ não é simétrica e seu número de condição na norma 2 é $k(A)=||A||_2||A^{-1}||_2=43.16$. Dois detalhes importantes devem ser considerados nessa primeira discretização. 
 
-O primeiro é que a equação \eqref{eq:poisson_fd_2d} tem diferentes escalas ou ordem de grandeza. Por exemplo, ao tomar $m_x=m_y=1001$, tem-se $h_x=h_y=0,001$ o que resulta em coeficientes para os nodos internos do domínio da ordem de $4/0.001^2=x \times 10^6$, enquanto que os coeficientes para os nodos do contorno são iguais a 1. Para mitigar esse problema, pode multiplicar \eqref{eq:poisson_fd_2d} pela área do elemento de malha, $h_xh_y$.
+O primeiro é que a equação \eqref{eq:poisson_fd_2d} tem diferentes escalas ou ordem de grandeza. Por exemplo, ao tomar $m_x=m_y=1001$, tem-se $h_x=h_y=0,001$ o que resulta em coeficientes para os nodos internos do domínio da ordem de $4/0.001^2=x \times 10^6$, enquanto que os coeficientes para os nodos do contorno são iguais a 1. Para mitigar esse problema, pode-se multiplicar \eqref{eq:poisson_fd_2d} pela área do elemento de malha, $h_xh_y$, resultando em:
 \begin{equation}
  \label{eq:poisson_fd_2d_area}
  2(a+b)u_{i,j}-a(u_{i+1,j}+u_{i-1,j})-a(u_{i,j+1}+u_{i,j-1})=h_xh_yf(x_i,y_j)
 \end{equation}
 em que $a = h_y/h_x$ e $b=h_x/h_y$. 
 
-Em segundo, as equações de diferenças finitas podem ser reescritas para formar uma matriz simétrica A. Por exemplo, em um ponto de malha adjacente ao limite esquerdo do domínio, o caso $i = 1$ de  \eqref{eq:poisson_fd_2d_area}, o valor de localização da incógnita $u_{0,j}$ aparece na equação. A matriz do sistema linear será simétrica ao mover tais valores para o vetor do lado direito $\boldsymbol{b}$. Isso é possível pois o valor $u_{0,j}$ é explicitado pelas condições de contorno. Isso converte as entradas das sub-diagonais  de A para zero nas colunas correspondentes aos valores de contorno conhecidos. Desta forma, pode-se resolver o sistema de equações por meio de álgebra linear mais eficientes, como gradientes conjugados, KSP e pré-condicionadores de Cholesky. Ao realizar estas duas alterações no sistema linear \eqref{eq:sistema_01}, tem-se:
+Em segundo, as equações de diferenças finitas podem ser reescritas para formar uma matriz $A$ simétrica. Por exemplo, em um ponto da malha adjacente ao limite esquerdo do domínio, o caso $i = 1$ de \eqref{eq:poisson_fd_2d_area}, o valor de localização da incógnita $u_{0,j}$ aparece na equação. A matriz do sistema linear será simétrica ao mover tais valores para o vetor do lado direito, $\boldsymbol{b}$. Isso é possível pois o valor $u_{0,j}$ é explicitado pelas condições de contorno. Isso converte as entradas das sub-diagonais  de A para zero nas colunas correspondentes aos valores de contorno conhecidos. Desta forma, pode-se resolver o sistema de equações por métodos mais eficientes, como gradientes conjugados, KSP e pré-condicionadores de Cholesky. Ao realizar estas duas alterações no sistema linear \eqref{eq:sistema_01}, tem-se:
 
 \begin{equation}
   \label{eq:sistema_02}
@@ -471,39 +515,98 @@ Em segundo, as equações de diferenças finitas podem ser reescritas para formar u
 \end{equation}
 em que $\alpha=2(h_x/h_y + h_y/h_x) = 13/3$, $\beta = -h_y/h_x=-3/2$. A nova matriz $A$ é simétrica e positiva definida, está melhor escalada que antes e tem um número de condição $k(A) = 5.83$.
 
-\subsection{Montagem da matriz em PETSc}
+\subsection{Montagem da matriz $A$ em PETSc}
 A função denominada \verb|formMatrix()| no Código \ref{code:formMatrix} é responsável pela montagem da matriz $A$ do sistema linear \eqref{eq:sistema_02}.
 
 \lstinputlisting[label=code:formMatrix,linerange={6-45},language=C,caption=formMatrix()]{codigo/poisson_fd_2d.c}
 
-A variável \verb|DMDALocalInfo info| declarada no Código \ref{code:formMatrix} precisa de uma descrição especial. Ela é uma estrutura de inteiros em C, definida pela biblioteca PETSc, e serve para  descrever tanto o tamanho da malha global como a extensão das submalhas locais. A extensão da malha global está nos membros \verb|info.mx| e \verb|info.my|. Os processos locais possem sub-malhas rectangulares com dimensão \verb|info.xm| e \verb|info.ym|, com um intervalo de índices locais em duas dimensões da forma:
+A variável \verb|DMDALocalInfo info| declarada no Código \ref{code:formMatrix} precisa de uma descrição especial. Ela é uma estrutura de inteiros em C, definida pela biblioteca PETSc, e serve para  descrever tanto o tamanho da malha global como a extensão das submalhas locais. A extensão da malha global está nos membros \verb|info.mx| e \verb|info.my|. Os processos locais possem sub-malhas retangulares com dimensão \verb|info.xm| e \verb|info.ym|, com um intervalo de índices locais em duas dimensões da forma:
 \begin{center}
  \texttt{info.xs} $\leq i \leq $ \texttt{info.xs + info.xm -1}\\
  \texttt{info.ys} $\leq j \leq $ \texttt{info.ys + info.ym -1}
 \end{center}
-Para melhor compreensão, considere a malha da Figura ????3.3, em que \verb|info.mx|=5 e \verb|info.my|=7. Ao considerar o caso em que são empregados 4 processos MPI, tem-se que os processos com rank 0 e 2 têm \verb|info.xs|=0 e \verb|info.xm|=3, por outro lado, os processos com rank 1 e 3 têm \verb|info.xs|=3 e \verb|info.xm|=2, respectivamente. Para a coordenada $j$, os processos com rank 0 e 1 têm \verb|info.ys|=0 e \verb|info.ym|=4, por outro lado, os processos com rank 2 e 3 têm \verb|info.ys|=4 e \verb|info.xm|=3, respectivamente. Com esses índices, é possível montar a matriz bidimensional em paralelo.
+Para melhor compreensão, considere a malha da Figura \ref{fig:poisson_grid_2d_5x7}, em que \verb|info.mx|=5 e \verb|info.my|=7. Ao considerar o caso em que são empregados 4 processos MPI, tem-se que os processos com rank 0 e 2 têm \verb|info.xs|=0 e \verb|info.xm|=3, por outro lado, os processos com rank 1 e 3 têm \verb|info.xs|=3 e \verb|info.xm|=2, respectivamente. Para a coordenada $j$, os processos com rank 0 e 1 têm \verb|info.ys|=0 e \verb|info.ym|=4, por outro lado, os processos com rank 2 e 3 têm \verb|info.ys|=4 e \verb|info.xm|=3, respectivamente. Com esses índices, é possível montar a matriz bidimensional em paralelo. A Figura \ref{fig:DMDALocalInfo_info} ilustra o posicionamento das variáveis locais.
 
-Em particular, os índices locais $(i, j)$ podem ser usados para inserir entradas na \verb|Mat A|. No Código \ref{code:formMatrix}, vemos um uso de \verb|MatSetValuesStencil()| para cada ponto da malha  local. Para um ponto interior genérico, este comando insere cinco coeficientes na matriz, cuja  estrutura de dados é do tipo \verb|MatStencil|, que é uma estrutura da biblioteca PETSc que apresenta quatro valores inteiros, $k,j,i,c$. No caso 2D, com um único grau de liberdade em cada nodo, usamos apenas os membros $i$ e $j$ da estrutura  \verb|MatStencil|. A partir de \eqref{eq:poisson_fd_2d_area}, as entradas da matriz são $a_{i,i} = 2 (h_y / h_x + h_x / h_y)$ na diagonal e $a_{i,j} = -h_y / h_x$ ou $a_{i,j} = - h_x / h_y$ para as diagonais secundárias.
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/DMDALocalInfo_info}
+ \caption{\texttt{DMDALocalInfo info}.}
+ \label{fig:DMDALocalInfo_info}
+\end{figure}
+
+Em particular, os índices locais $(i, j)$ podem ser usados para inserir entradas na \verb|Mat A|. No Código \ref{code:formMatrix}, vemos um uso de \verb|MatSetValuesStencil()| para cada ponto da malha  local. Para um ponto interior genérico, este comando insere cinco coeficientes na matriz, cuja  estrutura de dados é do tipo \verb|MatStencil|, que é uma estrutura da biblioteca PETSc que apresenta quatro valores inteiros, $k,j,i,c$. No caso 2D, com um único grau de liberdade em cada nodo, usamos apenas os membros $i$ e $j$ da estrutura  \verb|MatStencil|. A partir da discretização  \eqref{eq:poisson_fd_2d_area}, as entradas da matriz são $a_{i,i} = 2 (h_y / h_x + h_x / h_y)$ na diagonal e $a_{i,j} = -h_y / h_x$ ou $a_{i,j} = - h_x / h_y$ para as diagonais secundárias.
 
 % Ainda considerando o Código \ref{code:formMatrix}, a variável \verb|MAT A| montado por \verb|formMatrix()| tem intervalos de linhas pertencentes a cada processo, o layout paralelo padrão MATMPIAIJ de objetos Mat no PETSc (Capítulo 1). No entanto, como trabalhamos com a subgrid de propriedade local usando índices (i, j), podemos ignorar o layout real de um Mat e concentrar-nos apenas na parte da grade pertencente ao processo, em vez de nos preocuparmos com a própria matriz.
 
 
-figura............ 3.9
-
 
 \subsection{Um problema particular}
-Neste seção, será especificado uma função $u(x,y)$ para que o problema de Poisson tenha uma solução exata e cuidando para que ela satisfaça as condições de contorno de Dirichlet homogêneas ($u = 0$ ao longo de $\partial S)$:
+Neste seção, será especificada uma função $u(x,y)$ para que o problema de Poisson tenha uma solução exata que também satisfaça as condições de contorno de Dirichlet homogêneas ($u = 0$ ao longo de $\partial S)$:
 \begin{equation}
  \label{eq:poisson_an}
  u(x,y)=(x^2-x^4)(y^4-y^2)
 \end{equation}
-Cujo laplaciano é igual a $f = - \nabla^u$:
+Cujo Laplaciano é igual a $f = - \nabla^2u$:
 \begin{equation}
  \label{eq:poisson_laplacian}
  f(x,y) = 2(1-6x^2)y^2(1-y^2)+2(1-6y^2)x^2(1-x^2)
 \end{equation}
 A expressão \eqref{eq:poisson_an} será referenciada como solução exata, $u_{ex}$ a partir de agora. Este mesmo problema é ilustrado no capítulo 4 \cite{briggs:2000} e em \cite{bueler:2017},
 
+O Código \ref{code:formExact} mostra como a solução exata é implementado na função \verb|formExact()|, e mostra como  \eqref{eq:poisson_laplacian} é implementada na função  \verb|formRHS()|. Os cálculos nestes códigos usam apenas coordenadas da malha local $(i, j)$. Ou seja, a aritmética de ponteiros PETSc permite indexar as arrays que obtemos de \verb|DMDAVecGetArray()| usando as coordenadas da malha $i$ e $j$, sem conhecer os índices das incógnitas no \verb|Vec u|, considerado como vetor de coluna de comprimento $L = m_x m_y$. Ao terminar de construir os vetores, restaura-se as arrays chamando a função \verb| DMDAVecRestoreArray()|.
+
+\lstinputlisting[label=code:formExact,linerange={49-93},language=C,caption=\texttt{formExact()} e \texttt{formRHS}]{codigo/poisson_fd_2d.c}
+
+\subsection{Resolução do sistema de equações}
+O Código \ref{code:solve}  mostra a função principal e os objetos necessários para resolver o problema de Poisson: um \verb|DM|, um \verb|Mat| e três \verb|Vec|. Um objeto \verb|DM| determina as dimensões da matriz e dos vetores a partir das dimensões da malha, o que é feito quando chamamos \verb|DMCreateMatrix()| e \verb|DMCreateGlobalVector()| para criar objetos \verb|Mat| e \verb|Vec|, respectivamente. Então invoca-se as funções mostradas nos Códigos \ref{code:formMatrix} e \ref{code:formExact} para preencher a matriz e os vetores.
+
+\lstinputlisting[label=code:solve,linerange={97-148},language=C,caption=formExact()]{codigo/poisson_fd_2d.c}
+
+Como já realizado, o sistema linear é resolvido por um objeto de solução linear KSP. O sistema é resolvido chamando \texttt{KSPSolve()}. Então calcula-se e imprimi-se na tela o erro numérico $||u - u_{ex}||$. Finalmente, destruímos objetos com o método \texttt{XXXDestroy()} e chamamos \texttt{PetscFinalize()} para encerrar. Uma primeira execução da solução pode ser feita através do comando:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ make poisson_fd_2d|\\
+\verb|user@user-G73Sw:~$ ./poisson_fd_2d -ksp_monitor|\\
+\verb|0 KSP Residual norm 1.020952970432e-01 |\\
+\verb|1 KSP Residual norm 2.656923348626e-02 |\\
+  \verb|2 KSP Residual norm 8.679141000397e-03 |\\
+  \verb|3 KSP Residual norm 1.557150861763e-03 |\\
+  \verb|4 KSP Residual norm 2.239919982542e-04 |\\
+  \verb|5 KSP Residual norm 2.519822315367e-05 |\\
+  \verb|6 KSP Residual norm 2.152764600588e-06 |\\
+  \verb|7 KSP Residual norm 2.650467236964e-07 |\\
+\verb|on 9 x 9 grid:  error| \verb%|u-uexact|_inf = 0.000763959|%\\
+\end{flushleft}
+
+Pode-se examinar graficamente a malha para verificar a indexação dos objetos, em tempo de execução Assim, se o sistema X-window estiver corretamente configurado na instalação PETSc, então o comando:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ ./poisson_fd_2d -da_grid_x 5 -da_grid_y 7 -dm_view draw -draw_pause 5|\\
+\end{flushleft}
+irá plotar a Figura \ref{fig:grid_xwindow_poisson}.
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/grid_xwindow_poisson}
+ \caption{Malha computacional.}
+ \label{fig:grid_xwindow_poisson}
+\end{figure}
+Outra visualização interessante é obtida com o comando:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ ./poisson_fd_2d -da_grid_x 5 -da_grid_y 7 -a_mat_view draw -draw_pause 5|\\
+\end{flushleft}
+que apresenta a estrutura da matriz A, conforme Figura \ref{fig:matrix_struct_xwindow}.
+\begin{figure}[H] \centering
+ \includegraphics[width=0.5\textwidth]{figuras/matrix_struct_xwindow}
+ \caption{Estrutura da matriz $A$.}
+ \label{fig:matrix_struct_xwindow}
+\end{figure}
+
+É possível também observar a variação do erro conforme o refinamento da malha com o comando:
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ for K in 0 1 2 3 4 5; do ./poisson_fd_2d -da_refine $K; done|\\
+\verb|on 9 x 9 grid:  error |u-uexact|_inf = 0.000763959|\\
+\verb|on 17 x 17 grid:  error |u-uexact|_inf = 0.000196764|\\
+\verb|on 33 x 33 grid:  error |u-uexact|_inf = 4.91557e-05|\\
+\verb|on 65 x 65 grid:  error |u-uexact|_inf = 1.29719e-05|\\
+\verb|on 129 x 129 grid:  error |u-uexact|_inf = 3.76924e-06|\\
+\verb|on 257 x 257 grid:  error |u-uexact|_inf = 1.73086e-06|\\
+\end{flushleft}
 
 
 

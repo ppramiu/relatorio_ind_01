@@ -25,3 +25,7 @@ solve_linear_ksp: solve_linear_ksp.o  chkopts
 solve_linear_arbitrary: solve_linear_arbitrary.o  chkopts
 	-${CLINKER} -o solve_linear_arbitrary solve_linear_arbitrary.o  ${PETSC_LIB}
 	${RM} solve_linear_arbitrary.o
+
+poisson_fd_2d: poisson_fd_2d.o  chkopts
+	-${CLINKER} -o poisson_fd_2d poisson_fd_2d.o  ${PETSC_LIB}
+	${RM} poisson_fd_2d.o

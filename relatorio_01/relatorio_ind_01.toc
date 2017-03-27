@@ -1,11 +1,12 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdução}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Instalação e Configuração do PETSC}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Primeiros exemplos com PETSC}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Objetos do tipo vetores e matrizes em PETSC}{11}{subsection.2.1.1}
+\contentsline {chapter}{\numberline {2}Instalação e Configuração do PETSc}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Primeiros exemplos com PETSc}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Objetos do tipo vetores e matrizes em PETSc}{11}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Solução de sistema linear}{14}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}A equação de Poisson}{19}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Geração da malha}{20}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Discretização em diferenças finitas}{21}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Montagem da matriz em PETSc}{23}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Um problema particular}{25}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Resolução do sistema de equações}{26}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.1}Geração da malha}{21}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Discretização em diferenças finitas}{23}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Montagem da matriz $A$ em PETSc}{25}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Um problema particular}{27}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Resolução do sistema de equações}{28}{subsection.2.2.5}

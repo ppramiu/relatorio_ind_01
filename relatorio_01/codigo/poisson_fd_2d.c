@@ -26,21 +26,23 @@ PetscErrorCode formMatrix(DM da, Mat A) {
         // if neighbor is NOT a known boundary value then we put an entry
         if (i-1 > 0) {
           col[ncols].j = j;    col[ncols].i = i-1;  v[ncols++] = -hy/hx;
-	printf("linha j: %d linha i: %d Ncols: %d \n",row.j,row.i,ncols); }
+	//printf("linha j: %d linha i: %d Ncols: %d \n",row.j,row.i,ncols); 
+	}
         if (i+1 < info.mx-1) {
           col[ncols].j = j;    col[ncols].i = i+1;  v[ncols++] = -hy/hx;  }
         if (j-1 > 0) {
           col[ncols].j = j-1;  col[ncols].i = i;    v[ncols++] = -hx/hy;  }
         if (j+1 < info.my-1) {
           col[ncols].j = j+1;  col[ncols].i = i;    v[ncols++] = -hx/hy;
-	printf("linha j: %d linha i: %d Ncols: %d \n",row.j,row.i,ncols);}
+	//printf("linha j: %d linha i: %d Ncols: %d \n",row.j,row.i,ncols);
+	}
       }
 	ierr = MatSetValuesStencil(A,1,&row,ncols,col,v,INSERT_VALUES); CHKERRQ(ierr);
     }
   }
   ierr = MatAssemblyBegin(A,MAT_FINAL_ASSEMBLY); CHKERRQ(ierr);
   ierr = MatAssemblyEnd(A,MAT_FINAL_ASSEMBLY); CHKERRQ(ierr);
-  ierr = MatView(A,PETSC_VIEWER_STDOUT_SELF);
+  //ierr = MatView(A,PETSC_VIEWER_STDOUT_SELF);
   return 0;
 }
 //ENDMATRIX

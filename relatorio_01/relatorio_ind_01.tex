@@ -15,8 +15,10 @@
 \usepackage{multicol} 
 \usepackage{varwidth}
 \usepackage{color}
+\usepackage{animate}
 \usepackage{xcolor}
 \usepackage{lmodern}
+\usepackage{tikz}
 \renewcommand*\familydefault{\sfdefault}
 \usepackage{subfigure}
 \usepackage{nomencl} 
@@ -100,16 +102,18 @@ urlcolor=blue]{hyperref}
 \tableofcontents
 
 \chapter{Introdução}
-Este relatório objetiva registrar de forma detalhada e sistemática as atividades de pesquisa e estudos relacionados à temática de proposta de tese do autor. Nele serão revistos alguns conceitos fundamentais de mecânica de fluidos, métodos numéricos em equações diferenciais, instalação e configuração de bibliotecas para implementação computacional como PETSC e MPI, entre outros. Exemplos da resolução de sistemas de equações lineares e da solução de algumas EDPs como a equação de Laplace, de Poisson, da equação do calor transiente e da equação de Stokes serão resolvidos detalhadamente em diferenças finitas ou volumes finitos, empregando malhas estruturadas e em programação serial ou paralela. A linguagem selecionada para implementação dos códgidos fonte é a linguagem C, e alguns exemplos também serão ilustrados e implementados em Scilab. Com a realização destes exemplos espera-se obter os requisitos necessários para compreensão de trabalhos e implementação de código computacional envolvendo simulações em escoamentos turbulentos empregando o método de Simulação de Grandes Escalas - \textit{Large Eddy Simulation}.
+Este relatório objetiva registrar de forma detalhada e sistemática as atividades de pesquisa e estudos relacionados à temática de proposta de tese do autor. Nele serão revistos alguns conceitos fundamentais de mecânica de fluidos, métodos numéricos em equações diferenciais, instalação e configuração de bibliotecas para implementação computacional como PETSc e MPI, entre outros. Exemplos da resolução de sistemas de equações lineares e da solução de algumas EDPs como a equação de Laplace, de Poisson, da equação do calor transiente e da equação de Stokes serão resolvidos detalhadamente em diferenças finitas ou volumes finitos, empregando malhas estruturadas e em programação serial ou paralela. A linguagem selecionada para implementação dos códgidos fonte é a linguagem C, e alguns exemplos também serão ilustrados e implementados em Scilab. Com a realização destes exemplos espera-se obter os requisitos necessários para compreensão de trabalhos e implementação de código computacional envolvendo simulações em escoamentos turbulentos empregando o método de Simulação de Grandes Escalas - \textit{Large Eddy Simulation}.
 
 %\input{resumo_ceasb}
 %\input{fluxograma}
 % \input{revisao}
 \input{codigo}
+\input{teste_tikz}
 
-\bibliographystyle{elsarticle-harv}
+\bibliographystyle{plain}
 \nocite{*}
 \bibliography{bibliografia}
 
+\input{logos}
 
 \end{document}
