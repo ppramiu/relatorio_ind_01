@@ -1,6 +1,6 @@
 //STARTSETUP
 static char help[] =
-  "Solve a tridiagonal system of arbitrary size.  Option prefix = tri_.\n";
+  "Resolve um sistema linear tridiagonal de tamanho definido pelo usuário.\n";
 
 #include <petsc.h>
 
@@ -14,8 +14,10 @@ int main(int argc,char **args) {
 
   PetscInitialize(&argc,&args,NULL,help);
 
-  ierr = PetscOptionsBegin(PETSC_COMM_WORLD,"tri_","options for tri",""); CHKERRQ(ierr);
-  ierr = PetscOptionsInt("-m","dimension of linear system","tri.c",m,&m,NULL); CHKERRQ(ierr);
+  ierr = PetscOptionsBegin(PETSC_COMM_WORLD,"tri_","Opções para tri",""); 
+	 CHKERRQ(ierr);
+  ierr = PetscOptionsInt("-m","Dimensão do sistema","tri.c",m,&m,NULL); 
+	 CHKERRQ(ierr);
   ierr = PetscOptionsEnd(); CHKERRQ(ierr);
 
   ierr = VecCreate(PETSC_COMM_WORLD,&x); CHKERRQ(ierr);
@@ -62,7 +64,8 @@ int main(int argc,char **args) {
   ierr = VecAXPY(x,-1.0,xexact); CHKERRQ(ierr);
   ierr = VecNorm(x,NORM_2,&errnorm); CHKERRQ(ierr);
   ierr = PetscPrintf(PETSC_COMM_WORLD,
-         "error for m = %d system is |x-xexact|_2 = %.1e\n",m,errnorm); CHKERRQ(ierr);
+         "Erro para sistema de ordem m = %d é |x-xexact|_2 = %.1e\n",m,errnorm); 
+	 CHKERRQ(ierr);
 
   KSPDestroy(&ksp);  MatDestroy(&A);
   VecDestroy(&x);  VecDestroy(&b);  VecDestroy(&xexact);

@@ -14,13 +14,15 @@ int main(int argc, char **argv) {
   for (i = 2; i < rank+1; i++)
       localval /= i;
 
-  // soma as contribuiÃ§Ãµes de cada processo
+  // soma as contribuições de cada processo
   ierr = MPI_Allreduce(&localval, &globalsum, 1, MPI_DOUBLE, MPI_SUM,
                        PETSC_COMM_WORLD); CHKERRQ(ierr);
 
   // imprime a estimativa de e
   ierr = PetscPrintf(PETSC_COMM_WORLD,
-      "O valor da constante 'e' Ã© aproximadamente: %17.15f\n",globalsum); CHKERRQ(ierr);
+      "O valor da constante 'e' é aproximadamente: %17.15f\n",globalsum); 
+	CHKERRQ(ierr);
+
   ierr = PetscPrintf(PETSC_COMM_SELF,
       "rank %d did %d flops\n",rank,(rank > 0) ? rank-1 : 0); CHKERRQ(ierr);
 

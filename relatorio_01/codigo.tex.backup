@@ -297,6 +297,71 @@ A princípio um sistema de equações contendo $10^7$ variáveis parece ser grande. 
 Como esperado, o tempo de execução foi reduzido, neste caso caiu de 17 para 5 segundos.
 
 \section{A equação de Poisson}
+
+\subsection{O caso 1D}
+Nesta seção será realizada a discretização e implementação de um algoritmo computacional empregando a biblioteca PETSc para resolução da equação de Poisson 1D, por meio do método de diferenças finitas. Embora seja um problema simplificado, ele objetiva introduzir alguns conceitos referentes à utilização da ferramenta PETSc. O referido problema é será resolvido numa reta (0,1) empregando condições de contorno do tipo Dirichlet, em que $u(0) = 0$ e $u(1) = 0$. Mais especificamente, a equação é representada pelo problema de valor de contorno:
+\begin{equation}	
+ \label{eq:poisson_1d}
+ \begin{split}
+      -\dfrac{d^2 u }{d x^2} & = f(x) \quad \text{em } x \in (0,1)\\ 
+       u(0) & = 0 \\
+       u(1) & = 0
+ \end{split}
+\end{equation}
+Uma aproximação em diferenças finitas centradas de segunda ordem para a equação \eqref{eq:poisson_1d} é como:
+\begin{equation}
+ \label{eq:poisson_fd_1d}
+ -\dfrac{d^2 u }{d x^2} \approx -\dfrac{u_{i+1}-2u_i+u_{i-1}}{h_x^2}
+\end{equation}
+Ao substituir a segunda derivada da equação de Poisson por sua aproximação em diferenças finitas, tem-se um esquema para determinação de $u_i \approx u(x_i)$:
+\begin{equation}
+ \label{eq:poisson_fd_1dd}
+ \begin{split}
+ -\dfrac{u_{i+1}-2u_i+u_{i-1}}{h_x^2}  & = f_i\\
+ u_0 & = 0\\
+ u_{m_x} = 0
+ \end{split}
+\end{equation}
+
+Pode-se escrever a equação \eqref{eq:poisson_fd_1d} na forma matricial:
+\begin{equation}
+ \label{eq:poisson_fd_1d_lse}
+ A\boldsymbol{u} = \boldsymbol{b} 
+\end{equation}
+em que explicitamente, para uma malha 1D uniforme com um total de nodos $m_x = 5$ e com $h_x = 1/(m_x-1)=0,25$: 
+
+\begin{equation}
+  \label{eq:sistema_01}
+    \left[
+    \begin{array}{ccccc}
+     a & -b  & & &  \\
+    -b &a &-b& &   \\
+      &-b &a &-b &   \\
+      & &-b&a&-b  \\
+      & & &-b& a 
+     \end{array} 
+     \right]
+     \left[
+     \begin{array}{l}
+      u_{0}\\
+      u_{1}\\
+      u_{2}\\
+      u_{3}\\
+      u_{4}
+     \end{array}
+     \right] = \left[
+     \begin{array}{l}
+      0\\
+      f_1\\
+      f_2\\
+      f_3\\
+      0
+     \end{array}
+   \right] 
+\end{equation}
+em que $a=2/h_x^2 = 32$ e $b= 1/h_x^2=16$. O código \ref{code:poisson_fd_2d_octave} escrito em Octave ilustra a implementação desse primeiro exemplo.
+
+\subsection{O caso 2D}
 Esta seção é dedicada a resolução numérica do problema de Poisson em um quadrado. Este é um problema que permite compreender partes essenciais  da implementação de códigos empregando a biblioteca PETSc. A discretização da EDP gera um sistema linear que é mais interessante do que o sistema tridiagonal que foi resolvido anteriormente. Será construída uma malha estruturada usando um objeto \verb|DMDA|, que será introduzido nesta  seção, e depois será montada uma matriz em paralelo com base nessa malha. Por último o sistema linear resultante será resovido em paralelo usando um objeto \verb|KSP| \cite{petsc-user-ref}.
 
 Neste exemplo a equação de Poisson será resolvida numa região quadrada, $S, (0,1)\times(0,1)$ cujo contorno é representado por $\partial S$. O  domínio do problema é ilustrado na Figura \ref{fig:dominio_poisson_2d} e formulado em \eqref{eq:poisson}.
@@ -318,7 +383,7 @@ O Laplaciano de $u(x,y)$ é especificado por:
 e aparece com frequência em modelos matemáticos que expressam a conservação de alguma quantidade $u$, juntamente com a suposição de que o fluxo de $u$ é proporcional ao seu gradiente. O problema aqui estudado está sujeito à condições de contorno homogêneas de Dirichlet. 
 
 \begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/dominio_poisson_2d}
+ \includegraphics[width=0.35\textwidth]{figuras/dominio_poisson_2d}
  \caption{Domínio do problema.}
  \label{fig:dominio_poisson_2d}
 \end{figure}
@@ -338,7 +403,7 @@ O método de diferenças finitias é desenvolvido sobre uma malha composta por $m_x
 Considerando a malha da Figura \ref{fig:poisson_grid_2d_5x7} em $m_x=5$ e $m_y=7$, as coordenadas da malha são $(x_i = ih_x, y_j=j h_y)$, para $i=0,...,m_x-1$ e $j=0,...,m_y-1$.
 
 \begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/poisson_grid_2d_5x7}
+ \includegraphics[width=0.35\textwidth]{figuras/poisson_grid_2d_5x7}
  \caption{Malha computacional $5\times 7$.}
  \label{fig:poisson_grid_2d_5x7}
 \end{figure}
@@ -355,7 +420,7 @@ uma malha correspondente à da Figura \ref{fig:poisson_grid_2d_5x7} será criada, 
 então a biblioteca PETSc faz o equilíbrio de carga para os pontos da malha entre os processos, com a restrição de que cada processo MPI possui uma sub-malha retangular. Como observado na Figura \ref{fig:poisson_grid_2d_5x7_4_mpi}, PETSc distribui os quatro processos através dos 35 pontos da malha de forma relativamente uniforme (O processo rank 0 possui 12 pontos e o rank 3 possui 6, enquanto os outros estão entre eles). 
 
 \begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/poisson_grid_2d_5x7_4_mpi}
+ \includegraphics[width=0.35\textwidth]{figuras/poisson_grid_2d_5x7_4_mpi}
  \caption{Malha computacional $5\times 7$ e 4 processos.}
  \label{fig:poisson_grid_2d_5x7_4_mpi}
 \end{figure}
@@ -367,7 +432,7 @@ O bloco de código referente ao emprego do objeto \texttt{DMDACreate2d} é descrit
 No Código \ref{code:code_poisson_fd_2d}, o primeiro argumento é referente ao comunicador. O segundo e terceiro argumentos são do tipo \verb|DM_BOUNDARY_NONE| pois as condições de Dirichlet não precisam de comunicação para o próximo processo. No quarto argumento, escolhe-se o método \verb|DMDA_STENCIL_STAR| porque somente os vizinhos cardeais de um ponto da malha são usados na discretização. A Figura \ref{fig:stencil_finite_diference_2d} mostra seu stencil computacional. 
 
 \begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/stencil_finite_diference_2d}
+ \includegraphics[width=0.35\textwidth]{figuras/stencil_finite_diference_2d}
  \caption{Stencil computacional epregado na discretização.}
  \label{fig:stencil_finite_diference_2d}
 \end{figure}
@@ -378,7 +443,7 @@ Os dois argumentos \verb|PETSC_DECIDE| depois disso dão ao \texttt{PETSc} autono
 Considerando uma discretização da equação \eqref{eq:poisson} em diferenças finitas, ela pode ser escrita na forma discreta como:
 \begin{equation}
   \label{eq:poisson_fd_2d}
-  - \dfrac{u_{i+1,j} - 2u_{i,j} + u_{i-1,j}}{h_x^2} - \dfrac{u_{i+1,j} - 2u_{i,j} + u_{i-1,j}}{h_x^2} = f(x_i,y_j)
+  - \dfrac{u_{i+1,j} - 2u_{i,j} + u_{i-1,j}}{h_x^2} - \dfrac{u_{i,j+1} - 2u_{i,j} + u_{i,j-1}}{h_y^2} = f(x_i,y_j)
 \end{equation}
 que se aplica a todos os pontos interiores do domínio, ou seja, quando $ 0 < i < m_x - 1$ e $ 0 < j < m_j - 1$. As condições de contorno são impostas como:
 \begin{equation}
@@ -393,15 +458,34 @@ Todos os valores $u_{i,j}$ serão tratados como incógnitas, sejam do interior ou 
  A\boldsymbol{u} = \boldsymbol{b} 
 \end{equation}
 em que a matriz A tem dimensão $L\times L$, e os vetores $\boldsymbol{u}$ e $\boldsymbol{b}$, dimensão $L\times 1$. No entanto, para montar  as entradas de $A$ e $\boldsymbol{b}$ no sistema linear \eqref{eq:poisson_fd_2d_lse}, deve-se ordenar as incógnitas. Essa ordenação é implementada dentro do objeto \verb|DMDA|, e o código só precisa usar as coordenadas $(i, j)$. %A capacidade de montar Mat s e Vecs com indexação de tipo (i, j) é uma razão estruturada - códigos de grade usando DMDA pode ser bastante curto.
+
 A ordenação usada em um processo único (serial) executado por um \verb|DMDA| 2D é mostrada na Figura \ref{fig:poisson_grid_2d_4x3}. Em uma malha $m_x$ por $m_y$, pode-se escrever o novo índice global como $k = j m_x + i$ de modo que $u_{i,j}$ seja a $k$-ésima incógnita do sistema. Esse mapeamento de índice feito pelo objeto \verb|DMDA| fica transparente ao usuário. 
 
 \begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/poisson_grid_2d_4x3}
+ \includegraphics[width=0.35\textwidth]{figuras/poisson_grid_2d_4x3}
  \caption{Malha computacional $4\times 3$.}
  \label{fig:poisson_grid_2d_4x3}
 \end{figure}
 
-Como exemplo, a seguir será construído o sistema de equações para o caso da malha representada na Figura \ref{fig:poisson_grid_2d_4x3}, em que $m_x=4$ e $m_y=3$, o que resulta em $h_x=1/3$ e $h_y=1/2$. Somente os pontos com índice global $k=5$ e $k=6$ não são condições de contorno e o sistema linear é dado por:
+Um primeiro exemplo será feito de forma detalhada para auxiliar na compreensão. O tamanho da malha escolhido é de $4 \times 3$, ou seja, $m_x =4 $ e $m_y=3$, o que resulta em $h_x = 1/3$ e $h_y=1/2$. Desta forma, utiliza-se a expressão \ref{eq:poisson_fd_2d} para cada nodo da malha que não pertença às condições de contorno:\\
+Para o ponto $(1,1)$ tem-se:
+\begin{equation} 
+\begin{split}
+f(1,1) 	& = -\dfrac{u_{2,1} - 2u_{1,1} + u_{0,1}}{h_x^2} -\dfrac{u_{1,2} - 2u_{1,1} + u_{1,0}}{h_y^2} \\
+	& = -\dfrac{u_{2,1}}{h_x^2} - \dfrac{u_{0,1}}{h_x^2} + 2u_{1,1}\left(\dfrac{1}{h_x^2}+\dfrac{1}{h_y^2}\right) -\dfrac{u_{1,2}}{h_y^2} - \dfrac{u_{1,0}}{h_y^2} \\
+	& = -\dfrac{1}{h_x^2} u_{2,1} - \dfrac{1}{h_x^2}u_{0,1} + \left(\dfrac{2}{h_x^2}+\dfrac{2}{h_y^2}\right)u_{1,1} -\dfrac{1}{h_y^2}u_{1,2} - \dfrac{1}{h_y^2}u_{1,0}
+\end{split}
+\end{equation}
+De forma análoga, para o ponto $(2,1)$ tem-se:
+\begin{equation} 
+\begin{split} 
+  f(2,1) & = -\dfrac{u_{3,1} - 2u_{2,1} + u_{1,1}}{h_x^2} -\dfrac{u_{2,2} - 2u_{2,1} + u_{2,0}}{h_y^2}\\
+	 & = -\dfrac{u_{3,1}}{h_x^2} - \dfrac{u_{1,1}}{h_x^2} + 2u_{2,1}\left(\dfrac{1}{h_x^2}+\dfrac{1}{y_x^2}\right) -\dfrac{u_{2,2}}{h_y^2} - \dfrac{u_{2,0}}{h_y^2} \\ 
+	 & = -\dfrac{1}{h_x^2} u_{3,1} - \dfrac{1}{h_x^2}u_{1,1} + \left(\dfrac{2}{h_x^2}+\dfrac{2}{h_y^2}\right)u_{2,1} -\dfrac{1}{h_y^2}u_{2,2} - \dfrac{1}{h_y^2}u_{2,0}
+  \end{split}
+\end{equation}
+
+Para escrever a equação de diferenças finitas na forma matricial, deve-se separar os coeficientes que multiplicam as velocidades e os valores da função $f$. A seguir é construído o sistema de equações para o caso da malha representada na Figura \ref{fig:poisson_grid_2d_4x3}. Somente os pontos com índice global $k=5$ e $k=6$ não são condições de contorno, o que resutla no sistema linear:
 \begin{equation}
   \label{eq:sistema_01}
     \left[
@@ -452,9 +536,28 @@ Como exemplo, a seguir será construído o sistema de equações para o caso da malh
      \end{array}
    \right] 
 \end{equation}
-em que $a=2/h_x^2+2/h_y^2 = 26$, $b= -1/h_x^2=-9$ e $c = -1/h_y^2=-4$. A matriz $A$ não é simétrica e seu número de condição na norma 2 é $k(A)=||A||_2||A^{-1}||_2=43.16$. Dois detalhes importantes devem ser considerados nessa primeira discretização. 
+em que $a=2/h_x^2+2/h_y^2 = 26$, $b= -1/h_x^2=-9$ e $c = -1/h_y^2=-4$. A matriz $A$ não é simétrica e seu número de condição na norma 2 é $k(A)=||A||_2||A^{-1}||_2=43.16$. O código \ref{code:poisson_fd_2d_octave} escrito em Octave ilustra a implementação desse primeiro exemplo.
 
-O primeiro é que a equação \eqref{eq:poisson_fd_2d} tem diferentes escalas ou ordem de grandeza. Por exemplo, ao tomar $m_x=m_y=1001$, tem-se $h_x=h_y=0,001$ o que resulta em coeficientes para os nodos internos do domínio da ordem de $4/0.001^2=x \times 10^6$, enquanto que os coeficientes para os nodos do contorno são iguais a 1. Para mitigar esse problema, pode-se multiplicar \eqref{eq:poisson_fd_2d} pela área do elemento de malha, $h_xh_y$, resultando em:
+\lstinputlisting[label=code:poisson_fd_2d_octave,language=Matlab,caption=Primeiro exemplo.]{codigo/poisson_fd_2d_octave.m}
+
+Cuja solução é:
+\begin{flushleft}
+\verb|u = |\\
+\verb|   0.000000|\\
+\verb|  -0.000000|\\
+\verb|  -0.000000|\\
+\verb|   0.000000|\\
+\verb|  -0.000000|\\
+\verb|  -0.012042|\\
+\verb|  -0.037704|\\
+\verb|   0.000000|\\
+\verb|   0.000000|\\
+\verb|   0.000000|\\
+\verb|   0.000000|\\
+\verb|   0.000000|
+\end{flushleft}
+
+Dois detalhes importantes devem ser considerados nessa primeira discretização. O primeiro é que a equação \eqref{eq:poisson_fd_2d} tem diferentes escalas ou ordem de grandeza. Por exemplo, ao tomar $m_x=m_y=1001$, tem-se $h_x=h_y=0,001$ o que resulta em coeficientes para os nodos internos do domínio da ordem de $4/0.001^2=x \times 10^6$, enquanto que os coeficientes para os nodos do contorno são iguais a 1. Para mitigar esse problema, pode-se multiplicar \eqref{eq:poisson_fd_2d} pela área do elemento de malha, $h_xh_y$, resultando em:
 \begin{equation}
  \label{eq:poisson_fd_2d_area}
  2(a+b)u_{i,j}-a(u_{i+1,j}+u_{i-1,j})-a(u_{i,j+1}+u_{i,j-1})=h_xh_yf(x_i,y_j)
@@ -525,13 +628,15 @@ A variável \verb|DMDALocalInfo info| declarada no Código \ref{code:formMatrix} p
  \texttt{info.xs} $\leq i \leq $ \texttt{info.xs + info.xm -1}\\
  \texttt{info.ys} $\leq j \leq $ \texttt{info.ys + info.ym -1}
 \end{center}
-Para melhor compreensão, considere a malha da Figura \ref{fig:poisson_grid_2d_5x7}, em que \verb|info.mx|=5 e \verb|info.my|=7. Ao considerar o caso em que são empregados 4 processos MPI, tem-se que os processos com rank 0 e 2 têm \verb|info.xs|=0 e \verb|info.xm|=3, por outro lado, os processos com rank 1 e 3 têm \verb|info.xs|=3 e \verb|info.xm|=2, respectivamente. Para a coordenada $j$, os processos com rank 0 e 1 têm \verb|info.ys|=0 e \verb|info.ym|=4, por outro lado, os processos com rank 2 e 3 têm \verb|info.ys|=4 e \verb|info.xm|=3, respectivamente. Com esses índices, é possível montar a matriz bidimensional em paralelo. A Figura \ref{fig:DMDALocalInfo_info} ilustra o posicionamento das variáveis locais.
+Para melhor compreensão, considere a malha da Figura \ref{fig:poisson_grid_2d_5x7}, em que \verb|info.mx|=5 e \verb|info.my|=7. Ao considerar o caso em que são empregados 4 processos MPI, tem-se que os processos com rank 0 e 2 têm \verb|info.xs|=0 e \verb|info.xm|=3, por outro lado, os processos com rank 1 e 3 têm \verb|info.xs|=3 e \verb|info.xm|=2, respectivamente. Para a coordenada $j$, os processos com rank 0 e 1 têm \verb|info.ys|=0 e \verb|info.ym|=4, por outro lado, os processos com rank 2 e 3 têm \verb|info.ys|=4 e \verb|info.xm|=3, respectivamente. Com esses índices, é possível montar a matriz bidimensional em paralelo. 
 
-\begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/DMDALocalInfo_info}
- \caption{\texttt{DMDALocalInfo info}.}
- \label{fig:DMDALocalInfo_info}
-\end{figure}
+% A Figura \ref{fig:DMDALocalInfo_info} ilustra o posicionamento das variáveis locais.
+% 
+% \begin{figure}[H] \centering
+%  \includegraphics[width=0.5\textwidth]{figuras/DMDALocalInfo_info}
+%  \caption{\texttt{DMDALocalInfo info}.}
+%  \label{fig:DMDALocalInfo_info}
+% \end{figure}
 
 Em particular, os índices locais $(i, j)$ podem ser usados para inserir entradas na \verb|Mat A|. No Código \ref{code:formMatrix}, vemos um uso de \verb|MatSetValuesStencil()| para cada ponto da malha  local. Para um ponto interior genérico, este comando insere cinco coeficientes na matriz, cuja  estrutura de dados é do tipo \verb|MatStencil|, que é uma estrutura da biblioteca PETSc que apresenta quatro valores inteiros, $k,j,i,c$. No caso 2D, com um único grau de liberdade em cada nodo, usamos apenas os membros $i$ e $j$ da estrutura  \verb|MatStencil|. A partir da discretização  \eqref{eq:poisson_fd_2d_area}, as entradas da matriz são $a_{i,i} = 2 (h_y / h_x + h_x / h_y)$ na diagonal e $a_{i,j} = -h_y / h_x$ ou $a_{i,j} = - h_x / h_y$ para as diagonais secundárias.
 
@@ -600,13 +705,19 @@ que apresenta a estrutura da matriz A, conforme Figura \ref{fig:matrix_struct_xw
 É possível também observar a variação do erro conforme o refinamento da malha com o comando:
 \begin{flushleft}
 \verb|user@user-G73Sw:~$ for K in 0 1 2 3 4 5; do ./poisson_fd_2d -da_refine $K; done|\\
-\verb|on 9 x 9 grid:  error |u-uexact|_inf = 0.000763959|\\
-\verb|on 17 x 17 grid:  error |u-uexact|_inf = 0.000196764|\\
-\verb|on 33 x 33 grid:  error |u-uexact|_inf = 4.91557e-05|\\
-\verb|on 65 x 65 grid:  error |u-uexact|_inf = 1.29719e-05|\\
-\verb|on 129 x 129 grid:  error |u-uexact|_inf = 3.76924e-06|\\
-\verb|on 257 x 257 grid:  error |u-uexact|_inf = 1.73086e-06|\\
+\verb|on 9 x 9 grid:  error u-uexact_inf = 0.000763959|\\
+\verb|on 17 x 17 grid:  error u-uexact_inf = 0.000196764|\\
+\verb|on 33 x 33 grid:  error u-uexact_inf = 4.91557e-05|\\
+\verb|on 65 x 65 grid:  error u-uexact_inf = 1.29719e-05|\\
+\verb|on 129 x 129 grid:  error u-uexact_inf = 3.76924e-06|\\
+\verb|on 257 x 257 grid:  error u-uexact_inf = 1.73086e-06|\\
 \end{flushleft}
 
-
+Note agora a diferença entre tempos de processamento para o código serial e utilizando 2 processadores.
+\begin{flushleft}
+\verb|user@user-G73Sw:~$ time ./poisson_fd_2d -da_refine 6|\\
+\verb|real	0m56.467s|\\
+\verb|user@user-G73Sw:~$ time mpiexec -n 2 ./poisson_fd_2d -da_refine 6|\\
+\verb|real	1m0.327s  |\\
+\end{flushleft}
 

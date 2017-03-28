@@ -1,4 +1,4 @@
-static char help[] = "Monta um vetor 10x1 usando Vec.\n";
+static char help[] = "Monta um vetor 10 x 1 usando Vec.\n";
 
 #include <petsc.h>
 

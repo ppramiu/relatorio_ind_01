@@ -62,53 +62,63 @@
 \newlabel{code:solve_linear_arbitrary}{{2.3}{16}{Resolução de sistema com tamanho arbitrário}{lstlisting.2.3}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2.3}Resolução de sistema com tamanho arbitrário.}{16}{lstlisting.2.3}}
 \citation{petsc-user-ref}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}A equação de Poisson}{19}{section.2.2}}
-\newlabel{eq:poisson}{{2.3}{20}{A equação de Poisson}{equation.2.2.3}{}}
-\newlabel{eq:laplaciano}{{2.4}{20}{A equação de Poisson}{equation.2.2.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Domínio do problema.\relax }}{20}{figure.caption.10}}
-\newlabel{fig:dominio_poisson_2d}{{2.9}{20}{Domínio do problema.\relax }{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Geração da malha}{21}{subsection.2.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Malha computacional.\relax }}{21}{figure.caption.11}}
-\newlabel{fig:poisson_grid_2d}{{2.10}{21}{Malha computacional.\relax }{figure.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Malha computacional $5\times 7$.\relax }}{21}{figure.caption.12}}
-\newlabel{fig:poisson_grid_2d_5x7}{{2.11}{21}{Malha computacional $5\times 7$.\relax }{figure.caption.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Malha computacional $5\times 7$ e 4 processos.\relax }}{22}{figure.caption.13}}
-\newlabel{fig:poisson_grid_2d_5x7_4_mpi}{{2.12}{22}{Malha computacional $5\times 7$ e 4 processos.\relax }{figure.caption.13}{}}
-\newlabel{code:code_poisson_fd_2d}{{2.4}{22}{DMDA()}{lstlisting.2.4}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.4}DMDA()}{22}{lstlisting.2.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Stencil computacional epregado na discretização.\relax }}{23}{figure.caption.14}}
-\newlabel{fig:stencil_finite_diference_2d}{{2.13}{23}{Stencil computacional epregado na discretização.\relax }{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Discretização em diferenças finitas}{23}{subsection.2.2.2}}
-\newlabel{eq:poisson_fd_2d}{{2.5}{23}{Discretização em diferenças finitas}{equation.2.2.5}{}}
-\newlabel{eq:poisson_fd_2d_bd}{{2.6}{23}{Discretização em diferenças finitas}{equation.2.2.6}{}}
-\newlabel{eq:poisson_fd_2d_lse}{{2.7}{23}{Discretização em diferenças finitas}{equation.2.2.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Malha computacional $4\times 3$.\relax }}{24}{figure.caption.15}}
-\newlabel{fig:poisson_grid_2d_4x3}{{2.14}{24}{Malha computacional $4\times 3$.\relax }{figure.caption.15}{}}
-\newlabel{eq:sistema_01}{{2.8}{24}{Discretização em diferenças finitas}{equation.2.2.8}{}}
-\newlabel{eq:poisson_fd_2d_area}{{2.9}{24}{Discretização em diferenças finitas}{equation.2.2.9}{}}
-\newlabel{eq:sistema_02}{{2.10}{25}{Discretização em diferenças finitas}{equation.2.2.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Montagem da matriz $A$ em PETSc}{25}{subsection.2.2.3}}
-\newlabel{code:formMatrix}{{2.5}{25}{formMatrix()}{lstlisting.2.5}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.5}formMatrix()}{25}{lstlisting.2.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}A equação de Poisson}{20}{section.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}O caso 1D}{20}{subsection.2.2.1}}
+\newlabel{eq:poisson_1d}{{2.3}{20}{O caso 1D}{equation.2.2.3}{}}
+\newlabel{eq:poisson_fd_1d}{{2.4}{20}{O caso 1D}{equation.2.2.4}{}}
+\newlabel{eq:poisson_fd_1dd}{{2.5}{20}{O caso 1D}{equation.2.2.5}{}}
+\newlabel{eq:poisson_fd_1d_lse}{{2.6}{20}{O caso 1D}{equation.2.2.6}{}}
+\newlabel{eq:sistema_01}{{2.7}{20}{O caso 1D}{equation.2.2.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}O caso 2D}{21}{subsection.2.2.2}}
+\newlabel{eq:poisson}{{2.8}{21}{O caso 2D}{equation.2.2.8}{}}
+\newlabel{eq:laplaciano}{{2.9}{21}{O caso 2D}{equation.2.2.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Domínio do problema.\relax }}{21}{figure.caption.10}}
+\newlabel{fig:dominio_poisson_2d}{{2.9}{21}{Domínio do problema.\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Geração da malha}{22}{subsection.2.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Malha computacional.\relax }}{22}{figure.caption.11}}
+\newlabel{fig:poisson_grid_2d}{{2.10}{22}{Malha computacional.\relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Malha computacional $5\times 7$.\relax }}{22}{figure.caption.12}}
+\newlabel{fig:poisson_grid_2d_5x7}{{2.11}{22}{Malha computacional $5\times 7$.\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Malha computacional $5\times 7$ e 4 processos.\relax }}{23}{figure.caption.13}}
+\newlabel{fig:poisson_grid_2d_5x7_4_mpi}{{2.12}{23}{Malha computacional $5\times 7$ e 4 processos.\relax }{figure.caption.13}{}}
+\newlabel{code:code_poisson_fd_2d}{{2.4}{23}{DMDA()}{lstlisting.2.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.4}DMDA()}{23}{lstlisting.2.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Stencil computacional epregado na discretização.\relax }}{24}{figure.caption.14}}
+\newlabel{fig:stencil_finite_diference_2d}{{2.13}{24}{Stencil computacional epregado na discretização.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Discretização em diferenças finitas}{24}{subsection.2.2.4}}
+\newlabel{eq:poisson_fd_2d}{{2.10}{24}{Discretização em diferenças finitas}{equation.2.2.10}{}}
+\newlabel{eq:poisson_fd_2d_bd}{{2.11}{24}{Discretização em diferenças finitas}{equation.2.2.11}{}}
+\newlabel{eq:poisson_fd_2d_lse}{{2.12}{24}{Discretização em diferenças finitas}{equation.2.2.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Malha computacional $4\times 3$.\relax }}{25}{figure.caption.15}}
+\newlabel{fig:poisson_grid_2d_4x3}{{2.14}{25}{Malha computacional $4\times 3$.\relax }{figure.caption.15}{}}
+\newlabel{eq:sistema_01}{{2.15}{26}{Discretização em diferenças finitas}{equation.2.2.15}{}}
+\newlabel{code:poisson_fd_2d_octave}{{2.5}{26}{Primeiro exemplo}{lstlisting.2.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.5}Primeiro exemplo.}{26}{lstlisting.2.5}}
+\newlabel{eq:poisson_fd_2d_area}{{2.16}{27}{Discretização em diferenças finitas}{equation.2.2.16}{}}
+\newlabel{eq:sistema_02}{{2.17}{28}{Discretização em diferenças finitas}{equation.2.2.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Montagem da matriz $A$ em PETSc}{28}{subsection.2.2.5}}
+\newlabel{code:formMatrix}{{2.6}{28}{formMatrix()}{lstlisting.2.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.6}formMatrix()}{28}{lstlisting.2.6}}
 \citation{briggs:2000}
 \citation{bueler:2017}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Um problema particular}{27}{subsection.2.2.4}}
-\newlabel{eq:poisson_an}{{2.11}{27}{Um problema particular}{equation.2.2.11}{}}
-\newlabel{eq:poisson_laplacian}{{2.12}{27}{Um problema particular}{equation.2.2.12}{}}
-\newlabel{code:formExact}{{2.6}{27}{\texttt {formExact()} e \texttt {formRHS}}{lstlisting.2.6}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.6}\texttt  {formExact()} e \texttt  {formRHS}}{27}{lstlisting.2.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Resolução do sistema de equações}{28}{subsection.2.2.5}}
-\newlabel{code:solve}{{2.7}{29}{formExact()}{lstlisting.2.7}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.7}formExact()}{29}{lstlisting.2.7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces Malha computacional.\relax }}{31}{figure.caption.16}}
-\newlabel{fig:grid_xwindow_poisson}{{2.15}{31}{Malha computacional.\relax }{figure.caption.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Estrutura da matriz $A$.\relax }}{32}{figure.caption.17}}
-\newlabel{fig:matrix_struct_xwindow}{{2.16}{32}{Estrutura da matriz $A$.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}Um problema particular}{30}{subsection.2.2.6}}
+\newlabel{eq:poisson_an}{{2.18}{30}{Um problema particular}{equation.2.2.18}{}}
+\newlabel{eq:poisson_laplacian}{{2.19}{30}{Um problema particular}{equation.2.2.19}{}}
+\newlabel{code:formExact}{{2.7}{30}{\texttt {formExact()} e \texttt {formRHS}}{lstlisting.2.7}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.7}\texttt  {formExact()} e \texttt  {formRHS}}{30}{lstlisting.2.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.7}Resolução do sistema de equações}{31}{subsection.2.2.7}}
+\newlabel{code:solve}{{2.8}{32}{formExact()}{lstlisting.2.8}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.8}formExact()}{32}{lstlisting.2.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces Malha computacional.\relax }}{34}{figure.caption.16}}
+\newlabel{fig:grid_xwindow_poisson}{{2.15}{34}{Malha computacional.\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Estrutura da matriz $A$.\relax }}{34}{figure.caption.17}}
+\newlabel{fig:matrix_struct_xwindow}{{2.16}{34}{Estrutura da matriz $A$.\relax }{figure.caption.17}{}}
 \bibstyle{plain}
 \citation{*}
 \bibdata{bibliografia}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Agenda de atividades}{35}{section.2.3}}
 \bibcite{petsc-web-page}{1}
 \bibcite{petsc-user-ref}{2}
 \bibcite{petsc-efficient}{3}
 \bibcite{bueler:2017}{4}
-\zref@newlabel{LastPage}{\default{2.2.5}\page{34}\abspage{35}}
+\zref@newlabel{LastPage}{\default{2.3}\page{37}\abspage{38}}

@@ -1,4 +1,4 @@
-static char help[] = "Resolve um sistema linear 4x4 usando Vec, Mat, and KSP.\n";
+static char help[] = "Resolve um sistema linear 4x4 usando Vec, Mat, e KSP.\n";
 
 #include <petsc.h>
 

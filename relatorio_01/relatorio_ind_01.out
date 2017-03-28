@@ -4,8 +4,11 @@
 \BOOKMARK [2][-]{subsection.2.1.1}{Objetos do tipo vetores e matrizes em PETSc}{section.2.1}% 4
 \BOOKMARK [2][-]{subsection.2.1.2}{Solução de sistema linear}{section.2.1}% 5
 \BOOKMARK [1][-]{section.2.2}{A equação de Poisson}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.1}{Geração da malha}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.2}{Discretização em diferenças finitas}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.3}{Montagem da matriz A em PETSc}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.4}{Um problema particular}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.5}{Resolução do sistema de equações}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{O caso 1D}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{O caso 2D}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.3}{Geração da malha}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.4}{Discretização em diferenças finitas}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.5}{Montagem da matriz A em PETSc}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.6}{Um problema particular}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.7}{Resolução do sistema de equações}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Agenda de atividades}{chapter.2}% 14

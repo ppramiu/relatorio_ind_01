@@ -1,4 +1,4 @@
-static char help[] = "Cria um vetor com tamanho definido pelo usu√°rio \n\n";
+static char help[] = "Cria um vetor com tamanho definido pelo usu·rio \n\n";
 
 #include <petscvec.h>
 
