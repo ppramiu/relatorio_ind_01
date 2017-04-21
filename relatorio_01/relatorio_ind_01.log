@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.8)  28 MAR 2017 16:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.11)  21 APR 2017 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1167,6 +1167,9 @@ LaTeX Warning: Unused global option(s):
 
 (./relatorio_ind_01.aux
 
+LaTeX Warning: Label `eq:media_espacial' multiply defined.
+
+
 LaTeX Warning: Label `eq:sistema_01' multiply defined.
 
 
@@ -1309,12 +1312,23 @@ Package babel Info: Redefining portuges shorthand "|
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./relatorio_ind_01.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
-)
+(Font)              <6> on input line 3.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 ...sistema de equações}{42}{subsection.3.3.7}
+                                                   [1
+
+])
 \tf@toc=\write6
 \openout6 = `relatorio_ind_01.toc'.
 
@@ -1322,28 +1336,120 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 104.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 104.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.104 \chapter
-              {Introdução} [1
-
-]
+ [2]
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 104.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 105.
-(./codigo.tex
+(./resumo_ceasb.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
- [2
+(babel)             in language  on input line 4.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 4.
+ [3
 
 ]
+Overfull \hbox (9.75761pt too wide) in paragraph at lines 5--6
+[]\T1/lmss/m/n/12 Atualmente exis-tem di-ver-sas fer-ra-men-tas com-pu-ta-ci-o-
+nais e softwa-res de-sen-vol-vi-dos especificamente
+ []
+
+
+Overfull \hbox (1.52072pt too wide) in paragraph at lines 5--6
+\T1/lmss/m/n/12 Com-sol, Open-Foam, Mul-ti-Sim, Pro-teus, Du-alSPHyics, en-tre 
+ou-tros, são exem-plos de tais fer-ra-men-tas
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 13.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 13.
+[4] <figuras/erosao_dpm.png, id=134, 435.5472pt x 302.5704pt>
+File: figuras/erosao_dpm.png Graphic file (type png)
+
+<use figuras/erosao_dpm.png>
+Package pdftex.def Info: figuras/erosao_dpm.png used on input line 26.
+(pdftex.def)             Requested size: 212.82779pt x 147.84988pt.
+
+<figuras/erosao.png, id=136, 440.1243pt x 309.0747pt>
+File: figuras/erosao.png Graphic file (type png)
+ <use figuras/erosao.png>
+Package pdftex.def Info: figuras/erosao.png used on input line 27.
+(pdftex.def)             Requested size: 212.82779pt x 149.45773pt.
+
+<figuras/pontos_erosao.png, id=137, 251.0178pt x 220.9053pt>
+File: figuras/pontos_erosao.png Graphic file (type png)
+
+<use figuras/pontos_erosao.png>
+Package pdftex.def Info: figuras/pontos_erosao.png used on input line 28.
+(pdftex.def)             Requested size: 193.47578pt x 170.26613pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]\T1/lmss/m/n/10 (c) Al-guns pon-tos de des-gaste
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 32.
+[5]) (./turbulencia.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [6 <./figuras/erosao_dpm.png> <./figuras/erosao.png> <./figuras/pontos_erosao.
+png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [7]
 Cap\'{\i }tulo 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 9.
+[8
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 14.
+
+
+LaTeX Warning: Citation `pontes:2016' on page 9 undefined on input line 15.
+
+
+LaTeX Warning: Citation `pontes:2016' on page 9 undefined on input line 20.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 24.
+[9]
+
+LaTeX Warning: Citation `atila:2002' on page 10 undefined on input line 47.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 60.
+[10]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 73.
+) (./codigo.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [11]
+Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 2.
@@ -1361,7 +1467,7 @@ Overfull \hbox (4.37288pt too wide) in paragraph at lines 4--5
 -ti-za-das. Tam-bém será exi-bido uma in-tro-du-ção,
  []
 
-<figuras/install_01.png, id=98, 933.4875pt x 269.005pt>
+<figuras/install_01.png, id=197, 933.4875pt x 269.005pt>
 File: figuras/install_01.png Graphic file (type png)
 
 <use figuras/install_01.png>
@@ -1377,7 +1483,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 17.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 17.
-[3
+[12
 
 ]
 Overfull \hbox (28.82838pt too wide) in paragraph at lines 19--20
@@ -1385,7 +1491,7 @@ Overfull \hbox (28.82838pt too wide) in paragraph at lines 19--20
 rch-linux2-c-debug all  
  []
 
-<figuras/install_02.png, id=108, 933.4875pt x 269.005pt>
+<figuras/install_02.png, id=207, 933.4875pt x 269.005pt>
 File: figuras/install_02.png Graphic file (type png)
 
 <use figuras/install_02.png>
@@ -1397,7 +1503,7 @@ Overfull \hbox (35.00339pt too wide) in paragraph at lines 30--31
 rch-linux2-c-debug test  
  []
 
-<figuras/install_03.png, id=110, 816.04875pt x 234.8775pt>
+<figuras/install_03.png, id=209, 816.04875pt x 234.8775pt>
 File: figuras/install_03.png Graphic file (type png)
 
 <use figuras/install_03.png>
@@ -1413,22 +1519,22 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 42.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 42.
-[4 <./figuras/install_01.png> <./figuras/install_02.png> <./figuras/install_03.
-png>] <figuras/install_04.png, id=121, 689.57625pt x 456.70625pt>
+[13 <./figuras/install_01.png> <./figuras/install_02.png> <./figuras/install_03
+.png>] <figuras/install_04.png, id=220, 689.57625pt x 456.70625pt>
 File: figuras/install_04.png Graphic file (type png)
 
 <use figuras/install_04.png>
 Package pdftex.def Info: figuras/install_04.png used on input line 46.
 (pdftex.def)             Requested size: 290.22107pt x 192.21252pt.
 
-<figuras/install_speedup.png, id=122, 589.20125pt x 457.71pt>
+<figuras/install_speedup.png, id=221, 589.20125pt x 457.71pt>
 File: figuras/install_speedup.png Graphic file (type png)
 
 <use figuras/install_speedup.png>
 Package pdftex.def Info: figuras/install_speedup.png used on input line 53.
 (pdftex.def)             Requested size: 290.22107pt x 225.45319pt.
 
-<figuras/install_environment.png, id=124, 867.24pt x 232.87pt>
+<figuras/install_environment.png, id=223, 867.24pt x 232.87pt>
 File: figuras/install_environment.png Graphic file (type png)
 
 <use figuras/install_environment.png>
@@ -1445,15 +1551,15 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 64.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 64.
-[5 <./figuras/install_04.png> <./figuras/install_speedup.png>]
-<figuras/make_ex1.png, id=134, 797.98125pt x 405.515pt>
+[14 <./figuras/install_04.png> <./figuras/install_speedup.png>]
+<figuras/make_ex1.png, id=233, 797.98125pt x 405.515pt>
 File: figuras/make_ex1.png Graphic file (type png)
 
 <use figuras/make_ex1.png>
 Package pdftex.def Info: figuras/make_ex1.png used on input line 73.
 (pdftex.def)             Requested size: 338.58632pt x 172.06004pt.
 
-<figuras/exec_ex1.png, id=136, 797.98125pt x 388.45125pt>
+<figuras/exec_ex1.png, id=235, 797.98125pt x 388.45125pt>
 File: figuras/exec_ex1.png Graphic file (type png)
 
 <use figuras/exec_ex1.png>
@@ -1463,7 +1569,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 84.
- [6 <./figuras/install_environment.png> <./figuras/make_ex1.png>]
+ [15 <./figuras/install_environment.png> <./figuras/make_ex1.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 87.
  (./codigo/code_euler.c
@@ -1480,12 +1586,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 10.
-[7 <./figuras/exec_ex1.png>]) (./codigo/makefile
+[16 <./figuras/exec_ex1.png>]) (./codigo/makefile
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 8.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 8.
- [8]
+ [17]
 Overfull \hbox (7.70813pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][]  
@@ -1496,12 +1602,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 121.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 121.
- [9]
+ [18]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 142.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 142.
- [10]
+ [19]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 147.
  (./codigo/build_vector.c
@@ -1509,7 +1615,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 23.
- [11]) (./codigo/makefile
+ [20]) (./codigo/makefile
 Overfull \hbox (7.70813pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][]  
@@ -1520,19 +1626,19 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
- [12] (./codigo/build_matrix.c)
+ [21] (./codigo/build_matrix.c)
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 180.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 180.
- [13]
+ [22]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 207.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 237.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 237.
- [14] (./codigo/solve_linear_ksp.c
+ [23] (./codigo/solve_linear_ksp.c
 Overfull \hbox (14.0082pt too wide) in paragraph at lines 1--3
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1543,7 +1649,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 46.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 46.
-[15]) (./codigo/solve_linear_arbitrary.c
+[24]) (./codigo/solve_linear_arbitrary.c
 Overfull \hbox (7.70813pt too wide) in paragraph at lines 3--5
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1554,7 +1660,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 23.
-[16]
+[25]
 Overfull \hbox (20.30826pt too wide) in paragraph at lines 67--68
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1566,113 +1672,135 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 70.
-[17])
+[26])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 268.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 268.
- [18]
+ [27]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 299.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 301.
+
+
+LaTeX Warning: Reference `cod:example_1_1_leveque' on page 28 undefined on inpu
+t line 301.
+
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 303.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 303.
- [19]
+[28] (./codigo/example_1_1_leveque.c
+Overfull \hbox (14.0082pt too wide) in paragraph at lines 35--36
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-LaTeX Warning: Reference `code:poisson_fd_1d_octave' on page 20 undefined on in
-put line 362.
+)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 303.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 303.
+ [29]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 328.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 330.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 339.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 339.
+ [30]
+
+LaTeX Warning: Reference `code:poisson_fd_1d_octave' on page 31 undefined on in
+put line 391.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 366.
+(babel)             in language  on input line 395.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 368.
+(babel)             in language  on input line 399.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 368.
-[20] <figuras/dominio_poisson_2d.pdf, id=521, 544.79321pt x 367.11115pt>
+(babel)             in language  on input line 399.
+[31] <figuras/dominio_poisson_2d.pdf, id=664, 544.79321pt x 367.11115pt>
 File: figuras/dominio_poisson_2d.pdf Graphic file (type pdf)
 
 <use figuras/dominio_poisson_2d.pdf>
-Package pdftex.def Info: figuras/dominio_poisson_2d.pdf used on input line 388.
+Package pdftex.def Info: figuras/dominio_poisson_2d.pdf used on input line 417.
 
 (pdftex.def)             Requested size: 169.29684pt x 114.08334pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 395.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 395.
- [21 <./figuras/dominio_poisson_2d.pdf>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 425.
 
-<figuras/poisson_grid_2d.pdf, id=534, 376.16946pt x 219.92226pt>
+<figuras/poisson_grid_2d.pdf, id=667, 376.16946pt x 219.92226pt>
 File: figuras/poisson_grid_2d.pdf Graphic file (type pdf)
 
 <use figuras/poisson_grid_2d.pdf>
-Package pdftex.def Info: figuras/poisson_grid_2d.pdf used on input line 400.
+Package pdftex.def Info: figuras/poisson_grid_2d.pdf used on input line 429.
 (pdftex.def)             Requested size: 241.84843pt x 141.39742pt.
-
-<figuras/poisson_grid_2d_5x7.pdf, id=536, 204.30472pt x 195.63205pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 432.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 432.
+ [32 <./figuras/dominio_poisson_2d.pdf>]
+<figuras/poisson_grid_2d_5x7.pdf, id=680, 204.30472pt x 195.63205pt>
 File: figuras/poisson_grid_2d_5x7.pdf Graphic file (type pdf)
 
 <use figuras/poisson_grid_2d_5x7.pdf>
-Package pdftex.def Info: figuras/poisson_grid_2d_5x7.pdf used on input line 408
+Package pdftex.def Info: figuras/poisson_grid_2d_5x7.pdf used on input line 437
 .
 (pdftex.def)             Requested size: 169.29684pt x 162.11484pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 414.
+(babel)             in language  on input line 450.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 414.
- [22 <./figuras/poisson_grid_2d.pdf> <./figuras/poisson_grid_2d_5x7.pdf
+(babel)             in language  on input line 450.
+ [33 <./figuras/poisson_grid_2d.pdf> <./figuras/poisson_grid_2d_5x7.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figuras/poisson_grid_2d_5x7.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->] <figuras/poisson_grid_2d_5x7_4_mpi.pdf, id=548, 204.30472pt x 195.63205pt>
+>] <figuras/poisson_grid_2d_5x7_4_mpi.pdf, id=691, 204.30472pt x 195.63205pt>
 File: figuras/poisson_grid_2d_5x7_4_mpi.pdf Graphic file (type pdf)
 
 <use figuras/poisson_grid_2d_5x7_4_mpi.pdf>
 Package pdftex.def Info: figuras/poisson_grid_2d_5x7_4_mpi.pdf used on input li
-ne 425.
+ne 454.
 (pdftex.def)             Requested size: 169.29684pt x 162.11484pt.
  (./codigo/poisson_fd_2d.c)
-Overfull \hbox (15.82126pt too wide) in paragraph at lines 434--435
+Overfull \hbox (15.82126pt too wide) in paragraph at lines 463--464
 \T1/lmss/m/n/12 ar-gu-men-tos são do tipo []\T1/lmtt/m/n/12 DM_BOUNDARY_NONE \T
 1/lmss/m/n/12 pois as con-di-ções de Di-ri-ch-let não pre-ci-sam de co-mu-ni-ca
 -ção
  []
 
-<figuras/stencil_finite_diference_2d.pdf, id=551, 204.30472pt x 195.63205pt>
+<figuras/stencil_finite_diference_2d.pdf, id=694, 204.30472pt x 195.63205pt>
 File: figuras/stencil_finite_diference_2d.pdf Graphic file (type pdf)
 
 <use figuras/stencil_finite_diference_2d.pdf>
 Package pdftex.def Info: figuras/stencil_finite_diference_2d.pdf used on input 
-line 437.
+line 466.
 (pdftex.def)             Requested size: 169.29684pt x 162.11484pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 470.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 440.
- [23 <./figuras/poisson_grid_2d_5x7_4_mpi.pdf>]
+(babel)             in language  on input line 470.
+ [34 <./figuras/poisson_grid_2d_5x7_4_mpi.pdf>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 444.
+(babel)             in language  on input line 473.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 463.
+(babel)             in language  on input line 494.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 463.
- [24 <./figuras/stencil_finite_diference_2d.pdf>]
-<figuras/poisson_grid_2d_4x3.pdf, id=584, 159.03848pt x 91.7115pt>
+(babel)             in language  on input line 494.
+ [35 <./figuras/stencil_finite_diference_2d.pdf>]
+<figuras/poisson_grid_2d_4x3.pdf, id=726, 159.03848pt x 91.7115pt>
 File: figuras/poisson_grid_2d_4x3.pdf Graphic file (type pdf)
 
 <use figuras/poisson_grid_2d_4x3.pdf>
-Package pdftex.def Info: figuras/poisson_grid_2d_4x3.pdf used on input line 467
+Package pdftex.def Info: figuras/poisson_grid_2d_4x3.pdf used on input line 496
 .
 (pdftex.def)             Requested size: 169.29684pt x 97.63072pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 540.
+(babel)             in language  on input line 569.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 540.
- [25 <./figuras/poisson_grid_2d_4x3.pdf>]
+(babel)             in language  on input line 569.
+ [36 <./figuras/poisson_grid_2d_4x3.pdf>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1681,22 +1809,22 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [26])
+ [37])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 570.
+(babel)             in language  on input line 599.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 570.
- [27]
+(babel)             in language  on input line 599.
+ [38]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 623.
+(babel)             in language  on input line 652.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 623.
+(hyperref)                removing `math shift' on input line 652.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 623.
+(hyperref)                removing `math shift' on input line 652.
 
 (./codigo/poisson_fd_2d.c
 Overfull \hbox (1.40807pt too wide) in paragraph at lines 17--18
@@ -1709,66 +1837,66 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 19.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 19.
-[28])
+[39])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 634.
+(babel)             in language  on input line 663.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 634.
- [29]
+(babel)             in language  on input line 663.
+ [40]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 649.
+(babel)             in language  on input line 678.
 
 
-LaTeX Warning: Citation `briggs:2000' on page 30 undefined on input line 660.
+LaTeX Warning: Citation `briggs:2000' on page 41 undefined on input line 689.
 
 (./codigo/poisson_fd_2d.c
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 60.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 60.
- [30])
+ [41])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 666.
+(babel)             in language  on input line 695.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 669.
+(babel)             in language  on input line 698.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 669.
- [31] (./codigo/poisson_fd_2d.c
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 698.
+ [42] (./codigo/poisson_fd_2d.c
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 144.
- [32])
-<figuras/grid_xwindow_poisson.png, id=833, 301.125pt x 329.23pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 144.
+ [43])
+<figuras/grid_xwindow_poisson.png, id=976, 301.125pt x 329.23pt>
 File: figuras/grid_xwindow_poisson.png Graphic file (type png)
 
 <use figuras/grid_xwindow_poisson.png>
-Package pdftex.def Info: figuras/grid_xwindow_poisson.png used on input line 69
-3.
+Package pdftex.def Info: figuras/grid_xwindow_poisson.png used on input line 72
+2.
 (pdftex.def)             Requested size: 193.47578pt x 211.54039pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 697.
+(babel)             in language  on input line 726.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 697.
- [33]
-<figuras/matrix_struct_xwindow.png, id=844, 301.125pt x 329.23pt>
+(babel)             in language  on input line 726.
+ [44]
+<figuras/matrix_struct_xwindow.png, id=987, 301.125pt x 329.23pt>
 File: figuras/matrix_struct_xwindow.png Graphic file (type png)
 
 <use figuras/matrix_struct_xwindow.png>
 Package pdftex.def Info: figuras/matrix_struct_xwindow.png used on input line 7
-04.
+33.
 (pdftex.def)             Requested size: 193.47578pt x 211.54039pt.
 
-Overfull \hbox (4.12837pt too wide) in paragraph at lines 711--711
+Overfull \hbox (4.12837pt too wide) in paragraph at lines 740--740
 []\T1/lmtt/m/n/12 user@user-G73Sw:~$ for K in 0 1 2 3 4 5; do ./poisson_fd_2d -
 da_refine $K; done  
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 713.
+(babel)             in language  on input line 742.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 713.
-[34 <./figuras/grid_xwindow_poisson.png> <./figuras/matrix_struct_xwindow.png>]
+(babel)             in language  on input line 742.
+[45 <./figuras/grid_xwindow_poisson.png> <./figuras/matrix_struct_xwindow.png>]
 ) (./cronograma.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
@@ -1780,55 +1908,59 @@ LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbullet' on input line 4.
 
-) (./relatorio_ind_01.bbl
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 12.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 12.
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+) (./revisao.tex) (./relatorio_ind_01.bbl
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [35]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
- [36]) (./logos.tex
-<logos/git.png, id=864, 913.4125pt x 381.425pt>
+ [47]) (./logos.tex
+<logos/git.png, id=1006, 913.4125pt x 381.425pt>
 File: logos/git.png Graphic file (type png)
  <use logos/git.png>
 Package pdftex.def Info: logos/git.png used on input line 1.
 (pdftex.def)             Requested size: 145.11053pt x 60.59273pt.
 
-<logos/octave.png, id=865, 285.065pt x 285.065pt>
+<logos/octave.png, id=1007, 285.065pt x 285.065pt>
 File: logos/octave.png Graphic file (type png)
  <use logos/octave.png>
 Package pdftex.def Info: logos/octave.png used on input line 2.
 (pdftex.def)             Requested size: 145.11053pt x 145.1072pt.
 
-<logos/vtk.png, id=866, 1204.5pt x 987.69pt>
+<logos/vtk.png, id=1008, 1204.5pt x 987.69pt>
 File: logos/vtk.png Graphic file (type png)
  <use logos/vtk.png>
 Package pdftex.def Info: logos/vtk.png used on input line 3.
 (pdftex.def)             Requested size: 145.11053pt x 118.98488pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--119
+Underfull \hbox (badness 10000) in paragraph at lines 1--121
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 120.
-Package atenddvi Info: Last page = 38.
-[37
+(babel)             in language  on input line 122.
+Package atenddvi Info: Last page = 49.
+[48
 
  <./logos/git.png> <./logos/octave.png> <./logos/vtk.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 120.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 122.
 
 (./relatorio_ind_01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `relatorio_ind_01.out' has not changed.
-(rerunfilecheck)             Checksum: 6B679B5475B78E2DD61481320D434073;1022.
+(rerunfilecheck)             Checksum: AF1D72E5B6CFBA8968F86492C8D001A2;1401.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1839,20 +1971,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 31262 strings out of 493029
- 573716 string characters out of 6136235
- 704631 words of memory out of 5000000
- 33643 multiletter control sequences out of 15000+600000
+ 31416 strings out of 493029
+ 575972 string characters out of 6136234
+ 705664 words of memory out of 5000000
+ 33707 multiletter control sequences out of 15000+600000
  77477 words of font info for 74 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  55i,17n,54p,10417b,2312s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1
@@ -1865,10 +1997,10 @@ mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on relatorio_ind_01.pdf (38 pages, 1153471 bytes).
+Output written on relatorio_ind_01.pdf (49 pages, 3941986 bytes).
 PDF statistics:
- 1060 PDF objects out of 1200 (max. 8388607)
- 956 compressed objects within 10 object streams
- 555 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1217 PDF objects out of 1440 (max. 8388607)
+ 1095 compressed objects within 11 object streams
+ 630 named destinations out of 1000 (max. 500000)
+ 283 words of extra memory for PDF output out of 10000 (max. 10000000)
 

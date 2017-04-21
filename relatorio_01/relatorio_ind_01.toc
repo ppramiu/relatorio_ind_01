@@ -1,15 +1,21 @@
 \select@language {brazil}
-\contentsline {chapter}{\numberline {1}Introdução}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Instalação e Configuração do PETSc}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Primeiros exemplos com PETSc}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Objetos do tipo vetores e matrizes em PETSc}{11}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Solução de sistema linear}{14}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}A equação de Poisson}{20}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}O caso 1D}{20}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}O caso 2D}{21}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Geração da malha}{22}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Discretização em diferenças finitas}{24}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Montagem da matriz $A$ em PETSc}{28}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Um problema particular}{30}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}Resolução do sistema de equações}{31}{subsection.2.2.7}
-\contentsline {section}{\numberline {2.3}Agenda de atividades}{35}{section.2.3}
+\contentsline {chapter}{\numberline {1}IntroduÃ§Ã£o}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivação}{3}{section.1.1}
+\contentsline {chapter}{\numberline {2}Turbulência}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Médias e filtros}{9}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Médias de Reynolds}{10}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Separação de escalas}{11}{subsection.2.1.2}
+\contentsline {chapter}{\numberline {3}Instalação e Configuração do PETSc}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Primeiros exemplos com PETSc}{16}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Objetos do tipo vetores e matrizes em PETSc}{20}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Solução de sistema linear}{23}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Diferenças finitas}{29}{section.3.2}
+\contentsline {section}{\numberline {3.3}A equação de Poisson}{30}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}O caso 1D}{30}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}O caso 2D}{31}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Geração da malha}{32}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Discretização em diferenças finitas}{35}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Montagem da matriz $A$ em PETSc}{39}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Um problema particular}{41}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Resolução do sistema de equações}{42}{subsection.3.3.7}
+\contentsline {section}{\numberline {3.4}Agenda de atividades}{46}{section.3.4}

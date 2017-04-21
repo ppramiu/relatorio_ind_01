@@ -296,6 +296,35 @@ A princípio um sistema de equações contendo $10^7$ variáveis parece ser grande. 
 \end{flushleft}
 Como esperado, o tempo de execução foi reduzido, neste caso caiu de 17 para 5 segundos.
 
+\section{Diferenças finitas}
+
+O código \ref{cod:example_1_1_leveque} ilustra uma simples implementação serial de uma equação de diferenças avançadas, atrasadas e centradas, denotadas na saída do console respectivamente por, D+, D- e D0.
+
+\lstinputlisting[language=C, label=code:example_1_1_leveque, caption=Exemplo de \texttt{makefile}.]{codigo/example_1_1_leveque.c}
+
+Cuja saída é apresenta a seguir:
+\begin{verbatim}
+Valor de f'(x)=cos(x) ou  f'(1.000000)=cos(1.000000)=0.540302
+h 		 D+ 		 D- 		 D0 
+0.100000	 0.497364 	 0.581441 	 0.539402 
+0.050000	 0.519045 	 0.561110 	 0.540077 
+0.025000	 0.529728 	 0.550764 	 0.540246 
+0.012500	 0.535029 	 0.545547 	 0.540288 
+0.006250	 0.537669 	 0.542928 	 0.540299 
+0.003125	 0.538987 	 0.541616 	 0.540301 
+0.001563	 0.539645 	 0.540959 	 0.540302 
+
+Valores do Erro
+h 		 D+ 		 D- 		 D0 
+0.100000	 -4.2939e-02 	 4.1138e-02 	 -9.0005e-04 
+0.050000	 -2.1257e-02 	 2.0807e-02 	 -2.2510e-04 
+0.025000	 -1.0574e-02 	 1.0462e-02 	 -5.6280e-05 
+0.012500	 -5.2732e-03 	 5.2451e-03 	 -1.4070e-05 
+0.006250	 -2.6331e-03 	 2.6261e-03 	 -3.5176e-06 
+0.003125	 -1.3157e-03 	 1.3139e-03 	 -8.7940e-07 
+0.001563	 -6.5762e-04 	 6.5718e-04 	 -2.1985e-07
+\end{verbatim}
+
 \section{A equação de Poisson}
 
 \subsection{O caso 1D}

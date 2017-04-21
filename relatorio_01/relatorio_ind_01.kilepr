@@ -35,16 +35,16 @@ order=-1
 
 [item:relatorio_ind_01.tex]
 archive=true
-column=14
+column=7
 encoding=UTF-8
 highlight=LaTeX
-line=106
+line=109
 mode=LaTeX
 open=true
 order=0
 
 [view-settings,view=0,item:relatorio_ind_01.tex]
-CursorColumn=14
-CursorLine=106
+CursorColumn=7
+CursorLine=109
 JumpList=
 ViMarks=

@@ -1,0 +1,102 @@
+\chapter{Turbulência}
+A turbulência que ocorre nos fluidos está entre os fenômenos mais complexos encontrados na natureza, sendo tridimensional e variando temporalmente. Também é caracterizado por processos não lineares de troca de massa, quantidade de movimento e energia, sendo essas trocas provenientes das interações entre estruturas de escalas variadas tanto no espaço quanto no tempo. De forma geral, existem duas frentes de trabalho em relação aos estudos deste fenômeno: uma devida aos experimentalistas numéricos e os de laboratório. 
+
+Esta seção será apresentada a metodologia de Simulação de Grandes Escalas (LES) para escoamentos turbulentos, que é uma das várias abordagens existentes para o tratamento teórico do tema. Tal abordagem teve início em meados da década de 60 com os trabalhos do meteorologista Smagorinsky, cuja motivaçã estava relacionada à simulação das grandes escalas de escoamentos atmosféricos, dada a inviabilidade de simular a totalidade do espectro de escalas. Embora iniciada por Smagorinsky, foi Deardorff que ``importou`` a metodologia para problemas de engenharia. 
+
+Deve-se ressaltar que é razoável o investimento em pesquisas relacionadas à compreensão e ao controle de escoamentos turbulentos, devido à enorme quantidade de implicações de cunho prático decorrentes, que envolvem sistemas de transportes, transmissão e conversão de energia, aplicções geofísicas, entre outras. Dentre as maiores dificuldades para o desenvolvimento da modelagem matemática dos escoamentos que apresentam turbuência, está a sua modelagem, o que será discutido nesta seção.
+
+Uma das principais características dos escoamentos turbulentos é o elevado grau de liberdade associado a este tipo de sistema dinãmico. A maneira mais tradicional ou intuitiva de conduzir uma simulação de escoamento é com auxílio das equações de Navier-Stokes, e se a malha computacional for suficientemente refinada, todos os fenômenos físicos envolvidos serão resolvidos. Essa abordagem é conhecida como Simulação Numérica Direta (DNS), no entanto, por aspectos computacionais ela nem sempre pode ser utilizada, ficando restrita na maioria das vezes à escoamentos com baixos número de Reynolds. Esse fato torna a DNS inviável para a maior parte dos problemas práticos encontrados. Diante desta limitação e empregando as ideias de decomposição das escalas de Reynolds, que Smagorinsky propôs uma nova concepção de modelagem, na qual é realizada uma separação estruturas que ocorrem em altas frequências daquelas que ocorrem em baixa frequência, ao invés de separar as escalas em um campo médio e nas suas respectivas flutuações. Nesta metodologia, a comprimento característico do filtro (fator que determina a frequ?ncia de corte) é especificado em função do tamanho da malha utilizada na discretização do problema.
+
+A Simulação de Grandes Escalas é considerada como uma metodologia intermediária à DNS e à simulação empregando equações resultantes da técnica de decomposição de Reynolds. Uma característica desta abordagem é que as estruturas turbulentas resposáveis pelo transporte de energia e quantidade de movimento são resolvidas diretamente por meio das equações filtradas, e somenteas as menores estruturas, que ocorrem com maior frequência são modeladas - filtro passa-baixa????. Ao considerar que estruturas menores apresentem uma isotropia e homogeneidade, espera-se que os modelos sejam mais gerais e independentes dos diferentes tipos de escoamento, quando comparados à metodologia que emprega médias.
+
+Ambas metodologias DNS e LES se assemelham, uma vez que ambas permitem a obtençaõ de resultados tridimensionais e transientes das equações de Navier-Stokes. Embora seja necessário uma malha também refinida para LES, nesta abordagem é possível resolver escoamentos com altos número de Reynolds, devido ao processo de separação das escalas utilizado e ao processo de modelagem dos tensores -sub-malha que são obtidos adicionalmente.
+
+\section{Médias e filtros}
+No caso de escoamento de fluidos, a turbulência origina-se da instabilidade de camadas de cisalhamento, que surge no momento em que os efeitos não-lineares são dominantes, o que é caracterizado por elevados números de Reynolds. Na maioria das vezes, é de interesse avaliar as propriedades médias dos escoamentos turbulentos. Para isso, decompõe-se cada grandeza física $u$ na soma de um campo médio $\bar{u}$ e uma componente de flutuação turbulenta $u'$, cuja média é considerada nula. Assim os campos de velocidade, pressão e densidade são escritos como em \cite{pontes:2016}:
+\begin{equation}
+ \label{eq:media}
+  u_i = \bar{u}_i + u_i' \qquad p = \bar{p} + p' \qquad \rho = \bar{\rho} + \rho_0'
+\end{equation}
+Como apresentado em \cite{pontes:2016} existem diversas formas de definir as grandezas médias e as flutuações, sendo que as propriedades dessas grandezas dependem da sua definição. 
+
+\subsection{Médias de Reynolds}
+As médias de Reynolds incluem as médias de conjunto, as médias temporais e as médias espaciais. Se o escoamento é quase estacionário, médias com relação ao tempo podem ser utilizadas. No caso da turbulência homogênea, as médias espaciais podem ser tomadas e para os  demais casos, pode ser necessário que as médias sejam obtidas sobre um grande número de experimentos possuindo as mesmas condições iniciais e de contorno, o que nos remete ao \textit{valor esperado} ou \textit{esperança matemática} da variável.
+
+Ao tratar um processo estacionário e homogêneo, essas três médias são idênticas, o que é conhecido como hipótese ergótica. Simulações que empregam as variáveis das Equações de Navier-Stokes promediadas por Reynolds são denominadas de RANS (Reynolds-averaged Navier-Stokes). 
+
+A média temporal para uma turbulêcia estacionária é como:
+\begin{equation}
+ \label{eq:media_temporal}
+  \bar{U}^t = \lim_{T \to \infty} \dfrac{1}{2T} \int^T_{-T} U(x_0,t) dt
+\end{equation}
+
+A média espacial para uma turbulêcia homogênea é expressa por:
+\begin{equation}
+ \label{eq:media_espacial}
+  \bar{U}^s = \lim_{X \to \infty} \dfrac{1}{2X} \int^X_{-X} U(x,t_0) dx
+\end{equation}
+
+O valor esperado para uma repetição de N experimentos:
+\begin{equation}
+ \label{eq:media_espacial}
+  \bar{U}^e = \lim_{N \to \infty} \dfrac{1}{N} \sum^N_1 U_n(x_0,t_0) 
+\end{equation}
+
+Obviamente os escoamentos de real interesse não são estacionários nem homogêneos. Além disso, por motivos práticos não é possível obter a média para valores infinitos de $X$, $T$ e $N$. Deve-se então determinar um intervalo adequado que represente o fenômeno em estudo, ao qual decorrerá a média.
+
+Como discutido em \cite{atila:2002} a técnica de passagem da média de Reynolds consiste de duas etapas: na primeira, as variáveis presentes nas equações do movimento são decompostas em termos médios e de flutuações; na segunda, deve-se aplicar o operador média temporal sobre um intervalo de tempo finito nos termos resultantes.
+
+As grandezas que caracterizam o campo de um escoamento são escritas para o precesso de decomposição como:
+\begin{equation}
+ \label{eq:grandezas_decompostas}
+ \begin{split}
+  u_i & = \bar{u}_i + u_i'\\
+  p & = \bar{p} + p'\\
+  \rho & = \bar{\rho} + \tilde{\rho}  
+ \end{split}
+\end{equation}
+em que $u_i$ representa as componentes da velocidade nas $i$ direções, $p$ é a pressão e $\rho$ é a massa específica. Por notação, as flutuações de densidade foram designadas por $\rho'$.
+
+Como já apresentado, a equação de conservação de massa ou equação da continuidade para um escoamento incompressível pode ser escrita como:
+\begin{equation}
+ \label{eq:conservacao}
+ \dfrac{\partial \rho}{\partial t} + \dfrac{\partial}{\partial x_j}(\rho u_j) = 0
+\end{equation}
+
+Empregando as expressões médias para $u$ e $\rho$, em \eqref{eq:conservacao} tem-se:
+\begin{equation}
+ \label{eq:conservacao_media}
+ \dfrac{\partial}{\partial t} (\bar{\rho} + \tilde{\rho})  + \dfrac{\partial}{\partial x_j}\big((\bar{\rho} + \tilde{\rho})(\bar{u}_i + u_i')\big) = 0
+\end{equation}
+
+
+\subsection{Separação de escalas}
+As equações que governam o escoamento de fluidos incompressíveis são especificadas basicamente pelas equações de conservação da massa e da quantidade de movimento, expressas respectivamente, por:
+\begin{equation}
+ \label{eq:cons_massa_mom}
+ \begin{split}
+  \dfrac{\partial u_i}{\partial x_i } & = 0 \\
+  \dfrac{\partial u_i}{\partial t} + \dfrac{\partial }{\partial x_j}(u_iu_j) & = -\dfrac{1}{\rho_0}\dfrac{\partial p}{\partial x_i}+ \dfrac{\partial }{\partial x_j}\left(\nu\dfrac{\partial u_i}{\partial x_j}\right)  
+ \end{split}
+\end{equation}
+em que $i,j = 1,2,3$, $u$ é a velocidade $t$ é o tempo, $p$ é a pressão, $\rho_0$ a densidade e $\nu$ a viscosidade do fluido. Como observado, esse sistema apresenta 4 equações e 4 incógnitas, constituindo um sistema de equações fechado. A solução direta deste sistema de equações é possível somente para baixos números de Reynolds, e em escoamentos com elevados números de Reynolds uma alternativa à solução é o processo de filtragem e de separação de escalas. Para isto, as variáveis presentes nas referidas equações governantes devem ser separadas em uma parcela denominada de grandes escalas $\bar{f}(\vec{x},t)$ e em outra parte denominada sub-malha $f'(\vec{x},t)$, de forma que:
+\begin{equation}
+ \label{eq:les}
+ f(\vec{x},t) = \bar{f}(\vec{x},t) + f'(\vec{x},t)
+\end{equation}
+em que a parte filtrada é definida como:
+\begin{equation}
+ \label{eq:filtro}
+ \bar{f}(\vec{x},t) = \int_D f(\vec{x},t)G(\vec{x}-\vec{x}') d\vec{x}'
+\end{equation}
+onde $G(\vec{x})$ é a função filtro e pode ser definida de diversas formas. Uma das mais frequentes funções filtro encontradas na literatura é expressa por:
+\begin{equation} 
+ \label{eq:funcao_filtro}
+ G(\vec{x}) = \left\{
+ \begin{array}{cc}
+  1/\Delta^3 	& \text{ se } |\vec{x}| \leq \Delta/2\\
+  0		& \text{ se } |\vec{x}| > \Delta/2\\
+ \end{array}
+ \right.
+\end{equation}
+em que $\Delta$ é o tamanho característico do filtro, e caracteriza a frequência de corte da filtragem. 
