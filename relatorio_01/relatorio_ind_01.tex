@@ -11,6 +11,7 @@
 \usepackage{amsthm,amsmath,mathtools,amssymb}
 \usepackage{framed} 
 \usepackage{multirow}
+\usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{multicol} 
 \usepackage{varwidth}
@@ -74,6 +75,7 @@
 %\journal{Applied Numerical Mathematics}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newtheorem{example}{Exemplo}
 \pretolerance=1000 % for no overfull lines
 \usepackage[
 colorlinks=true,
@@ -83,7 +85,7 @@ citecolor=blue,
 urlcolor=blue]{hyperref}
 %\hypersetup{
    %pdftitle    ={Numerical modeling of chickpea \textit{(Cicer arietinum)} hydration: The effects of temperature and pressure},
-   %pdfauthor   ={PÃ©tterson Pramiu},
+   %pdfauthor   ={Pétterson Pramiu},
    %pdfkeywords = {diffusion equation \sep Fick's second law \sep the hydration process.},
 	 %pdfsubject  = {Article}
 %} 
@@ -93,23 +95,23 @@ urlcolor=blue]{hyperref}
 \hyphenation{especificamen-te} 
 
 \begin{document}
-\title{RelatÃ³rio de estudos individual}
-\author{PÃ©tterson VinÃ­cius Pramiu}
+\title{Relatório de estudos individual}
+\author{Pétterson Vinícius Pramiu}
 \date{\today}
 
 \maketitle
 
 \tableofcontents
 
-\chapter{IntroduÃ§Ã£o}
-Este relatÃ³rio objetiva registrar de forma detalhada e sistemÃ¡tica as atividades de pesquisa e estudos relacionados Ã  temÃ¡tica de proposta de tese do autor. Nele serÃ£o revistos alguns conceitos fundamentais de mecÃ¢nica de fluidos, mÃ©todos numÃ©ricos em equaÃ§Ãµes diferenciais, instalaÃ§Ã£o e configuraÃ§Ã£o de bibliotecas para implementaÃ§Ã£o computacional como PETSc e MPI, entre outros. Exemplos da resoluÃ§Ã£o de sistemas de equaÃ§Ãµes lineares e da soluÃ§Ã£o de algumas EDPs como a equaÃ§Ã£o de Laplace, de Poisson, da equaÃ§Ã£o do calor transiente e da equaÃ§Ã£o de Stokes serÃ£o resolvidos detalhadamente em diferenÃ§as finitas ou volumes finitos, empregando malhas estruturadas e em programaÃ§Ã£o serial ou paralela. A linguagem selecionada para implementaÃ§Ã£o dos cÃ³dgidos fonte Ã© a linguagem C, e alguns exemplos tambÃ©m serÃ£o ilustrados e implementados em Scilab. Com a realizaÃ§Ã£o destes exemplos espera-se obter os requisitos necessÃ¡rios para compreensÃ£o de trabalhos e implementaÃ§Ã£o de cÃ³digo computacional envolvendo simulaÃ§Ãµes em escoamentos turbulentos empregando o mÃ©todo de SimulaÃ§Ã£o de Grandes Escalas - \textit{Large Eddy Simulation}.
+\chapter{Introdução}
+Este relatório objetiva registrar de forma detalhada e sistemática as atividades de pesquisa e estudos relacionados à temática de proposta de tese do autor. Nele serão revistos alguns conceitos fundamentais de mecânica do contínuo, mecânica de fluidos, métodos numéricos em equações diferenciais, instalação e configuração de bibliotecas para implementação computacional como PETSc e MPI, entre outros. Exemplos da resolução de sistemas de equações lineares e da solução de algumas EDPs como a equação de Laplace, de Poisson, da equação do calor transiente e da equação de Stokes serão resolvidos detalhadamente em diferenças finitas ou volumes finitos, empregando malhas estruturadas e em programação serial ou paralela. A linguagem selecionada para implementação dos códgidos fonte é a linguagem C, e alguns exemplos também serão ilustrados e implementados em Scilab. Com a realização destes exemplos espera-se obter os requisitos necessários para compreensão de trabalhos e implementação de código computacional envolvendo simulações em escoamentos turbulentos empregando o método de Simulação de Grandes Escalas - \textit{Large Eddy Simulation}.
 
-\input{resumo_ceasb}
+% \input{resumo_ceasb}	% breve introdução sobre projeto resumo_ceasb
 %\input{fluxograma}
-
-\input{turbulencia}
-\input{codigo}
-\input{cronograma}
+\input{mecanica} 	% revisao de conceitos: mec. continuo, fluidos, tensores, notação e teoremas
+\input{turbulencia}	% revisao sobre turbulencia: RANS, DNS, LES
+%\input{codigo}		% codigos e implementações computacionais: Dif. Finitas e Vol. Finitos
+% \input{cronograma}
 \input{revisao}
 % \input{teste_tikz}
 

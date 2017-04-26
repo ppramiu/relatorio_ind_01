@@ -3,48 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: relatorio_ind_01.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
+Warning--I didn't find a database entry for "chaves:2013"
+Warning--I didn't find a database entry for "william:2003"
 Warning--I didn't find a database entry for "pontes:2016"
 Warning--I didn't find a database entry for "atila:2002"
-Warning--I didn't find a database entry for "briggs:2000"
-You've used 4 entries,
+Warning--empty journal in Saad1
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            522 strings with 4886 characters,
-and the built_in function-call counts, 2229 in all, are:
-= -- 183
-> -- 217
-< -- 2
-+ -- 85
-- -- 81
-* -- 197
-:= -- 403
-add.period$ -- 13
-call.type$ -- 4
-change.case$ -- 50
+            624 strings with 7091 characters,
+and the built_in function-call counts, 6828 in all, are:
+= -- 650
+> -- 396
+< -- 3
++ -- 156
+- -- 138
+* -- 539
+:= -- 1169
+add.period$ -- 56
+call.type$ -- 18
+change.case$ -- 120
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 51
-empty$ -- 102
-format.name$ -- 81
-if$ -- 427
+cite$ -- 19
+duplicate$ -- 220
+empty$ -- 481
+format.name$ -- 138
+if$ -- 1382
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 3
-newline$ -- 23
-num.names$ -- 10
-pop$ -- 60
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 93
+num.names$ -- 40
+pop$ -- 115
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 103
 quote$ -- 0
-skip$ -- 37
+skip$ -- 149
 stack$ -- 0
-substring$ -- 52
-swap$ -- 14
-text.length$ -- 2
+substring$ -- 415
+swap$ -- 38
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 14
-warning$ -- 0
-while$ -- 12
-width$ -- 5
-write$ -- 45
-(There were 3 warnings)
+type$ -- 68
+warning$ -- 1
+while$ -- 62
+width$ -- 20
+write$ -- 199
+(There were 5 warnings)

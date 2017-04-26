@@ -5,11 +5,20 @@ Esta seção será apresentada a metodologia de Simulação de Grandes Escalas (LES) 
 
 Deve-se ressaltar que é razoável o investimento em pesquisas relacionadas à compreensão e ao controle de escoamentos turbulentos, devido à enorme quantidade de implicações de cunho prático decorrentes, que envolvem sistemas de transportes, transmissão e conversão de energia, aplicções geofísicas, entre outras. Dentre as maiores dificuldades para o desenvolvimento da modelagem matemática dos escoamentos que apresentam turbuência, está a sua modelagem, o que será discutido nesta seção.
 
-Uma das principais características dos escoamentos turbulentos é o elevado grau de liberdade associado a este tipo de sistema dinãmico. A maneira mais tradicional ou intuitiva de conduzir uma simulação de escoamento é com auxílio das equações de Navier-Stokes, e se a malha computacional for suficientemente refinada, todos os fenômenos físicos envolvidos serão resolvidos. Essa abordagem é conhecida como Simulação Numérica Direta (DNS), no entanto, por aspectos computacionais ela nem sempre pode ser utilizada, ficando restrita na maioria das vezes à escoamentos com baixos número de Reynolds. Esse fato torna a DNS inviável para a maior parte dos problemas práticos encontrados. Diante desta limitação e empregando as ideias de decomposição das escalas de Reynolds, que Smagorinsky propôs uma nova concepção de modelagem, na qual é realizada uma separação estruturas que ocorrem em altas frequências daquelas que ocorrem em baixa frequência, ao invés de separar as escalas em um campo médio e nas suas respectivas flutuações. Nesta metodologia, a comprimento característico do filtro (fator que determina a frequ?ncia de corte) é especificado em função do tamanho da malha utilizada na discretização do problema.
+A mariora dos problemas de engenharia que ocorrem na prática e em grande parte dos fluxos naturais são turbulentos o que direciona o estudo e o desenvolvimento de técnicas em dinâmica de fluidos computacional (CFD), a fluxos em que a turbulência desempenha um papel dominante. Embora a natureza física exata da turbulência não tenha sido totalmente compreendida, ela pode ser modelada com um grau suficiente de precisão em simulações numéricas \cite{Zhiyin:2015}.
+
+Uma das principais características dos escoamentos turbulentos é o elevado grau de liberdade associado a este tipo de sistema dinãmico. A maneira mais tradicional ou intuitiva de conduzir uma simulação de escoamento é com auxílio das equações de Navier-Stokes, e se a malha computacional for suficientemente refinada, todos os fenômenos físicos envolvidos serão resolvidos. Essa abordagem é conhecida como Simulação Numérica Direta (DNS), no entanto, por aspectos computacionais ela nem sempre pode ser utilizada, ficando restrita na maioria das vezes à escoamentos com baixos número de Reynolds. Esse fato torna a DNS inviável para a maior parte dos problemas práticos encontrados. Diante desta limitação e empregando as ideias de decomposição das escalas de Reynolds, que Smagorinsky propôs uma nova concepção de modelagem, na qual é realizada uma separação estruturas que ocorrem em altas frequências daquelas que ocorrem em baixa frequência, ao invés de separar as escalas em um campo médio e nas suas respectivas flutuações. Nesta metodologia, o comprimento característico do filtro (fator que determina a frequ?ncia de corte) é especificado em função do tamanho da malha utilizada na discretização do problema \cite{silva_freire:2002}. 
+
+Em alguns casos, o pesquisaor pode estar interessado  no fluxo no estado estacionário e, portanto, não é necessário simular o fluxo instantâneo de forma detalhada, o que leva a uma grande redução do custo computacional. Esta é a base para a aproximação de Navier-Stokes baseada nas médias de Reynolds (RANS), onde as equações são resolvidas apenas para as quantidades médias, enquanto o efeito de todas as escalas de movimento turbulento instantâneo é modelado por um modelo de turbulência. Esta abordagem tem sido majoritária nas aplicações de industriais de CFD nas últimas décadas, devido à sua baixa exigência computacional. No entanto, o conhecimento do comportamento transitório do fluxo é necessário e a abordagem RANS não é suficiente, e em muitos casos não consegue descrever o comportamento detalhado do fluxo \cite{Zhiyin:2015}.
+
+Uma abordagem alternativa é chamada de simulação de grandes escalas (LES), a qual foi proposta em 1963 por Smagorinsky. Esta abordagem não adota a abordagem convencional de RANS com tempo ou conjunto, com equações adicionais de transporte modeladas sendo resolvidas para obter o tensor de tensões de Reynolds resultantes do processo de média. Na LES, os movimentos em grande escala (grandes vórtices) de fluxo turbulento são calculados diretamente, e apenas os movimentos de pequena escala (escala sub-malha (SGS)) são modelados, resultando em uma redução significativa no custo computacional quando comparado ao DNS. Desta forma, LES é mais precisa do que a abordagem RANS, uma vez que as grandes escalas turbulentas contêm a maior parte da energia turbulenta e são responsáveis ??pela maior parte da transferência de momentum e difusão turbulenta, e LES captura estas estruturas em detalhe completo diretamente, enquanto elas são modelados na abordagem RANS. Além disso, as pequenas escalas tendem a ser mais isotrópicas e homogêneas do que as grandes e, portanto, modelar os movimentos do SGS pode ser mais fácil do que modelar todas as escalas dentro de um único modelo como na abordagem RANS \cite{Zhiyin:2015}.
 
 A Simulação de Grandes Escalas é considerada como uma metodologia intermediária à DNS e à simulação empregando equações resultantes da técnica de decomposição de Reynolds. Uma característica desta abordagem é que as estruturas turbulentas resposáveis pelo transporte de energia e quantidade de movimento são resolvidas diretamente por meio das equações filtradas, e somenteas as menores estruturas, que ocorrem com maior frequência são modeladas - filtro passa-baixa????. Ao considerar que estruturas menores apresentem uma isotropia e homogeneidade, espera-se que os modelos sejam mais gerais e independentes dos diferentes tipos de escoamento, quando comparados à metodologia que emprega médias.
 
 Ambas metodologias DNS e LES se assemelham, uma vez que ambas permitem a obtençaõ de resultados tridimensionais e transientes das equações de Navier-Stokes. Embora seja necessário uma malha também refinida para LES, nesta abordagem é possível resolver escoamentos com altos número de Reynolds, devido ao processo de separação das escalas utilizado e ao processo de modelagem dos tensores -sub-malha que são obtidos adicionalmente.
+
+Quando o método de volumes finitos é empregado para resolver as equações governantes numericamente, as equações são integradas sobre volumes de controle, equivalentes a convolução com um filtro de chapéu alto, portanto não há necessidade de aplicar explicitamente um filtro à equação instantânea e isso é chamado filtragem implícita. No entanto, vale a pena salientar que existe potencialmente uma grande deficiência ou dificuldade na filtragem implícita, ou seja, uma verdadeira malha resultados independentes nunca podem ser alcançados como com o refinamento de malha, menor escala movimentos são resolvidos e se um continua a refinar a Malha, em seguida, eventualmente, um DNS é realizado, e não um LES. Em outras palavras, quando a filtragem implícita é empregada, é quase impossível distinguir entre erros numéricos e de modelagem e, portanto, proíbe a análise útil de esquemas numéricos.
+
 
 \section{Médias e filtros}
 No caso de escoamento de fluidos, a turbulência origina-se da instabilidade de camadas de cisalhamento, que surge no momento em que os efeitos não-lineares são dominantes, o que é caracterizado por elevados números de Reynolds. Na maioria das vezes, é de interesse avaliar as propriedades médias dos escoamentos turbulentos. Para isso, decompõe-se cada grandeza física $u$ na soma de um campo médio $\bar{u}$ e uma componente de flutuação turbulenta $u'$, cuja média é considerada nula. Assim os campos de velocidade, pressão e densidade são escritos como em \cite{pontes:2016}:
@@ -52,9 +61,23 @@ As grandezas que caracterizam o campo de um escoamento são escritas para o prece
  \begin{split}
   u_i & = \bar{u}_i + u_i'\\
   p & = \bar{p} + p'\\
-  \rho & = \bar{rho} + \tilde{\rho}  
+  \rho & = \bar{\rho} + \tilde{\rho}  
  \end{split}
 \end{equation}
+em que $u_i$ representa as componentes da velocidade nas $i$ direções, $p$ é a pressão e $\rho$ é a massa específica. Por notação, as flutuações de densidade foram designadas por $\rho'$.
+
+Como já apresentado, a equação de conservação de massa ou equação da continuidade para um escoamento incompressível pode ser escrita como:
+\begin{equation}
+ \label{eq:conservacao}
+ \dfrac{\partial \rho}{\partial t} + \dfrac{\partial}{\partial x_j}(\rho u_j) = 0
+\end{equation}
+
+Empregando as expressões médias para $u$ e $\rho$, em \eqref{eq:conservacao} tem-se:
+\begin{equation}
+ \label{eq:conservacao_media}
+ \dfrac{\partial}{\partial t} (\bar{\rho} + \tilde{\rho})  + \dfrac{\partial}{\partial x_j}\big((\bar{\rho} + \tilde{\rho})(\bar{u}_i + u_i')\big) = 0
+\end{equation}
+
 
 \subsection{Separação de escalas}
 As equações que governam o escoamento de fluidos incompressíveis são especificadas basicamente pelas equações de conservação da massa e da quantidade de movimento, expressas respectivamente, por:
@@ -86,3 +109,10 @@ onde $G(\vec{x})$ é a função filtro e pode ser definida de diversas formas. Uma 
  \right.
 \end{equation}
 em que $\Delta$ é o tamanho característico do filtro, e caracteriza a frequência de corte da filtragem. 
+
+
+
+\section{Simulação de grandes escalas - LES}
+A simulação de grandes escalas (LES) foi originalmente proposta para simular fluxos atmosféricos na década de 1960 e partir de então, tornou-se uma das metodologias mais promissoras e bem-sucedidas para a simulação de escoamentos ou fluxos turbulentos. Atualmente é possível simular fluxos complexos e de real interesse em engenharia empregando a técninca LES. No entanto, ainda existem desafios significativos para que esta abordagem atinja um nível de maturidade para sua ampla disseminação em aplicações de engenharia e de indústria \cite{Zhiyin:2015}
+
+

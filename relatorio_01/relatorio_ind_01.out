@@ -1,20 +1,9 @@
-\BOOKMARK [0][-]{chapter.1}{IntroduÃ§Ã£o}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Motivação}{chapter.1}% 2
-\BOOKMARK [0][-]{chapter.2}{Turbulência}{}% 3
-\BOOKMARK [1][-]{section.2.1}{Médias e filtros}{chapter.2}% 4
-\BOOKMARK [2][-]{subsection.2.1.1}{Médias de Reynolds}{section.2.1}% 5
-\BOOKMARK [2][-]{subsection.2.1.2}{Separação de escalas}{section.2.1}% 6
-\BOOKMARK [0][-]{chapter.3}{Instalação e Configuração do PETSc}{}% 7
-\BOOKMARK [1][-]{section.3.1}{Primeiros exemplos com PETSc}{chapter.3}% 8
-\BOOKMARK [2][-]{subsection.3.1.1}{Objetos do tipo vetores e matrizes em PETSc}{section.3.1}% 9
-\BOOKMARK [2][-]{subsection.3.1.2}{Solução de sistema linear}{section.3.1}% 10
-\BOOKMARK [1][-]{section.3.2}{Diferenças finitas}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.3}{A equação de Poisson}{chapter.3}% 12
-\BOOKMARK [2][-]{subsection.3.3.1}{O caso 1D}{section.3.3}% 13
-\BOOKMARK [2][-]{subsection.3.3.2}{O caso 2D}{section.3.3}% 14
-\BOOKMARK [2][-]{subsection.3.3.3}{Geração da malha}{section.3.3}% 15
-\BOOKMARK [2][-]{subsection.3.3.4}{Discretização em diferenças finitas}{section.3.3}% 16
-\BOOKMARK [2][-]{subsection.3.3.5}{Montagem da matriz A em PETSc}{section.3.3}% 17
-\BOOKMARK [2][-]{subsection.3.3.6}{Um problema particular}{section.3.3}% 18
-\BOOKMARK [2][-]{subsection.3.3.7}{Resolução do sistema de equações}{section.3.3}% 19
-\BOOKMARK [1][-]{section.3.4}{Agenda de atividades}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.1}{Introdução}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Revisão e conceitos fundamentais}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Tensores}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Convenção do somatório de Einstein e notação indicial}{section.2.1}% 4
+\BOOKMARK [0][-]{chapter.3}{Turbulência}{}% 5
+\BOOKMARK [1][-]{section.3.1}{Médias e filtros}{chapter.3}% 6
+\BOOKMARK [2][-]{subsection.3.1.1}{Médias de Reynolds}{section.3.1}% 7
+\BOOKMARK [2][-]{subsection.3.1.2}{Separação de escalas}{section.3.1}% 8
+\BOOKMARK [1][-]{section.3.2}{Simulação de grandes escalas - LES}{chapter.3}% 9

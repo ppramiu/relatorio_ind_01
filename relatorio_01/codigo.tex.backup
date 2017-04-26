@@ -1,3 +1,59 @@
+\chapter{Aproximações por diferenças}
+Esta seção tem como objetivo apresentar uma breve introdução às aproximações por diferenças e foi escrita de acordo com \cite{leveque,fortuna}. O objetivo é aproximar soluções de equações diferenciais, ou seja, encontrar uma função ou alguma aproximação discreta para essa função que satisfaça uma relação entre ela e suas derivadas em algum domínio com condições de contorno conhecidas. Um método de diferenças finitas auxilia na resolução deste problema substituindo as derivadas nas equações diferenciais por aproximações de diferenças finitas. Isso resulta num sistema algébrico de equações a ser resolvido em lugar da equação diferencial, algo que pode ser resolvido computacionalmente.
+
+Antes de abordar este problema, considera-se primeiro a questão mais básica de como é possível aproximar as derivadas de uma função conhecida por fórmulas de diferenças finitas baseadas apenas em valores conhecidos da função em pontos discretos. Além de fornecer uma base para o desenvolvimento posterior de métodos de diferenças finitas para resolução de equações diferenciais, isso permite investigar vários conceitos relevantes como a ordem de acurácia de uma aproximação na configuração mais simples possível.
+
+Seja $u(x)$ uma função de uma variável que, salvo indicação em contrário, será sempre assumida ser suave, o que significa que é possível diferenciá-la o várias vezes e cada derivada é uma função limitada bem definida sobre um intervalo contendo um ponto de interesse particular $\bar{x}$. 
+
+Suponha que queremos aproximar $u'(\bar{x})$ por uma aproximação de diferenças finitas baseada apenas em valores de $u$ num número finito de pontos próxima de $\bar{x}$. Uma escolha óbvia seria usar
+
+\begin{equation}
+  \label{eq:dif_avancada}
+ D_+u(\bar{x}) \equiv \dfrac{u(\bar{x}+h)-u(\bar{x})}{h}
+\end{equation}
+para pequenos valores de $h$. Esta escolha é motivaad pela definição padrão de derivada como o limite desta expressão quando $h \to 0$. Note que $D_+(\bar{x})$ é inclinação da linha que interpolando os pontos $\bar{x}$ e $\bar{x} + h$. A expressão \eqref{eq:dif_avancada} é uma aproximação unilateral avançada para $u'(\bar{x})$ uma vez que emprega valores de $x\geq \bar{x}$. Analogamente é possível obter uma aproximação unilateral atrasada para $u'(\bar{x})$ com a expressão:
+
+\begin{equation}
+  \label{eq:dif_atrasada}
+ D_-u(\bar{x}) \equiv \dfrac{u(\bar{x})-u(\bar{x}-h)}{h}
+\end{equation}
+Essas aproximações fornecem uma acurácia de primeira ordem de aproximação para $u'(\bar{x})$, uma vez que a magnitude do erro é diretamente proporcional ao tamanho do espaçamento $h$.
+
+Outra possibilidade seria utilizar uma aproximação centrada, da forma:
+\begin{equation}
+  \label{eq:dif_centrada}
+ D_0u(\bar{x}) \equiv \dfrac{u(\bar{x}+h)-u(\bar{x}-h)}{2h}
+\end{equation}
+Esta aproximação tem segunda ordem de acurácia já que o erro é proporcional ao tamanho $h^2$.
+
+Como exemplo da aplicação das aproximações por diferenças, utiliza-se a função $u(x) = \sin(x)$ e o ponto $\bar{x}=1$. Sabe-se que $u'(1) = \cos(1) = 0.5403023$. O código \ref{cod:example_1_1_leveque} ilustra uma simples implementação serial para este exemplo empregadn equação de diferenças avançadas, atrasadas e centradas, denotadas na saída do console respectivamente por, D+, D- e D0. Foram utilizados nesse exemplo diferentes espaçamentos $h$.
+
+\lstinputlisting[language=C, label=code:example_1_1_leveque, caption=Exemplo de \texttt{makefile}.]{codigo/example_1_1_leveque.c}
+
+Cuja saída é apresenta a seguir:
+\begin{verbatim}
+Valor de f'(x)=cos(x) ou  f'(1.000000)=cos(1.000000)=0.540302
+h 		 D+ 		 D- 		 D0 
+0.100000	 0.497364 	 0.581441 	 0.539402 
+0.050000	 0.519045 	 0.561110 	 0.540077 
+0.025000	 0.529728 	 0.550764 	 0.540246 
+0.012500	 0.535029 	 0.545547 	 0.540288 
+0.006250	 0.537669 	 0.542928 	 0.540299 
+0.003125	 0.538987 	 0.541616 	 0.540301 
+0.001563	 0.539645 	 0.540959 	 0.540302 
+
+Valores do Erro
+h 		 D+ 		 D- 		 D0 
+0.100000	 -4.2939e-02 	 4.1138e-02 	 -9.0005e-04 
+0.050000	 -2.1257e-02 	 2.0807e-02 	 -2.2510e-04 
+0.025000	 -1.0574e-02 	 1.0462e-02 	 -5.6280e-05 
+0.012500	 -5.2732e-03 	 5.2451e-03 	 -1.4070e-05 
+0.006250	 -2.6331e-03 	 2.6261e-03 	 -3.5176e-06 
+0.003125	 -1.3157e-03 	 1.3139e-03 	 -8.7940e-07 
+0.001563	 -6.5762e-04 	 6.5718e-04 	 -2.1985e-07
+\end{verbatim}
+
+
 \chapter{Instalação e Configuração do PETSc}
 Esta seção tem como objetivo auxiliar na instalação e configuração do pacote de ferramentas PETSc, seguindo o manual do software. Informações adicionais podem ser obtidas diretamente no site do desenvolvedor da ferramenta: \url{https://www.mcs.anl.gov/petsc/}. 
 
@@ -359,7 +415,9 @@ em que explicitamente, para uma malha 1D uniforme com um total de nodos $m_x = 5
      \end{array}
    \right] 
 \end{equation}
-em que $a=2/h_x^2 = 32$ e $b= 1/h_x^2=16$. O código \ref{code:poisson_fd_2d_octave} escrito em Octave ilustra a implementação desse primeiro exemplo.
+em que $a=2/h_x^2 = 32$ e $b= 1/h_x^2=16$. Tomando $u(x) = x^4$, tem-se que $f(x) = 12x^2$, o que será utilizado para realização deste exemplo que é escrito em Octave e apresentado no Código \ref{code:poisson_fd_1d_octave} .
+
+
 
 \subsection{O caso 2D}
 Esta seção é dedicada a resolução numérica do problema de Poisson em um quadrado. Este é um problema que permite compreender partes essenciais  da implementação de códigos empregando a biblioteca PETSc. A discretização da EDP gera um sistema linear que é mais interessante do que o sistema tridiagonal que foi resolvido anteriormente. Será construída uma malha estruturada usando um objeto \verb|DMDA|, que será introduzido nesta  seção, e depois será montada uma matriz em paralelo com base nessa malha. Por último o sistema linear resultante será resovido em paralelo usando um objeto \verb|KSP| \cite{petsc-user-ref}.
@@ -683,21 +741,23 @@ Como já realizado, o sistema linear é resolvido por um objeto de solução linear 
 
 Pode-se examinar graficamente a malha para verificar a indexação dos objetos, em tempo de execução Assim, se o sistema X-window estiver corretamente configurado na instalação PETSc, então o comando:
 \begin{flushleft}
-\verb|user@user-G73Sw:~$ ./poisson_fd_2d -da_grid_x 5 -da_grid_y 7 -dm_view draw -draw_pause 5|\\
+\verb|user@user-G73Sw:~$ ./poisson_fd_2d -da_grid_x 5 -da_grid_y 7 |\\
+\verb|-dm_view draw -draw_pause 5|\\
 \end{flushleft}
 irá plotar a Figura \ref{fig:grid_xwindow_poisson}.
 \begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/grid_xwindow_poisson}
+ \includegraphics[width=0.4\textwidth]{figuras/grid_xwindow_poisson}
  \caption{Malha computacional.}
  \label{fig:grid_xwindow_poisson}
 \end{figure}
 Outra visualização interessante é obtida com o comando:
 \begin{flushleft}
-\verb|user@user-G73Sw:~$ ./poisson_fd_2d -da_grid_x 5 -da_grid_y 7 -a_mat_view draw -draw_pause 5|\\
+\verb|user@user-G73Sw:~$ ./poisson_fd_2d -da_grid_x 5 -da_grid_y 7 |\\
+\verb|-a_mat_view draw -draw_pause 5|\\
 \end{flushleft}
 que apresenta a estrutura da matriz A, conforme Figura \ref{fig:matrix_struct_xwindow}.
 \begin{figure}[H] \centering
- \includegraphics[width=0.5\textwidth]{figuras/matrix_struct_xwindow}
+ \includegraphics[width=0.4\textwidth]{figuras/matrix_struct_xwindow}
  \caption{Estrutura da matriz $A$.}
  \label{fig:matrix_struct_xwindow}
 \end{figure}
@@ -720,4 +780,21 @@ Note agora a diferença entre tempos de processamento para o código serial e util
 \verb|user@user-G73Sw:~$ time mpiexec -n 2 ./poisson_fd_2d -da_refine 6|\\
 \verb|real	1m0.327s  |\\
 \end{flushleft}
+
+A solução do problema de Poisson na malha $4\times 3$ é:
+\begin{flushleft}
+\verb|0.|\\
+\verb|0.|\\
+\verb|0.|\\
+\verb|0.|\\
+\verb|0.|\\
+\verb|-0.0120422|\\
+\verb|-0.0377036|\\
+\verb|0.|\\
+\verb|0.|\\
+\verb|0.|\\
+\verb|0.|\\
+\verb|0.|\\
+\end{flushleft}
+o que é bem semelhante à obtida com o Código \ref{code:poisson_fd_2d_octave} implementado em Octave.
 

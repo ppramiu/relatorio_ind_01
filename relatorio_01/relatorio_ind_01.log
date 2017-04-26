@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.11)  21 APR 2017 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.8)  26 APR 2017 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -236,24 +236,46 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen141
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count110
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
@@ -280,28 +302,34 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
-Package epstopdf Warning: No graphics package `graphic{s,x}' loaded.
-
-)) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
-\c@tracingmulticols=\count110
+\c@tracingmulticols=\count111
 \mult@box=\box30
-\multicol@leftmargin=\dimen142
-\c@unbalance=\count111
-\c@collectmore=\count112
-\doublecol@number=\count113
-\multicoltolerance=\count114
-\multicolpretolerance=\count115
-\full@width=\dimen143
-\page@free=\dimen144
-\premulticols=\dimen145
-\postmulticols=\dimen146
+\multicol@leftmargin=\dimen144
+\c@unbalance=\count112
+\c@collectmore=\count113
+\doublecol@number=\count114
+\multicoltolerance=\count115
+\multicolpretolerance=\count116
+\full@width=\dimen145
+\page@free=\dimen146
+\premulticols=\dimen147
+\postmulticols=\dimen148
 \multicolsep=\skip57
 \multicolbaselineskip=\skip58
 \partial@page=\box31
 \last@line=\box32
-\maxbalancingoverflow=\dimen147
+\maxbalancingoverflow=\dimen149
 \mult@rightbox=\box33
 \mult@grightbox=\box34
 \mult@gfirstbox=\box35
@@ -323,21 +351,21 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \@tempa=\box51
 \@tempa=\box52
 \@tempa=\box53
-\c@columnbadness=\count116
-\c@finalcolumnbadness=\count117
-\last@try=\dimen148
-\multicolovershoot=\dimen149
-\multicolundershoot=\dimen150
+\c@columnbadness=\count117
+\c@finalcolumnbadness=\count118
+\last@try=\dimen150
+\multicolovershoot=\dimen151
+\multicolundershoot=\dimen152
 \mult@nat@firstbox=\box54
 \colbreak@box=\box55
-\mc@col@check@num=\count118
+\mc@col@check@num=\count119
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box56
-\sift@deathcycles=\count119
-\@vwid@loff=\dimen151
-\@vwid@roff=\dimen152
+\sift@deathcycles=\count120
+\@vwid@loff=\dimen153
+\@vwid@roff=\dimen154
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
@@ -346,11 +374,7 @@ Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
-
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count120
-))
+)
 (/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
 Package: animate 2016/03/15 PDF animations from files and inline graphics
 
@@ -402,17 +426,6 @@ Package: animfp 2009/07/23 fixed point addition for animate.sty
 \afp@regb=\count128
 \afp@regs=\count129
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
-)
-Package graphics Info: Driver file: pdftex.def on input line 95.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
@@ -446,12 +459,12 @@ L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
 \l__iow_current_word_int=\count139
 \l__iow_current_indentation_int=\count140
 L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
-\c_zero_dim=\dimen153
-\c_max_dim=\dimen154
-\l_tmpa_dim=\dimen155
-\l_tmpb_dim=\dimen156
-\g_tmpa_dim=\dimen157
-\g_tmpb_dim=\dimen158
+\c_zero_dim=\dimen155
+\c_max_dim=\dimen156
+\l_tmpa_dim=\dimen157
+\l_tmpb_dim=\dimen158
+\g_tmpa_dim=\dimen159
+\g_tmpb_dim=\dimen160
 \c_zero_skip=\skip59
 \c_max_skip=\skip60
 \l_tmpa_skip=\skip61
@@ -485,13 +498,13 @@ L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \g_tmpb_box=\box61
 L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
 \l__coffin_internal_box=\box62
-\l__coffin_internal_dim=\dimen159
-\l__coffin_offset_x_dim=\dimen160
-\l__coffin_offset_y_dim=\dimen161
-\l__coffin_x_dim=\dimen162
-\l__coffin_y_dim=\dimen163
-\l__coffin_x_prime_dim=\dimen164
-\l__coffin_y_prime_dim=\dimen165
+\l__coffin_internal_dim=\dimen161
+\l__coffin_offset_x_dim=\dimen162
+\l__coffin_offset_y_dim=\dimen163
+\l__coffin_x_dim=\dimen164
+\l__coffin_y_dim=\dimen165
+\l__coffin_x_prime_dim=\dimen166
+\l__coffin_y_prime_dim=\dimen167
 \c_empty_coffin=\box63
 \l__coffin_aligned_coffin=\box64
 \l__coffin_aligned_internal_coffin=\box65
@@ -500,28 +513,28 @@ L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
 \l__coffin_display_coffin=\box68
 \l__coffin_display_coord_coffin=\box69
 \l__coffin_display_pole_coffin=\box70
-\l__coffin_display_offset_dim=\dimen166
-\l__coffin_display_x_dim=\dimen167
-\l__coffin_display_y_dim=\dimen168
+\l__coffin_display_offset_dim=\dimen168
+\l__coffin_display_x_dim=\dimen169
+\l__coffin_display_y_dim=\dimen170
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
 L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
 L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen169
-\l__box_bottom_dim=\dimen170
-\l__box_left_dim=\dimen171
-\l__box_right_dim=\dimen172
-\l__box_top_new_dim=\dimen173
-\l__box_bottom_new_dim=\dimen174
-\l__box_left_new_dim=\dimen175
-\l__box_right_new_dim=\dimen176
+\l__box_top_dim=\dimen171
+\l__box_bottom_dim=\dimen172
+\l__box_left_dim=\dimen173
+\l__box_right_dim=\dimen174
+\l__box_top_new_dim=\dimen175
+\l__box_bottom_new_dim=\dimen176
+\l__box_left_new_dim=\dimen177
+\l__box_right_new_dim=\dimen178
 \l__box_internal_box=\box71
-\l__coffin_bounding_shift_dim=\dimen177
-\l__coffin_left_corner_dim=\dimen178
-\l__coffin_right_corner_dim=\dimen179
-\l__coffin_bottom_corner_dim=\dimen180
-\l__coffin_top_corner_dim=\dimen181
-\l__coffin_scaled_total_height_dim=\dimen182
-\l__coffin_scaled_width_dim=\dimen183
+\l__coffin_bounding_shift_dim=\dimen179
+\l__coffin_left_corner_dim=\dimen180
+\l__coffin_right_corner_dim=\dimen181
+\l__coffin_bottom_corner_dim=\dimen182
+\l__coffin_top_corner_dim=\dimen183
+\l__coffin_scaled_total_height_dim=\dimen184
+\l__coffin_scaled_width_dim=\dimen185
 L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
@@ -601,21 +614,21 @@ Package: ocgbase 2016/03/11 v0.6 support package for ocgx2.sty
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count199
-\scratchdimen=\dimen184
+\scratchdimen=\dimen186
 \scratchbox=\box72
 \nofMPsegments=\count266
 \nofMParguments=\count267
 \everyMPshowfont=\toks30
 \MPscratchCnt=\count268
-\MPscratchDim=\dimen185
+\MPscratchDim=\dimen187
 \MPnumerator=\count269
 \makeMPintoPDFobject=\count270
 \everyMPtoPDFconversion=\toks31
 )
 \@anim@box=\box73
 \@anim@measbox=\box74
-\@anim@tmpdima=\dimen186
-\@anim@tmpdimb=\dimen187
+\@anim@tmpdima=\dimen188
+\@anim@tmpdimb=\dimen189
 \@anim@num=\count271
 \@anim@curframe=\count272
 \@anim@curframe@zb=\count273
@@ -687,8 +700,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen188
-\pgfutil@tempdimb=\dimen189
+\pgfutil@tempdima=\dimen190
+\pgfutil@tempdimb=\dimen191
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -702,11 +715,6 @@ Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen190
-\Gin@req@width=\dimen191
-)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
@@ -1070,6 +1078,8 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
+\c@example=\count326
+
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -1106,13 +1116,13 @@ Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
 \@linkdim=\dimen320
-\Hy@linkcounter=\count326
-\Hy@pagecounter=\count327
+\Hy@linkcounter=\count327
+\Hy@pagecounter=\count328
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count328
+\Hy@SavedSpaceFactor=\count329
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1126,10 +1136,10 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count329
+\c@Hy@tempcnt=\count330
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen321
-\Fld@menulength=\count330
+\Fld@menulength=\count331
 \Field@Width=\dimen322
 \Fld@charsize=\dimen323
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -1141,18 +1151,18 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count331
-\c@Item=\count332
-\c@Hfootnote=\count333
+\Hy@abspage=\count332
+\c@Item=\count333
+\c@Hfootnote=\count334
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\HyAnn@Count=\count334
-\Fld@listcount=\count335
-\c@bookmark@seq@number=\count336
+\HyAnn@Count=\count335
+\Fld@listcount=\count336
+\c@bookmark@seq@number=\count337
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -1169,30 +1179,24 @@ LaTeX Warning: Unused global option(s):
 
 LaTeX Warning: Label `eq:media_espacial' multiply defined.
 
-
-LaTeX Warning: Label `eq:sistema_01' multiply defined.
-
-
-LaTeX Warning: Label `eq:sistema_01' multiply defined.
-
 )
 \openout1 = `relatorio_ind_01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 97.
  (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1245,8 +1249,8 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
-\c@lstlisting=\count337
-Package hyperref Info: Link coloring ON on input line 95.
+\c@lstlisting=\count338
+Package hyperref Info: Link coloring ON on input line 97.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1254,713 +1258,287 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count338
+\c@section@level=\count339
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 97.
+LaTeX Info: Redefining \pageref on input line 97.
+LaTeX Info: Redefining \nameref on input line 97.
 
 (./relatorio_ind_01.out) (./relatorio_ind_01.out)
 \@outlinefile=\write5
 \openout5 = `relatorio_ind_01.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 101.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 103.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 101.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 103.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 101
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 103
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 101
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 103
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 101.
+(Font)              <14.4> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 101.
+(Font)              <10> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 101.
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+(Font)              <7> on input line 103.
+LaTeX Font Info:    Try loading font information for U+msa on input line 103.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 103.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 103.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./relatorio_ind_01.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 20.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 20.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.20 ...sistema de equações}{42}{subsection.3.3.7}
-                                                   [1
-
-])
+(Font)              <6> on input line 4.
+)
 \tf@toc=\write6
 \openout6 = `relatorio_ind_01.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 104.
- [2]
-Cap\'{\i }tulo 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 104.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 105.
-(./resumo_ceasb.tex
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
- [3
+(babel)             in language  on input line 106.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \chapter
+              {Introdução} [1
 
 ]
-Overfull \hbox (9.75761pt too wide) in paragraph at lines 5--6
-[]\T1/lmss/m/n/12 Atualmente exis-tem di-ver-sas fer-ra-men-tas com-pu-ta-ci-o-
-nais e softwa-res de-sen-vol-vi-dos especificamente
- []
-
-
-Overfull \hbox (1.52072pt too wide) in paragraph at lines 5--6
-\T1/lmss/m/n/12 Com-sol, Open-Foam, Mul-ti-Sim, Pro-teus, Du-alSPHyics, en-tre 
-ou-tros, são exem-plos de tais fer-ra-men-tas
- []
-
+Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 13.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 13.
-[4] <figuras/erosao_dpm.png, id=134, 435.5472pt x 302.5704pt>
-File: figuras/erosao_dpm.png Graphic file (type png)
-
-<use figuras/erosao_dpm.png>
-Package pdftex.def Info: figuras/erosao_dpm.png used on input line 26.
-(pdftex.def)             Requested size: 212.82779pt x 147.84988pt.
-
-<figuras/erosao.png, id=136, 440.1243pt x 309.0747pt>
-File: figuras/erosao.png Graphic file (type png)
- <use figuras/erosao.png>
-Package pdftex.def Info: figuras/erosao.png used on input line 27.
-(pdftex.def)             Requested size: 212.82779pt x 149.45773pt.
-
-<figuras/pontos_erosao.png, id=137, 251.0178pt x 220.9053pt>
-File: figuras/pontos_erosao.png Graphic file (type png)
-
-<use figuras/pontos_erosao.png>
-Package pdftex.def Info: figuras/pontos_erosao.png used on input line 28.
-(pdftex.def)             Requested size: 193.47578pt x 170.26613pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
-[]\T1/lmss/m/n/10 (c) Al-guns pon-tos de des-gaste
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 32.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 32.
-[5]) (./turbulencia.tex
+(babel)             in language  on input line 106.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 107.
+(./mecanica.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [6 <./figuras/erosao_dpm.png> <./figuras/erosao.png> <./figuras/pontos_erosao.
-png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
- [7]
+ [2
+
+]
 Cap\'{\i }tulo 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
-[8
+LaTeX Font Info:    Try loading font information for OMS+lmss on input line 3.
+LaTeX Font Info:    No file OMSlmss.fd. on input line 3.
 
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 14.
+LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 3.
 
 
-LaTeX Warning: Citation `pontes:2016' on page 9 undefined on input line 15.
+LaTeX Warning: Citation `chaves:2013' on page 3 undefined on input line 9.
 
 
-LaTeX Warning: Citation `pontes:2016' on page 9 undefined on input line 20.
+LaTeX Warning: Citation `chaves:2013' on page 3 undefined on input line 11.
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
-[9]
+(babel)             in language  on input line 22.
+[3
 
-LaTeX Warning: Citation `atila:2002' on page 10 undefined on input line 47.
+]
+
+LaTeX Warning: Citation `william:2003' on page 4 undefined on input line 28.
+
+
+LaTeX Warning: Citation `chaves:2013' on page 4 undefined on input line 36.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
-[10]
+(babel)             in language  on input line 37.
+[4]
+
+LaTeX Warning: Citation `chaves:2013' on page 5 undefined on input line 38.
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 73.
-) (./codigo.tex
+(babel)             in language  on input line 40.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 50.
+[5]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 108.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 108.
+ [6]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 193.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 193.
+ [7]
+Package epstopdf Info: Source file: <figuras/Permutation_indices_3d.eps>
+(epstopdf)                    date: 2017-04-26 16:44:18
+(epstopdf)                    size: 52968 bytes
+(epstopdf)             Output file: <figuras/Permutation_indices_3d-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2017-04-26 16:48:35
+(epstopdf)                    size: 23384 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/Permutation_indice
+s_3d-eps-converted-to.pdf figuras/Permutation_indices_3d.eps>
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
+
+<figuras/Permutation_indices_3d-eps-converted-to.pdf, id=116, 314.17375pt x 151
+.56625pt>
+File: figuras/Permutation_indices_3d-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use figuras/Permutation_indices_3d-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/Permutation_indices_3d-eps-converted-to.pdf us
+ed on input line 198.
+(pdftex.def)             Requested size: 241.84843pt x 116.67398pt.
+)
+(./turbulencia.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [11]
+ [8 <./figuras/Permutation_indices_3d-eps-converted-to.pdf>]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 11.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 11.
+[9
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 17.
+ [10]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+
+
+LaTeX Warning: Citation `pontes:2016' on page 11 undefined on input line 24.
+
+
+LaTeX Warning: Citation `pontes:2016' on page 11 undefined on input line 29.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 33.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 33.
+[11]
+
+LaTeX Warning: Citation `atila:2002' on page 12 undefined on input line 56.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 69.
+[12]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 82.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 115.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 117.
+ [13]) (./revisao.tex) (./relatorio_ind_01.bbl
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [14]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
+
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (25.9411pt too wide) in paragraph at lines 4--5
-[]\T1/lmss/m/n/12 Nesta se-ção se-rão apre-sen-ta-dos tam-bém al-guns re-qui-si
--tos com-pu-ta-ci-o-nais ne-ces-sá-rios à im-ple-men-ta-ção
- []
-
-
-Overfull \hbox (4.37288pt too wide) in paragraph at lines 4--5
-\T1/lmss/m/n/12 dos mé-to-dos nu-mé-ri-cos e re-so-lu-ção das equa-ções dis-cre
--ti-za-das. Tam-bém será exi-bido uma in-tro-du-ção,
- []
-
-<figuras/install_01.png, id=197, 933.4875pt x 269.005pt>
-File: figuras/install_01.png Graphic file (type png)
-
-<use figuras/install_01.png>
-Package pdftex.def Info: figuras/install_01.png used on input line 13.
-(pdftex.def)             Requested size: 338.58632pt x 97.57236pt.
-
-Overfull \hbox (0.47597pt too wide) in paragraph at lines 10--16
-\T1/lmss/m/n/12 Esse co-mando, além de con-fi-gu-rar o PETSc, tam-bém ins-tala 
-al-gu-mas fer-ra-men-tas como com-pi-la-do-res
+Underfull \hbox (badness 1496) in paragraph at lines 51--55
+\T1/lmss/m/n/12 Cur-rent Ca-pa-bi-li-ties, Re-com-men-ded Prac-ti-ces, and Fu-t
+ure Re-se-arch.  \T1/lmss/m/sl/12 AIAA Jour-nal\T1/lmss/m/n/12 ,
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 17.
-[12
+(babel)             in language  on input line 67.
+[15
 
-]
-Overfull \hbox (28.82838pt too wide) in paragraph at lines 19--20
-[]\T1/lmtt/m/n/12 make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=a
-rch-linux2-c-debug all  
- []
-
-<figuras/install_02.png, id=207, 933.4875pt x 269.005pt>
-File: figuras/install_02.png Graphic file (type png)
-
-<use figuras/install_02.png>
-Package pdftex.def Info: figuras/install_02.png used on input line 24.
-(pdftex.def)             Requested size: 338.58632pt x 97.57236pt.
-
-Overfull \hbox (35.00339pt too wide) in paragraph at lines 30--31
-[]\T1/lmtt/m/n/12 make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=a
-rch-linux2-c-debug test  
- []
-
-<figuras/install_03.png, id=209, 816.04875pt x 234.8775pt>
-File: figuras/install_03.png Graphic file (type png)
-
-<use figuras/install_03.png>
-Package pdftex.def Info: figuras/install_03.png used on input line 35.
-(pdftex.def)             Requested size: 338.58632pt x 97.45442pt.
-
-Overfull \hbox (53.5284pt too wide) in paragraph at lines 41--42
-[]\T1/lmtt/m/n/12 make PETSC_DIR=/home/user/Documentos/petsc-3.7.5 PETSC_ARCH=a
-rch-linux2-c-debug streams  
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 42.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 42.
-[13 <./figuras/install_01.png> <./figuras/install_02.png> <./figuras/install_03
-.png>] <figuras/install_04.png, id=220, 689.57625pt x 456.70625pt>
-File: figuras/install_04.png Graphic file (type png)
-
-<use figuras/install_04.png>
-Package pdftex.def Info: figuras/install_04.png used on input line 46.
-(pdftex.def)             Requested size: 290.22107pt x 192.21252pt.
-
-<figuras/install_speedup.png, id=221, 589.20125pt x 457.71pt>
-File: figuras/install_speedup.png Graphic file (type png)
-
-<use figuras/install_speedup.png>
-Package pdftex.def Info: figuras/install_speedup.png used on input line 53.
-(pdftex.def)             Requested size: 290.22107pt x 225.45319pt.
-
-<figuras/install_environment.png, id=223, 867.24pt x 232.87pt>
-File: figuras/install_environment.png Graphic file (type png)
-
-<use figuras/install_environment.png>
-Package pdftex.def Info: figuras/install_environment.png used on input line 61.
-
-(pdftex.def)             Requested size: 338.58632pt x 90.91841pt.
-
-Overfull \hbox (0.52252pt too wide) in paragraph at lines 58--64
-[]\T1/lmtt/m/n/12 PETSC_DIR=/home/user/Documentos/petsc-3.7.5 \T1/lmss/m/n/12 e
- []\T1/lmtt/m/n/12 PETSC_ARCH=arch-linux2-c-debug \T1/lmss/m/n/12 com
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
-[14 <./figuras/install_04.png> <./figuras/install_speedup.png>]
-<figuras/make_ex1.png, id=233, 797.98125pt x 405.515pt>
-File: figuras/make_ex1.png Graphic file (type png)
-
-<use figuras/make_ex1.png>
-Package pdftex.def Info: figuras/make_ex1.png used on input line 73.
-(pdftex.def)             Requested size: 338.58632pt x 172.06004pt.
-
-<figuras/exec_ex1.png, id=235, 797.98125pt x 388.45125pt>
-File: figuras/exec_ex1.png Graphic file (type png)
-
-<use figuras/exec_ex1.png>
-Package pdftex.def Info: figuras/exec_ex1.png used on input line 80.
-(pdftex.def)             Requested size: 338.58632pt x 164.8199pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
- [15 <./figuras/install_environment.png> <./figuras/make_ex1.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 87.
- (./codigo/code_euler.c
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1.
-
-Overfull \hbox (1.40807pt too wide) in paragraph at lines 8--10
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][]  
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
-[16 <./figuras/exec_ex1.png>]) (./codigo/makefile
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
- [17]
-Overfull \hbox (7.70813pt too wide) in paragraph at lines 26--27
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][]  
- []
-
-)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 121.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 121.
- [18]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 142.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 142.
- [19]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 147.
- (./codigo/build_vector.c
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
- [20]) (./codigo/makefile
-Overfull \hbox (7.70813pt too wide) in paragraph at lines 26--27
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][]  
- []
-
-)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 166.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 166.
- [21] (./codigo/build_matrix.c)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 180.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 180.
- [22]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 207.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 237.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 237.
- [23] (./codigo/solve_linear_ksp.c
-Overfull \hbox (14.0082pt too wide) in paragraph at lines 1--3
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 46.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 46.
-[24]) (./codigo/solve_linear_arbitrary.c
-Overfull \hbox (7.70813pt too wide) in paragraph at lines 3--5
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][]  
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
-[25]
-Overfull \hbox (20.30826pt too wide) in paragraph at lines 67--68
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][]  
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 70.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 70.
-[26])
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 268.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 268.
- [27]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 299.
-
-
-LaTeX Warning: Reference `cod:example_1_1_leveque' on page 28 undefined on inpu
-t line 301.
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 303.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 303.
-[28] (./codigo/example_1_1_leveque.c
-Overfull \hbox (14.0082pt too wide) in paragraph at lines 35--36
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 303.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 303.
- [29]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 328.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 330.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 339.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 339.
- [30]
-
-LaTeX Warning: Reference `code:poisson_fd_1d_octave' on page 31 undefined on in
-put line 391.
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 395.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 399.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 399.
-[31] <figuras/dominio_poisson_2d.pdf, id=664, 544.79321pt x 367.11115pt>
-File: figuras/dominio_poisson_2d.pdf Graphic file (type pdf)
-
-<use figuras/dominio_poisson_2d.pdf>
-Package pdftex.def Info: figuras/dominio_poisson_2d.pdf used on input line 417.
-
-(pdftex.def)             Requested size: 169.29684pt x 114.08334pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 425.
-
-<figuras/poisson_grid_2d.pdf, id=667, 376.16946pt x 219.92226pt>
-File: figuras/poisson_grid_2d.pdf Graphic file (type pdf)
-
-<use figuras/poisson_grid_2d.pdf>
-Package pdftex.def Info: figuras/poisson_grid_2d.pdf used on input line 429.
-(pdftex.def)             Requested size: 241.84843pt x 141.39742pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 432.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 432.
- [32 <./figuras/dominio_poisson_2d.pdf>]
-<figuras/poisson_grid_2d_5x7.pdf, id=680, 204.30472pt x 195.63205pt>
-File: figuras/poisson_grid_2d_5x7.pdf Graphic file (type pdf)
-
-<use figuras/poisson_grid_2d_5x7.pdf>
-Package pdftex.def Info: figuras/poisson_grid_2d_5x7.pdf used on input line 437
-.
-(pdftex.def)             Requested size: 169.29684pt x 162.11484pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 450.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 450.
- [33 <./figuras/poisson_grid_2d.pdf> <./figuras/poisson_grid_2d_5x7.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./figuras/poisson_grid_2d_5x7.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->] <figuras/poisson_grid_2d_5x7_4_mpi.pdf, id=691, 204.30472pt x 195.63205pt>
-File: figuras/poisson_grid_2d_5x7_4_mpi.pdf Graphic file (type pdf)
-
-<use figuras/poisson_grid_2d_5x7_4_mpi.pdf>
-Package pdftex.def Info: figuras/poisson_grid_2d_5x7_4_mpi.pdf used on input li
-ne 454.
-(pdftex.def)             Requested size: 169.29684pt x 162.11484pt.
- (./codigo/poisson_fd_2d.c)
-Overfull \hbox (15.82126pt too wide) in paragraph at lines 463--464
-\T1/lmss/m/n/12 ar-gu-men-tos são do tipo []\T1/lmtt/m/n/12 DM_BOUNDARY_NONE \T
-1/lmss/m/n/12 pois as con-di-ções de Di-ri-ch-let não pre-ci-sam de co-mu-ni-ca
--ção
- []
-
-<figuras/stencil_finite_diference_2d.pdf, id=694, 204.30472pt x 195.63205pt>
-File: figuras/stencil_finite_diference_2d.pdf Graphic file (type pdf)
-
-<use figuras/stencil_finite_diference_2d.pdf>
-Package pdftex.def Info: figuras/stencil_finite_diference_2d.pdf used on input 
-line 466.
-(pdftex.def)             Requested size: 169.29684pt x 162.11484pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 470.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 470.
- [34 <./figuras/poisson_grid_2d_5x7_4_mpi.pdf>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 473.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 494.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 494.
- [35 <./figuras/stencil_finite_diference_2d.pdf>]
-<figuras/poisson_grid_2d_4x3.pdf, id=726, 159.03848pt x 91.7115pt>
-File: figuras/poisson_grid_2d_4x3.pdf Graphic file (type pdf)
-
-<use figuras/poisson_grid_2d_4x3.pdf>
-Package pdftex.def Info: figuras/poisson_grid_2d_4x3.pdf used on input line 496
-.
-(pdftex.def)             Requested size: 169.29684pt x 97.63072pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 569.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 569.
- [36 <./figuras/poisson_grid_2d_4x3.pdf>]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(./codigo/poisson_fd_2d_octave.m
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 30.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 30.
- [37])
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 599.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 599.
- [38]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 652.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 652.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 652.
-
-(./codigo/poisson_fd_2d.c
-Overfull \hbox (1.40807pt too wide) in paragraph at lines 17--18
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][]  
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 19.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 19.
-[39])
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 663.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 663.
- [40]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 678.
-
-
-LaTeX Warning: Citation `briggs:2000' on page 41 undefined on input line 689.
-
-(./codigo/poisson_fd_2d.c
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
- [41])
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 695.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 698.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 698.
- [42] (./codigo/poisson_fd_2d.c
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 144.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 144.
- [43])
-<figuras/grid_xwindow_poisson.png, id=976, 301.125pt x 329.23pt>
-File: figuras/grid_xwindow_poisson.png Graphic file (type png)
-
-<use figuras/grid_xwindow_poisson.png>
-Package pdftex.def Info: figuras/grid_xwindow_poisson.png used on input line 72
-2.
-(pdftex.def)             Requested size: 193.47578pt x 211.54039pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 726.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 726.
- [44]
-<figuras/matrix_struct_xwindow.png, id=987, 301.125pt x 329.23pt>
-File: figuras/matrix_struct_xwindow.png Graphic file (type png)
-
-<use figuras/matrix_struct_xwindow.png>
-Package pdftex.def Info: figuras/matrix_struct_xwindow.png used on input line 7
-33.
-(pdftex.def)             Requested size: 193.47578pt x 211.54039pt.
-
-Overfull \hbox (4.12837pt too wide) in paragraph at lines 740--740
-[]\T1/lmtt/m/n/12 user@user-G73Sw:~$ for K in 0 1 2 3 4 5; do ./poisson_fd_2d -
-da_refine $K; done  
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 742.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 742.
-[45 <./figuras/grid_xwindow_poisson.png> <./figuras/matrix_struct_xwindow.png>]
-) (./cronograma.tex
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-LaTeX Font Info:    Try loading font information for OMS+lmss on input line 4.
-LaTeX Font Info:    No file OMSlmss.fd. on input line 4.
-
-
-LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 4.
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-) (./revisao.tex) (./relatorio_ind_01.bbl
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
- [47]) (./logos.tex
-<logos/git.png, id=1006, 913.4125pt x 381.425pt>
+]) (./logos.tex <logos/git.png, id=198, 913.4125pt x 381.425pt>
 File: logos/git.png Graphic file (type png)
- <use logos/git.png>
+
+<use logos/git.png>
 Package pdftex.def Info: logos/git.png used on input line 1.
 (pdftex.def)             Requested size: 145.11053pt x 60.59273pt.
-
-<logos/octave.png, id=1007, 285.065pt x 285.065pt>
+ <logos/octave.png, id=199, 285.065pt x 285.065pt>
 File: logos/octave.png Graphic file (type png)
- <use logos/octave.png>
+
+<use logos/octave.png>
 Package pdftex.def Info: logos/octave.png used on input line 2.
 (pdftex.def)             Requested size: 145.11053pt x 145.1072pt.
-
-<logos/vtk.png, id=1008, 1204.5pt x 987.69pt>
+ <logos/vtk.png, id=201, 1204.5pt x 987.69pt>
 File: logos/vtk.png Graphic file (type png)
- <use logos/vtk.png>
+
+<use logos/vtk.png>
 Package pdftex.def Info: logos/vtk.png used on input line 3.
 (pdftex.def)             Requested size: 145.11053pt x 118.98488pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--121
+Underfull \hbox (badness 10000) in paragraph at lines 1--123
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 122.
-Package atenddvi Info: Last page = 49.
-[48
-
- <./logos/git.png> <./logos/octave.png> <./logos/vtk.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 122.
+(babel)             in language  on input line 124.
+Package atenddvi Info: Last page = 17.
+[16 <./logos/git.png> <./logos/octave.png> <./logos/vtk.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 124.
 
 (./relatorio_ind_01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
 Package rerunfilecheck Info: File `relatorio_ind_01.out' has not changed.
-(rerunfilecheck)             Checksum: AF1D72E5B6CFBA8968F86492C8D001A2;1401.
+(rerunfilecheck)             Checksum: C2A7295A03C5356A74485604C5E66AAC;604.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1971,36 +1549,32 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 31416 strings out of 493029
- 575972 string characters out of 6136234
- 705664 words of memory out of 5000000
- 33707 multiletter control sequences out of 15000+600000
- 77477 words of font info for 74 fonts, out of 8000000 for 9000
+ 29832 strings out of 493029
+ 553642 string characters out of 6136235
+ 622493 words of memory out of 5000000
+ 32745 multiletter control sequences out of 15000+600000
+ 62949 words of font info for 61 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 55i,17n,54p,10417b,2312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
+ 55i,17n,54p,10417b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
-y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on relatorio_ind_01.pdf (49 pages, 3941986 bytes).
+s/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on relatorio_ind_01.pdf (17 pages, 461853 bytes).
 PDF statistics:
- 1217 PDF objects out of 1440 (max. 8388607)
- 1095 compressed objects within 11 object streams
- 630 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,208 @@
+\chapter{Revisão e conceitos fundamentais}
+\begin{itemize}
+ \item Tensores
+ \item Notação indicial
+ \item Levi-Civitta e Delta Kronecker
+ \item Operadores DEL e Nabla
+ \item Teoremas fundamentais
+\end{itemize}
+Esta seção foi escrita tendo como referência principal o livro de \cite{chaves:2013}. Ela  objetiva apresentar uma breve e concisa revisão conceitual, relevantes ao entendimento e desenvolvimento das seções futuras. Divididos entre mecânica do contínuo e mecânica dos fluidos, é ilustrada a notação indicial, os símbolos delta de Kronecker, símbolo de permutção (Levi-Civitta) e alguns operadores, além de verificações de algumas identidades frequentemente utilizadas .....\red{melhorar!!!}
+
+Pode-se definir mecânica como o ramo da física que estuda o comportamento de um corpo quando ele é submetido a forças, (por exemplo, deformação) e como ele se comporta ao longo do tempo. Em geral e de acordo com \cite{chaves:2013}, ela pode ser dividida em:
+\begin{itemize}
+ \item Mecânica Teórica;
+ \item Mecânica Aplicada;
+ \item Mecânica Computacional;
+\end{itemize}
+
+A Mecânica Teórica estabelece as leis que regem um problema físico específico baseado em princípios fundamentais. A Mecânica Aplicada transfere o conhecimento teórico para usá-los em engenharia científica e na resolução de problemas. A Mecânica Computacional resolve problemas com auxílio de simulação computacional 
+Neste livro concentramos nossa atenção na Mecânica Teórica e Aplicada. A seguir serão apresentados alguns conceitos relacionados à mecânca do contínuo.
+
+Em termos gerais, a  mecânica do contínua estuda o movimento (deformação) de um meio que consiste em matéria sujeita a forças. Um corpo físico consiste de pequenas moléculas (uma aglomeração de dois ou mais átomos), e então, por meio de experimentos sofisticados, pode-se observar que esses "constituintes" não são distribuídos de forma homogênea, ou seja, existem espaços vazios entre eles. No entanto, dentro do escopo da mecânica do contínuo estas carecterísticas fenomenológicas são desconsideradas.
+
+A hipótese fundamental na mecânica do contínua é que a matéria de que compõe o meio em estudo é continuamente distribuída e que as variáveis envolvidas no
+problema (por exemplo, velocidade, aceleração, pressão, densidade de massa, etc.) são funções contínuas. Em seguida, por meio de aproximações ou equações adicionais, pode-se caracterizar um contínuo com variáveis descontínuas associadas ao problem (fratura, ondas de choque, entre outros).
+
+Na maioria das vezes, ao aplicar uma força a corpos sólidos eles são capazes de recuperar seu estado/formato original com a remoção da força. No entanto, isto não ocorre com fluidos, ou seja, sólidos e fluidos aparentemente se comportam de forma distinta ao receberem solicitações. Tradicionalmente, a mecânica do contínuo é dividida em dois grupos: mecânica dos sólidos e mecânica dos fluidos (líquidos e gases). No entanto, as equações fundamentais da mecânica do contínuo são as mesmas para ambos.
+
+A ciência dos materiais pode ser estudada em diferentes escalas, que são classificadas como \cite{william:2003}:
+\begin{itemize}
+ \item Nível métrico: Neste nível, está a maior parte dos problemas práticos em Engenharia Civil, Mecânica, Aeroespacial.
+ \item Nível milimétrico: Neste nível, pode-se registrar a amostra utilizada para medir as propriedades mecânicas do material no laboratório.
+ \item Nível micrométrico: São observadas nesta escala características micro-estruturais, tais como micro-defeitos e produtos da hidratação cimentícia.
+ \item Nível nanométrico: Neste nível, contemplam-se os processos atômicos e moleculares.
+\end{itemize}
+
+A mecânica do contínuo atua num nível macroscópico. Ou seja, as variáveis do problema a nível macroscópico são considerados como sendo a média destas variáveis ao nível de mesoescala. Considerando como exemplo o sangue, que pode ser tratado de diferentes maneiras, dependendo da escala em consideração. Numa escala $10{-6}m$ considera-se o escoamento de sangue que flui ao redor de uma hemácea onde a deformação das paredes celulares é levada em consideração. Em uma escala de $10^{-4}m$, pode-se considerar o fluxo de fluido através de um conjunto de células sanguíneas, o que nos permite observar o efeito do fluido sobre as células. Em seguida, numa escada de $10{?3}m$ escala (nível macroscópico), é possível considerar o fluxo de líquido através de artérias ou veias (ignorando células individuais) como sendo um fluido com certas propriedades macroscópicas , por exemplo, velocidade, pressão, etc \cite{chaves:2013}.
+
+Outro exemplo é o de um material composto por uma mistura de materiais - como o concreto, que é formado fundamentalmente pela mistura de cimento, agregados e água. Na escala  $10^{-9} m$, pode-se distinguir a estrutura atômica do cimento e agregados. Numa escala $10^{-9}m$ é possível identificar grãos de cimento individuais antes da hidratação e grãos de silicato de cálcio e hidróxido de cálcio podem ser avaliados, após a hidratação. Finalmente, a $10^{-3}m$, pode-se distinguir individualmente cada um dos agregados e poros (lacunas). Note-se, neste nível, que a interação entre partes de cimento e agregados é importante. Na escala métrica de $10 m$ e na escala laboratorial de $1 m$, a estrutura interna do concreto pode ser examinada para assegurar que suas propriedades sejam idênticas em todas as direções e em todos os seus pontos, que é o que caracteriza um material homogêneo e isotrópico \cite{chaves:2013}.
+
+\section{Tensores}
+Como já mencionado, o objetivo da mecânica do contínuo é estabelecer um conjunto de equações que governam um problema físico a partir de uma perspectiva macroscópica. As variáveis físicas apresentadas em um problema são representadas por campos tensoriais, ou seja, os fenômenos físicos podem ser representados matematicamente por meio de tensores, enquanto que os campos tensoriais indicam como os valores do tensor variam no espaço e no tempo. Nestas equações, uma condição principal para as quantidades físicas é que elas devem ser independentes do sistema de referência, isto é, devem ser iguais para observadores em diferentes locais do espaço. No entanto, por questões de conveniência, ao resolver problemas, deve-se expressar o tensor em um dado sistema de coordenadas, que aqui será adotado como padrão  o sistema de coordenadas cartesianas tridimensionais.
+
+Nesta seção serão apresentados alguns conceitos fundamentais relacionados a linguagem tensorial, o que irá auxiliar na interpretação dos fenômenos físicos. Estes tensores podem ser classificados de acordo com a seguinte ordem:
+
+Tensores de ordem-zero (escalares): Entre algumas das quantidades que têm magnitude mas não tem direção, como por exemplo, a densidade, a temperatura, a pressão e a massa.
+
+Tensores de primeira ordem (Vetores): Quantidades que têm tanto magnitude quanto direção, como por exempo, velocidade, força. O tensor de primeira ordem é simbolizado com uma letra minúscula e por uma seta na parte superior do vetor, isto é: $\$vec{x}$.
+
+Tensores de segunda ordem: Quantidades que têm magnitude e duas direcções . tensão e deformação. Os tensores de segunda ordem e de ordem superior são simbolizados com uma letra em negrito.
+
+
+\subsection{Convenção do somatório de Einstein e notação indicial}
+Esta notação especifica que índices repetidos respresentam uma soma sobre o referido índice. Assim é possível expressa um vetor $\vec{a}$ em coordenada cartesianas, considerando que suas componentes são $a_1, a_2$ e $a_3$ numa base ortonormal caratesiana, $\vec{e}_1,\vec{e}_2,\vec{e}_3$ como:
+\begin{equation}
+ \label{eq:not_einstein}
+ \vec{a} = a_1\vec{e}_1 + a_2\vec{e}_2 + a_3\vec{e}_3 = \sum_{i=1}^{3} a_i\vec{e}_i = a_i\vec{e}_i
+\end{equation}
+em que o índice $i$ quando repetido duas vezes, indica somatório do termo sobre o índice. 
+
+Da convenção de soma de Einstein, surgiu a notação indicial, que permite o emprego de dois tipos de índices:
+\begin{itemize}
+ \item índice livre, que só aparece uma vez no termo da expressão. A quantidade de índices livres indica a ordem do tensor. 
+ \item O índice de soma é aquele que é repetido apenas duas vezes em um termo da expressão, e indica soma.
+\end{itemize}
+É importante observar que um índice pode aparecer somente uma ou duas vezes em algum termo da expressão.
+
+\begin{example}
+ Pode-se escrever expressão:
+ \begin{equation}
+a_1x_1x_3 + a_2x_2x_3 + a_3x_3x_3 = \sum_{i=1}^{3} a_ix_ix_3 = a_ix_ix_3
+  \end{equation}
+De forma análoga:
+ \begin{equation}
+x_1x_1 + x_2x_2 + x_3x_3 = \sum_{i=1}^{3} x_ix_i = x_ix_i
+  \end{equation}
+\end{example}
+
+\begin{example}
+Um sistema de equações pode ser escrito como:
+  \begin{equation}
+   \left\{ 
+   \begin{array}{cc}
+    a_{11}x_1 + a_{12}x_2 + a_{13}x_3 & = b_1\\
+    a_{21}x_1 + a_{22}x_2 + a_{23}x_3 & = b_2\\
+    a_{31}x_1 + a_{32}x_2 + a_{33}x_3 & = b_3\\
+   \end{array}
+  \right.
+  \rightarrow
+  \left\{
+   \begin{array}{cc}
+    a_{1j}x_j & = b_1\\
+    a_{2j}x_j & = b_2\\
+    a_{3j}x_j & = b_3\\
+   \end{array}
+   \right.  \rightarrow a_{ij}x_j=b_i
+  \end{equation}
+Como observado neste exempl, o uso da notação indicial torna a escrita muito concisa. Em muitos casos, se a operação algébrica não usa a notação indicial ou tensorial, torna-se quase impossível tratá-la devido ao grande número de termos envolvidos.  
+\end{example}
+
+\begin{example}
+ Para expandir a expressão $A_{ij}x_ix_j$ tem-se que os dois índices $i, j$ são índices de somatório. Como já indicado, da inexistência de índice livre, decorre que a ordem do tensor é nula e o resultado é um escalar. Assim,
+   \begin{equation}
+    \begin{split}
+      A_{1j}x_1x_j +  A_{2j}x_2x_j + A_{3j}x_3x_j & = A_{11}x_1x_1 +  A_{12}x_1x_2 + A_{13}x_1x_3 \\
+						  & = A_{21}x_2x_1 +  A_{22}x_2x_2 + A_{23}x_2x_3 \\
+						  & = A_{31}x_3x_1 +  A_{32}x_3x_2 + A_{33}x_3x_3 \\
+    \end{split}
+    \end{equation}
+\end{example}
+
+\subsubsection{Alguns operadores}
+O delta de Kronecker é definido como:
+\begin{equation}
+ \label{eq:delta_kronecker}
+  \delta_{ij } =
+  \left\{
+   \begin{array}{c}
+   1 \text{ se } i = j\\
+   0 \text{ se } i \neq j
+   \end{array}
+  \right.
+\end{equation}
+Nota-se que o produto escalar entre dois vetores da base ortonormal, $\vec{e}_i \cdot \vec{e}_j$ é igual a 1 se $i=j$ e igual a zero se $i \neq j$, então pode-se expressar esse produto na forma matricial como:
+\begin{equation}
+    \vec{e}_i \cdot \vec{e}_j
+    =
+    \left[
+    \begin{array}{ccc}
+     \vec{e}_1 \cdot \vec{e}_1 & \vec{e}_1 \cdot \vec{e}_2 & \vec{e}_1 \cdot \vec{e}_3 \\ 
+     \vec{e}_2 \cdot \vec{e}_1 & \vec{e}_2 \cdot \vec{e}_2 & \vec{e}_2 \cdot \vec{e}_3 \\
+     \vec{e}_3 \cdot \vec{e}_1 & \vec{e}_3 \cdot \vec{e}_2 & \vec{e}_3 \cdot \vec{e}_3 \\
+    \end{array}
+    \right]
+    =
+    \left[
+    \begin{array}{ccc}
+     1 & 0 & 0 \\ 
+     0 & 1 & 0 \\ 
+     0 & 0 & 1 \\ 
+    \end{array}
+    \right]
+    =
+    \delta_{ij}
+\end{equation}
+Uma propriedade interessante do delta de Kronecker é apresentada no próximo exemplo.
+\begin{example}
+Seja $V_i$ as componentes do vetor $\vec{V}$, então $\delta_{ij}V_i = \delta_{1j}V_1 + \delta_{2j}V_2 + \delta_{3j}V_3 $. Como $j$ é o índice livre, tem-se três valores a determinar:
+  \begin{equation}
+   \left. 
+   \begin{array}{cc}
+    j=1 \rightarrow \delta_{ij}V_i = \delta_{11}V_1 + \delta_{21}V_2 + \delta_{31}V_3 = V_1\\
+    j=2 \rightarrow \delta_{ij}V_i = \delta_{12}V_1 + \delta_{22}V_2 + \delta_{32}V_3 = V_2\\
+    j=3 \rightarrow \delta_{ij}V_i = \delta_{13}V_1 + \delta_{23}V_2 + \delta_{33}V_3 = V_3\\
+   \end{array}
+  \right\}  
+  \rightarrow
+  \delta_{ij}V_i = V_j
+  \end{equation}
+\end{example}
+
+\begin{example}
+  A seguir serão resolvidas algumas equações.
+  \begin{equation}
+   \delta_{ii} = \sum_{i=1}^3 \delta_{ii} = a_{11} + a_{22} + a_{33} = 3
+  \end{equation}
+  \begin{equation}
+   \delta_{ii}\delta_{jj} = \sum_{i=1}^3 \delta_{ii} \sum_{j=1}^3 \delta_{jj} = (a_{11} + a_{22} + a_{33})(a_{11} + a_{22} + a_{33}) = 9
+  \end{equation}
+  \begin{equation}
+  \begin{split}
+   \delta_{i1}\delta_{ij}\delta_{j1} = \sum_{i=1}^3\sum_{j=1}^3 \delta_{i1}\delta_{ij}\delta_{j1}  & = \delta_{11}\delta_{11}\delta_{11} + \delta_{11}\delta_{12}\delta_{21} + \delta_{11}\delta_{13}\delta_{31} \\
+   & + \delta_{21}\delta_{21}\delta_{11} + \delta_{21}\delta_{22}\delta_{21} + \delta_{21}\delta_{23}\delta_{31} \\
+   & + \delta_{31}\delta_{31}\delta_{11} + \delta_{31}\delta_{32}\delta_{21} + \delta_{31}\delta_{33}\delta_{31} \\
+   & = \delta_{j1}\delta_{1j} = \delta_{11} = 1
+   \end{split}
+  \end{equation}
+Note que $\delta_{j1}\delta_{j1} \neq \delta_{jj}$, pois $\delta_{j1}\delta_{j1} = 1$  e $\delta_{jj} = 3$.
+\end{example}
+
+\subsubsection{O símbolo de permutação}
+O símbolo de permutação $\epsilon_{ijk}$, também conhecido como \textit{símbolo de Levi-Civita} é definido como:
+
+\begin{equation}
+ \label{eq:levi_civita}
+  \epsilon_{ijk} =
+  \left\{
+   \begin{array}{l}
+   +1 \text{ se } (i,j,k) \in \{(1,2,3),(2,3,1),(3,1,2)\}  \\
+   -1 \text{ se } (i,j,k) \in \{(1,3,2),(3,2,1),(2,1,3)\}  \\
+   0 \text{ nos demais casos }
+   \end{array}
+  \right.
+\end{equation}
+
+A Figura \ref{fig:levi_civita} ilustra um procedimento para avaliar o sinal do símbolo de permutação.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.5\textwidth]{figuras/Permutation_indices_3d.eps}
+\caption{Sinal do símbolo de permutação.}
+\label{fig:levi_civita}
+\end{figure} 
+
+
+
+
+
+
+

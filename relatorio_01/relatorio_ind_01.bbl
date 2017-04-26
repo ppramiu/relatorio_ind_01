@@ -1,4 +1,9 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Argyropoulos2015}
+C.~D. Argyropoulos and N.~C. Markatos.
+\newblock {Recent advances on the numerical modelling of turbulent flows}.
+\newblock {\em Applied Mathematical Modelling}, 39(2):693--732, 2015.
 
 \bibitem{petsc-web-page}
 Satish Balay, Shrirang Abhyankar, Mark~F. Adams, Jed Brown, Peter Brune, Kris
@@ -29,5 +34,78 @@ Satish Balay, William~D. Gropp, Lois~Curfman McInnes, and Barry~F. Smith.
 Ed~Bueler.
 \newblock {\em PETSc for Partial Differential Equations}.
 \newblock SIAM, 2018.
+
+\bibitem{Deardorff1970}
+James~W. Deardorff.
+\newblock {A numerical study of three-dimensional turbulent channel flow at
+  large Reynolds numbers}.
+\newblock {\em Journal of Fluid Mechanics}, 41(1970):453, 2006.
+
+\bibitem{Georgiadis:2010}
+Nicholas~J. Georgiadis, Donald~P. Rizzetta, and Christer Fureby.
+\newblock Large-eddy simulation: Current capabilities, recommended practices,
+  and future research.
+\newblock {\em AIAA Journal}, 48(8):1772--1784, 2010.
+
+\bibitem{Georgiadis2010}
+Nicholas~J. Georgiadis, Donald~P. Rizzetta, and Christer Fureby.
+\newblock {Large-Eddy Simulation: Current Capabilities, Recommended Practices,
+  and Future Research}.
+\newblock {\em AIAA Journal}, 48(8):1772--1784, 2010.
+
+\bibitem{Markatos1986}
+N.C. Markatos.
+\newblock {The mathematical modelling of turbulent flows}.
+\newblock {\em Applied Mathematical Modelling}, 10(3):190--220, 1986.
+
+\bibitem{Pruett2008}
+C.~Pruett.
+\newblock {Temporal large-eddy simulation: Theory and implementation}.
+\newblock {\em Theoretical and Computational Fluid Dynamics}, 22(3-4):275--304,
+  2008.
+
+\bibitem{Pruett2003}
+C.~D. Pruett, T.~B. Gatski, C.~E. Grosch, and W.~D. Thacker.
+\newblock {The temporally filtered Navier-Stokes equations: Properties of the
+  residual stress}.
+\newblock {\em Physics of Fluids}, 15(8):2127--2140, 2003.
+
+\bibitem{Pruett2006}
+C.~D. Pruett, B.~C. Thomas, C.~E. Grosch, and T.~B. Gatski.
+\newblock {A temporal approximate deconvolution model for large-eddy
+  simulation}.
+\newblock {\em Physics of Fluids}, 18(2):1--5, 2006.
+
+\bibitem{Saad1}
+Tony Saad.
+\newblock {Turbulence Modeling For Beginners}.
+\newblock 1.
+
+\bibitem{Stolz1999}
+S.~Stolz and N.~A. Adams.
+\newblock {An approximate deconvolution procedure for large-eddy simulation}.
+\newblock {\em Physics of Fluids}, 11(7):1699--1701, 1999.
+
+\bibitem{willam:2003}
+Kaspar~J. Willam.
+\newblock Constitutive models for engineering materials.
+\newblock In Robert~A. Meyers, editor, {\em Encyclopedia of Physical Science
+  and Technology (Third Edition)}, pages 603 -- 633. Academic Press, New York,
+  third edition edition, 2003.
+
+\bibitem{Zhiyin:2015}
+Yang Zhiyin.
+\newblock Large-eddy simulation: Past, present and the future.
+\newblock {\em Chinese Journal of Aeronautics}, 28(1):11 -- 24, 2015.
+
+\bibitem{Zhiyin2015}
+Yang Zhiyin.
+\newblock {Large-eddy simulation: Past, present and the future}.
+\newblock {\em Chinese Journal of Aeronautics}, 28(1):11--24, 2015.
+
+\bibitem{silva_freire:2002}
+Átila P.~Freire, Philippe P.~M. Menut, and Jian Su.
+\newblock {\em Turbulência - Coleção Cadernos de Turbulência}.
+\newblock Associação Brasileira de Ciências Mecânicas - ABCM, 2002.
 
 \end{thebibliography}

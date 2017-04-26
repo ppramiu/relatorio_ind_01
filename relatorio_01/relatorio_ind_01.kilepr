@@ -18,7 +18,7 @@ QuickBuild=PDFLaTeX+ViewPDF
 
 [document-settings,item:relatorio_ind_01.tex]
 Bookmarks=
-Encoding=UTF-8
+Encoding=ISO-8859-1
 Highlighting=LaTeX
 Indentation Mode=normal
 Mode=LaTeX
@@ -35,16 +35,16 @@ order=-1
 
 [item:relatorio_ind_01.tex]
 archive=true
-column=7
-encoding=UTF-8
+column=21
+encoding=ISO-8859-1
 highlight=LaTeX
-line=109
+line=34
 mode=LaTeX
 open=true
 order=0
 
 [view-settings,view=0,item:relatorio_ind_01.tex]
-CursorColumn=7
-CursorLine=109
+CursorColumn=21
+CursorLine=34
 JumpList=
-ViMarks=
+ViMarks=.,13,0,[,13,0,],13,0
